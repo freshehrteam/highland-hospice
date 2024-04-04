@@ -1,0 +1,339 @@
+archetype (adl_version=1.4; uid=73e23809-7fa3-4da7-bf24-9ff38c9801d1)
+	openEHR-EHR-EVALUATION.personal_responsibilities.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-10-20">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"onelondon.ucp">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"6e1394dc4502ca8d6a2c9d1c39459d24">
+		["build_uid"] = <"375387c7-d4f7-35da-a60c-98d02d2b6665">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Personal responsibilities
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0036] occurrences matches {0..*} matches {    -- Responsibilities status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0037,    -- No critical responsibilities
+									at0038,    -- Has primary carer/parental responsibilities
+									at0039]    -- Has other critical responsibilities
+								}
+							}
+						}
+					}
+					ELEMENT[at0043] occurrences matches {0..1} matches {    -- Description
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0005] occurrences matches {0..*} matches {    -- Primary carer /parental responsibility
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0035] occurrences matches {0..1} matches {    -- Carer contingency plan status
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0010] occurrences matches {0..1} matches {    -- Cared for person
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0022] occurrences matches {0..*} matches {    -- Cared for person details
+								include
+									archetype_id/value matches {/.*/}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- How long can they wait on their own
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0018] occurrences matches {0..1} matches {    -- Contingency plan description
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {    -- Contingency plan attachment
+								include
+									archetype_id/value matches {/.*/}
+							}
+							CLUSTER[at0013] occurrences matches {0..1} matches {    -- Replacement carer
+								items cardinality matches {1..*; unordered} matches {
+									allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- Replacement carer details
+										include
+											archetype_id/value matches {/.*/}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Cared for person has consented to this replacement
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0033,    -- Yes
+													at0034]    -- No
+												}
+											}
+										}
+									}
+									ELEMENT[at0016] occurrences matches {0..1} matches {    -- Replacement has consented to being contacted
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0031,    -- Yes
+													at0032]    -- No
+												}
+											}
+										}
+									}
+									ELEMENT[at0017] occurrences matches {0..1} matches {    -- Replacement has consented to acting in that role
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0027,    -- Yes
+													at0028]    -- No
+												}
+											}
+										}
+									}
+									ELEMENT[at0026] occurrences matches {0..1} matches {    -- Replacement has a copy of contingency plan
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0029,    -- Yes
+													at0030]    -- No
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0040] occurrences matches {0..*} matches {    -- Pet
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0041] occurrences matches {0..1} matches {    -- Pet details
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0042] occurrences matches {0..*} matches {    -- Replacement pet carer details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+					CLUSTER[at0021] occurrences matches {0..*} matches {    -- Other responsibility
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0023] occurrences matches {0..1} matches {    -- Nature of responsibility
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							allow_archetype CLUSTER[at0024] occurrences matches {0..*} matches {    -- Replacement contact details
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0002] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date last updated
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Personal responsibilities">
+					description = <"Personal responsibilities">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Date last updated">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Primary carer /parental responsibility">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Cared for person">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"How long can they wait on their own">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Cared for person has consented to this replacement">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Replacement carer">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Replacement carer details">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Replacement has consented to being contacted">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Replacement has consented to acting in that role">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Contingency plan description">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Contingency plan attachment">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Other responsibility">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Cared for person details">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Nature of responsibility">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Replacement contact details">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Replacement has a copy of contingency plan">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Carer contingency plan status">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Responsibilities status">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"No critical responsibilities">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Has primary carer/parental responsibilities">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Has other critical responsibilities">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Pet">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Pet details">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Replacement pet carer details">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Description">
+					description = <"">
+				>
+			>
+		>
+	>
