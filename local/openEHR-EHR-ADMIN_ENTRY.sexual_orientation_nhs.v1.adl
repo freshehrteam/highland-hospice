@@ -1,0 +1,73 @@
+archetype (adl_version=1.4; uid=edce43b7-8b19-4e34-9455-709d73b1baa3)
+	openEHR-EHR-ADMIN_ENTRY.sexual_orientation_nhs.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-10-02">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"aaf1833c40e5eae8d681a4b25cb2c16c">
+		["build_uid"] = <"d4307852-2a57-329b-a732-456009b5b13d">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Sexual orientation
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Sexual orientation
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Sexual orientation">
+					description = <"Sexual orientation as described by the NHS Sexual Orientation monitoring standard.">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Sexual orientation">
+					description = <"1. Heterosexual or Straight
+2. Gay or Lesbian
+3. Bisexual
+4. Other sexual orientation not listed 
+U. Person asked and does not know or is not sure
+Z. Not stated (person asked but declined to provide a response)
+9. Not known (not recorded">
+				>
+			>
+		>
+	>
