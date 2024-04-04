@@ -1,0 +1,155 @@
+archetype (adl_version=1.4; uid=032c6b21-211f-44b3-a548-be36b28d2e65)
+	openEHR-EHR-OBSERVATION.driving.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-11-06">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b3795ec08fb1b0606e3b1856c6daaf26">
+		["build_uid"] = <"0eaf34ec-98fe-3452-878c-bab67003f738">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- Driving
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Driving status
+										value matches {
+											DV_CODED_TEXT matches {
+												defining_code matches {
+													[local::
+													at0005,    -- Current driver
+													at0006,    -- Never driven
+													at0007]    -- Former driver
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..*} matches {    -- License type
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- How often do they drive
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Concerns about driving
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Comment
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0010] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Driving">
+					description = <"Driving">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Driving status">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Current driver">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Never driven">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Former driver">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"License type">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Concerns about driving">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"How often do they drive">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Comment">
+					description = <"">
+				>
+			>
+		>
+	>
