@@ -1,0 +1,319 @@
+archetype (adl_version=1.4; uid=52af9a7e-7b49-44c1-9e7b-5cfbd4f58c68)
+	openEHR-EHR-EVALUATION.just_in_case_medication.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-03-21">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"15431fc4ffb35df636ab2c3fc0f2fc28">
+		["build_uid"] = <"dec47c0f-9ad3-32d9-8937-b52f868f56e1">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Just in case medications
+		data matches {
+			ITEM_TREE[at0003] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0010] occurrences matches {0..1} matches {    -- PRN medication
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0004] occurrences matches {0..1} matches {    -- Status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0005,    -- PRN drugs not prescribed
+											at0006,    -- PRN drugs prescribed
+											at0007]    -- PRN drugs prescribed and administration chart completed
+										}
+									}
+								}
+							}
+							ELEMENT[at0042] occurrences matches {0..1} matches {    -- Date chart completed
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Chart location
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0013,    -- In place of residence
+											at0014]    -- On GP system
+										}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0009] occurrences matches {0..1} matches {    -- Notes
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0015] occurrences matches {0..1} matches {    -- Syringe driver medication
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0016] occurrences matches {0..1} matches {    -- Status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0017,    -- Syringe driver drugs not prescribed
+											at0018,    -- Syringe driver drugs prescribed
+											at0019]    -- Syringe driver drugs prescribed and administration chart completed
+										}
+									}
+								}
+							}
+							ELEMENT[at0020] occurrences matches {0..1} matches {    -- Chart location
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0021,    -- In place of residence
+											at0022]    -- On GP system
+										}
+									}
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0023] occurrences matches {0..1} matches {    -- Notes
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0036] occurrences matches {0..1} matches {    -- Syringe driver
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::at0037]    -- Syringe driver in use
+										}
+									}
+								}
+							}
+						}
+					}
+					CLUSTER[at0024] occurrences matches {0..1} matches {    -- Authority for trained informal carer to administer
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0025] occurrences matches {0..1} matches {    -- Status
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0033,    -- Trained informal carer authority to administer NOT in place
+											at0034]    -- Trained informal carer authority to administer in place
+										}
+									}
+								}
+							}
+							ELEMENT[at0035] occurrences matches {0..*} matches {    -- Informal carer name
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0032] occurrences matches {0..1} matches {    -- Notes
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0038] occurrences matches {0..1} matches {    -- Oxygen
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0039] occurrences matches {0..1} matches {    -- Oxygen
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0040,    -- On home oxygen
+											at0041]    -- Home oxygen not required
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Just in case medications">
+					description = <"Just in case medication">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Extension">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Status">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"PRN drugs not prescribed">
+					description = <"PRN drugs have not been prescribed.">
+				>
+				["at0006"] = <
+					text = <"PRN drugs prescribed">
+					description = <"PRN drugs have been prescribed.">
+				>
+				["at0007"] = <
+					text = <"PRN drugs prescribed and administration chart completed">
+					description = <"PRN drugs have been prescribed and administration chart completed.">
+				>
+				["at0008"] = <
+					text = <"Chart location">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Notes">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"PRN medication">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"In place of residence">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"On GP system">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Syringe driver medication">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Status">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Syringe driver drugs not prescribed">
+					description = <"Syringe driver drugs have not been prescribed.">
+				>
+				["at0018"] = <
+					text = <"Syringe driver drugs prescribed">
+					description = <"Syringe driver drugs have been prescribed.">
+				>
+				["at0019"] = <
+					text = <"Syringe driver drugs prescribed and administration chart completed">
+					description = <"Syringe driver drugs have been prescribed and administration chart completed.">
+				>
+				["at0020"] = <
+					text = <"Chart location">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"In place of residence">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"On GP system">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Notes">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Authority for trained informal carer to administer">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Status">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Notes">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Trained informal carer authority to administer NOT in place">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Trained informal carer authority to administer in place">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Informal carer name">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Syringe driver">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Syringe driver in use">
+					description = <"A syringe driver is in use">
+				>
+				["at0038"] = <
+					text = <"Oxygen">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Oxygen">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"On home oxygen">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Home oxygen not required">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Date chart completed">
+					description = <"">
+				>
+			>
+		>
+	>
