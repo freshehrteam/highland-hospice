@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "5f0e11e032cf192b4a7cbaf80d2a7734",
+      "MD5-CAM-1.0.1" : "300103e008f3d5dc793587c7bffb2dc3",
       "sem_ver" : "1.6.0",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -4701,13 +4701,13 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
           "nodeId" : "at0001.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0011.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
@@ -4827,13 +4827,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001.1",
-            "text" : "How I refer to them",
-            "description" : "The unstructured name for the individual.",
-            "comment" : "The content of this data element may be derived from one or more components from CLUSTER.structured_name combined together as a text string. For example: 'John Markham', 'Professor Sir John Markham', 'John Markham Jnr MP'."
-          },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
@@ -4846,6 +4839,13 @@
             "code" : "at0010.1",
             "text" : "Other information about this person",
             "description" : "Additional narrative about the individual not captured in other fields."
+          },
+          "at0011.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0011.1",
+            "text" : "How I refer to them",
+            "description" : "A label for the individual.",
+            "comment" : "For example: 'Neighbour in the house with the red door'."
           }
         },
         "nb" : { },
