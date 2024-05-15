@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "73e75f20ad0929a340c346acca3706bc",
+      "MD5-CAM-1.0.1" : "f9fef41966cb8335ad7c9c2be32cd3f7",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
     "details" : {
@@ -387,12 +387,128 @@
             "rmAttributeName" : "items",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.1" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0056.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0008.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0009.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.7" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "nodeId" : "at0014",
+              "nodeId" : "at0014.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
                 "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0015.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "HH-TEP-Location"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "HH-TEP-Location" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "HH-TEP-Location",
+                            "code" : "1",
+                            "value" : "Ward care only"
+                          }, {
+                            "terminologyId" : "HH-TEP-Location",
+                            "code" : "2",
+                            "value" : "Referral / transfer to specialist ward"
+                          }, {
+                            "terminologyId" : "HH-TEP-Location",
+                            "code" : "3",
+                            "value" : "Referral / transfer to ICU"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
@@ -401,6 +517,275 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0014.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0015.2",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "HH-TEP-intervention"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "HH-TEP-intervention" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "4",
+                            "value" : "Palliative treatments"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "5",
+                            "value" : "invasive procedures"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "6",
+                            "value" : "Complex imaging (excluding simple x-ray)"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "7",
+                            "value" : "Intravenous access"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "8",
+                            "value" : "Intravenous/ subcutaneous fluids"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "9",
+                            "value" : "Blood transfusion"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "10",
+                            "value" : "Oral antibiotics"
+                          }, {
+                            "terminologyId" : "HH-TEP-intervention",
+                            "code" : "11",
+                            "value" : "Intravenous antibiotics"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0039.2",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0014.3",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0015.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "HH-TEP-Feeding"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "HH-TEP-Feeding" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "HH-TEP-Feeding",
+                            "code" : "13",
+                            "value" : "Nasogastric/PEG/TPN feeding"
+                          }, {
+                            "terminologyId" : "HH-TEP-Feeding",
+                            "code" : "14",
+                            "value" : "Oral feeding"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0039.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0014.4",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0015.4",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "defaultValue" : {
+                        "defining_code" : {
+                          "terminology_id" : {
+                            "value" : "HH-TEP-EarlyWarning",
+                            "@type" : "TERMINOLOGY_ID"
+                          },
+                          "code_string" : "15",
+                          "@type" : "CODE_PHRASE"
+                        },
+                        "value" : "Early warning scores/ observations",
+                        "@type" : "DV_CODED_TEXT"
+                      },
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "HH-TEP-EarlyWarning"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "HH-TEP-EarlyWarning" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "HH-TEP-EarlyWarning",
+                            "code" : "15",
+                            "value" : "Early warning scores/ observations"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0039.4",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0014.5",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0015.5",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "defaultValue" : {
+                        "defining_code" : {
+                          "terminology_id" : {
+                            "value" : "HH-TEP-Additional",
+                            "@type" : "TERMINOLOGY_ID"
+                          },
+                          "code_string" : "16",
+                          "@type" : "CODE_PHRASE"
+                        },
+                        "value" : "Additional interventions",
+                        "@type" : "DV_CODED_TEXT"
+                      },
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "HH-TEP-Additional"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "HH-TEP-Additional" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "HH-TEP-Additional",
+                            "code" : "16",
+                            "value" : "Additional interventions"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0039.5",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0042.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0043.1",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -413,13 +798,187 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "de" : { }
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Treatment escalation recommendations",
+            "description" : "Anticipatory decisions about the overall intent of care and possible interventions (including treatments, activities, and diagnostic or therapeutic procedures), asserted by a clinician."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0042.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0042.1",
+            "text" : "Patient undestanding / preferences",
+            "description" : "Narrative description about awareness of the Advance intervention decisions by the individual.",
+            "comment" : "For example: the capacity of the patient to understand the decisions."
+          },
+          "at0043.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.1",
+            "text" : "Family understanding",
+            "description" : "Narrative description about awareness of the Advance intervention decisions by family, carers or legal proxy.",
+            "comment" : "For example: the individual has no family."
+          },
+          "at0014.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Location interventions",
+            "description" : "Details of the decision about possible treatments or activities that may be life-saving, life-prolonging or cause undesirable side effects."
+          },
+          "at0056.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0056.1",
+            "text" : "Goals",
+            "description" : "Narrative description about the logic and justification for the 'Intent of care' decision."
+          },
+          "at0014.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.2",
+            "text" : "Investigation / interventions",
+            "description" : "Details of the decision about possible treatments or activities that may be life-saving, life-prolonging or cause undesirable side effects."
+          },
+          "at0014.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.3",
+            "text" : "Feeding",
+            "description" : "Details of the decision about possible treatments or activities that may be life-saving, life-prolonging or cause undesirable side effects."
+          },
+          "at0014.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.4",
+            "text" : "Early warning",
+            "description" : "Details of the decision about possible treatments or activities that may be life-saving, life-prolonging or cause undesirable side effects."
+          },
+          "at0014.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.5",
+            "text" : "Additional interventions",
+            "description" : "Details of the decision about possible treatments or activities that may be life-saving, life-prolonging or cause undesirable side effects."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0014.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Per intervensjon (2)",
+            "description" : "Detaljer om beslutninger om mulige behandlinger eller tiltak som kan være livreddende, livsforlengende eller føre til uønskede konsekvenser for individet."
+          },
+          "at0014.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Per intervensjon (3)",
+            "description" : "Detaljer om beslutninger om mulige behandlinger eller tiltak som kan være livreddende, livsforlengende eller føre til uønskede konsekvenser for individet."
+          },
+          "at0014.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Per intervensjon (4)",
+            "description" : "Detaljer om beslutninger om mulige behandlinger eller tiltak som kan være livreddende, livsforlengende eller føre til uønskede konsekvenser for individet."
+          },
+          "at0014.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Per intervensjon (5)",
+            "description" : "Detaljer om beslutninger om mulige behandlinger eller tiltak som kan være livreddende, livsforlengende eller føre til uønskede konsekvenser for individet."
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "at0014.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Pro Intervention (2)",
+            "description" : "Details der Entscheidung über mögliche Behandlungen oder Aktivitäten, die lebensrettend oder lebensverlängernd sein können oder unerwünschte Nebenwirkungen verursachen.\r\n"
+          },
+          "at0014.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Pro Intervention (3)",
+            "description" : "Details der Entscheidung über mögliche Behandlungen oder Aktivitäten, die lebensrettend oder lebensverlängernd sein können oder unerwünschte Nebenwirkungen verursachen.\r\n"
+          },
+          "at0014.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Pro Intervention (4)",
+            "description" : "Details der Entscheidung über mögliche Behandlungen oder Aktivitäten, die lebensrettend oder lebensverlängernd sein können oder unerwünschte Nebenwirkungen verursachen.\r\n"
+          },
+          "at0014.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0014.1",
+            "text" : "Pro Intervention (5)",
+            "description" : "Details der Entscheidung über mögliche Behandlungen oder Aktivitäten, die lebensrettend oder lebensverlängernd sein können oder unerwünschte Nebenwirkungen verursachen.\r\n"
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
-      "valueSets" : { }
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0003", "at0004", "at0005", "at0006", "at0007" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0016", "at0017", "at0018", "at0019", "at0020", "at0021", "at0022", "at0023", "at0024", "at0025", "at0026", "at0027", "at0028", "at0029", "at0030", "at0031", "at0032", "at0033" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "ac0.2" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0010", "at0011", "at0012", "at0013" ]
+        }
+      }
     },
     "adlVersion" : "1.4",
     "buildUid" : "3d99df16-8886-4c9a-b00d-7e1cbc9bd825",
@@ -696,6 +1255,12 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "TEP Shared decision making",
+            "description" : "shared decison_making_uk"
+          },
           "at0008.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008.1",
@@ -1263,6 +1828,25 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0011.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "defaultValue" : {
+                    "value" : "TEP recommendation endorsement",
+                    "@type" : "DV_TEXT"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0014.1",
               "attributes" : [ ],
@@ -1373,7 +1957,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Endorsement review",
+            "text" : "Plan endorsement",
             "description" : "A general clinical activity carried out for the patient to receive a specified service, advice or care from an expert healthcare provider."
           }
         },
