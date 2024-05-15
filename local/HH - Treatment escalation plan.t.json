@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "f9fef41966cb8335ad7c9c2be32cd3f7",
+      "MD5-CAM-1.0.1" : "cf4110bbb2583212854f9e8ff982f4f4",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
     "details" : {
@@ -152,7 +152,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "HH - Treatment escalation plan",
+          "text" : "Treatment escalation plan",
           "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
         }
       }
