@@ -26,12 +26,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4c4b4f841e44448771fa3073c4ef99af">
+		["MD5-CAM-1.0.1"] = <"5448200e25c6f824cc7b9f6c3aacf1a1">
 		["build_uid"] = <"c4e8d861-347f-3c81-8134-6acf3431b11f">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- GP synch details
+	CLUSTER[at0000] matches {    -- Integration details
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Date first synchronised
 				value matches {
@@ -43,6 +43,11 @@ definition
 					DV_DATE_TIME matches {*}
 				}
 			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- System name
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
 		}
 	}
 
@@ -51,7 +56,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"GP synch details">
+					text = <"Integration details">
 					description = <"GP synch rosi">
 				>
 				["at0001"] = <
@@ -60,6 +65,10 @@ ontology
 				>
 				["at0002"] = <
 					text = <"Date last synchronised">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"System name">
 					description = <"">
 				>
 			>
