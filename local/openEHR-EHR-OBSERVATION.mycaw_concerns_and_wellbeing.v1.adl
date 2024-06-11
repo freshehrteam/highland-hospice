@@ -1,0 +1,135 @@
+archetype (adl_version=1.4; uid=8bf18ff6-7cf0-4e9d-838d-94690ca8e95d)
+	openEHR-EHR-OBSERVATION.mycaw_concerns_and_wellbeing.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-10-03">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"published">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the outcome of The Measure Yourself Concerns and Wellbeing (MYCaW) assessment.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"One London UCP">
+		["references"] = <"“MYCaW®.” Meaningful Measures - The Home of MYCaW® and MYMOP®, www.meaningfulmeasures.co.uk/mycaw. Accessed 03 Oct. 2023.">
+		["original_namespace"] = <"org.onelondon.ucp">
+		["original_publisher"] = <"One London UCP">
+		["custodian_namespace"] = <"org.onelondon.ucp">
+		["MD5-CAM-1.0.1"] = <"8ec269aea1ae0899f1c5a393c0e54f66">
+		["build_uid"] = <"0befe7bc-1ac0-361d-9903-d2b9c087ee55">
+		["ip_acknowledgements"] = <"The MYCaw assessment is copyright to Meaningful Measures Ltd. UK and can only be used under the terms of the licence described at https://www.meaningfulmeasures.co.uk/mycaw/mycaw-licence-information. ">
+		["revision"] = <"1.0.0">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- MYcaW Concerns and Wellbeing
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									CLUSTER[at0007] occurrences matches {0..*} matches {    -- Concern or problem
+										items cardinality matches {1..*; unordered} matches {
+											ELEMENT[at0005] occurrences matches {0..1} matches {    -- Concern
+												value matches {
+													DV_TEXT matches {*}
+												}
+											}
+											ELEMENT[at0008] occurrences matches {0..1} matches {    -- Severity
+												value matches {
+													DV_COUNT matches {
+														magnitude matches {|0..6|}
+													}
+												}
+											}
+										}
+									}
+									ELEMENT[at0009] occurrences matches {0..1} matches {    -- General wellbeing
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..6|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0004] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"MYcaW Concerns and Wellbeing">
+					description = <"The Measure Yourself Concerns and Wellbeing (MYCaW) assessment.">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Concern">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Concern or problem">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Severity">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"General wellbeing">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Extension">
+					description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+					comment = <"For example: local information requirements or additional metadata to align with FHIR or equivalents.">
+				>
+			>
+		>
+	>
