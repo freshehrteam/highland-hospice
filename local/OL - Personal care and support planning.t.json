@@ -11,7 +11,7 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "in_development"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -22,8 +22,8 @@
       "original_namespace" : "org.onelondon.ucp",
       "original_publisher" : "One London UCP",
       "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "1.2.0",
-      "MD5-CAM-1.0.1" : "93726845b9cd2a783af5b1260d732c1c",
+      "sem_ver" : "1.0.0-alpha.1",
+      "MD5-CAM-1.0.1" : "b873ec0602bc026f3802307ed7adf5c1",
       "build_uid" : "",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -154,7 +154,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "11c6edc2-7669-32f7-a71a-6d396810a6c0",
+  "buildUid" : "25e8fdaa-af0f-3740-a1ae-685856f743e9",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
@@ -1171,13 +1171,6 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0079.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
