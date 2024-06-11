@@ -11,21 +11,21 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "in_development"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
-      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-      "custodian_organisation" : "One London UCP",
-      "original_namespace" : "org.onelondon.ucp",
-      "original_publisher" : "One London UCP",
-      "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "3.4.0",
-      "MD5-CAM-1.0.1" : "4e89a89b404e24f11792beb1b3cebca8",
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "2.7.2",
+      "MD5-CAM-1.0.1" : "4a6ee559736ef4817042d1972e413ca4",
       "build_uid" : "",
-      "is_singleton" : "ehr-tag-carePlanId",
+      "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
     "details" : {
@@ -38,7 +38,6 @@
           "codeString" : "en"
         },
         "keywords" : [ ],
-        "copyright" : "",
         "originalResourceUri" : { },
         "otherDetails" : { }
       }
@@ -137,10 +136,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "EVALUATION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.51",
+        "nodeId" : "at0.25",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-communication_capability-uk-002.v0",
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-communication_capability-uk-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -150,6 +149,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-ethnicity-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..0",
+        "nodeId" : "at0.28",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-ethnicity-001.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -178,6 +186,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-occupation_summary-001.v1",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.37",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-about_me-002.v0",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -200,7 +217,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "11c6edc2-7669-32f7-a71a-6d396810a6c0",
+  "buildUid" : "25e8fdaa-af0f-3740-a1ae-685856f743e9",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
@@ -1010,7 +1027,7 @@
                           "code_string" : "1515901000000105",
                           "@type" : "CODE_PHRASE"
                         },
-                        "value" : "",
+                        "value" : "About me - please do and please do not",
                         "@type" : "DV_CODED_TEXT"
                       },
                       "attributes" : [ ],
@@ -1249,7 +1266,7 @@
           "at0002.9" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.9",
-            "text" : "Places that the person would to visit",
+            "text" : "Places that the person would like to visit",
             "description" : "Narrative supplied by the patient about the topic."
           },
           "at0002.1" : {
@@ -2781,10 +2798,6 @@
                         "value" : "Looking after the family or home"
                       }, {
                         "terminologyId" : "UCP-Employment-status",
-                        "code" : "R",
-                        "value" : "Retired"
-                      }, {
-                        "terminologyId" : "UCP-Employment-status",
                         "code" : "9",
                         "value" : "Prefer not to say"
                       } ]
@@ -3044,21 +3057,6 @@
           "keywords" : [ "empleo", "empleador", "trabajo", "ocupación", "tarea", "profesión", "desempleado", "empleado", "desempleo", "estudiando", "empleado", "estudiante", "sector", "profesión", "voluntario", "vocación", "comercio", "trabajador", "voluntario", "cargo" ],
           "use" : "Usar para registrar detalles sobre un trabajo o rol particular llevado a cabo por un individuo durante un periodo de tiempo especificado.\r\n\r\nEl alcance de este arquetipo incluye todos los empleos o actividades llevadas a cabo por el individuo. Por ejemplo: Un trabajo o empleo pagado; trabajo no remunerado de cualquier tipo como voluntario; o roles tales como estar jubilado o ser estudiante.\r\n\r\nMúltiples instancias de este arquetipo capturadas a lo largo del tiempo resultarán en una agregación de un histórico de trabajos y/o roles presentes o pasados.\r\n\r\nUn trabajo actual puede deducirse de la 'Fecha empezado' pero no de la 'Fecha finalizado'.\r\n\r\nUn individuo puede llevar a cabo muchas ocupaciones al mismo tiempo, las cuales pueden ser remuneradas o no remuneradas. Cada ocupación debería de ser registrada en una instancia separada de este arquetipo.\r\n\r\nSi los atributos de la ocupación cambian significativamente, tales como cambios en el título/rol o el número de horas, éstas se deberían de registrar en una instancia separada de este arquetipo.\r\n\r\nEste arquetipo ha sido específicamente diseñado para ser usado en el SLOT de 'Episodio de ocupación' dentro del arquetipo EVALUATION.occupation_summary, pero también puede ser usado dentro de cualquier otro arquetipo ENTRY o CLUSTER, cuando sea clínicamente apropiado.\r\n\r\nPuede haber una superposición aparente o real entre los elementos de datos en este arquetipo y detalles sobre la ocupación/empleo que puedan haber sido incluidos como detalles demográficos en sistemas clínicos o administrativos. Estos elementos de datos se han diseñado específicamente para dar soporte a propósitos clínicos como puede ser la generación de un certificado médico para el empleador actual.",
           "misuse" : "No debe ser usado para registrar cambios temporales o episodios dentro de un único registro ocupacional, tales como estar de baja. Esto está fuera del alcance de este arquetipo y debería ser parte de un sistema de recursos humanos del empleador.\r\n\r\nNo debe ser usado para una descripción detallada de los riesgos de salud o exposición a sustancias nocivas en el lugar de trabajo. Para este propósito use los arquetipos EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNo debe ser usado para registrar información sobre fuentes o detalles de ingresos de un individuo. Para este propósito use el arquetipo EVALUATION.income_summary.\r\n\r\nNo debe ser usado para registrar información sobre la ocupación de un individuo en un punto concreto de tiempo (por ejemplo, el 16 de Junio de 2014) o durante un periodo de tiempo relativo (por ejemplo 'durante los últimos 30 días'). Para este propósito use un arquetipo OBSERVATION adecuado.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att registrera detaljer om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.",
-          "keywords" : [ "sysselsättning", "arbetsgivare", "jobb", "ockupation", "arbete", "yrke", "arbetslös", "anställd", "arbetslöshet", "studerar", "anställda", "studerande", "sektor", "yrke", "volontär", "yrke", "handel", "arbetstagare", "volontär", "position" ],
-          "use" : "Används för att registrera information om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.\r\n\r\nOmfattningen av denna arketyp inkluderar alla yrken eller aktiviteter som utförs av en individ. Till exempel: ett betalt jobb eller anställning; obetalt arbete av vilken typ som helst som en volontärposition; eller roller som att gå i pension eller studera.\r\n\r\nFlera instanser av den här arketypen som skapats över tid kommer att resultera i en sammanställning av en historia av tidigare och nuvarande jobb och/eller roller.\r\n\r\nEn aktiv eller nuvarande ockupation kan antydas från ett 'Datum inleddes' men inget 'Datum upphört'.\r\n\r\nEn individ kan utföra många samtidiga yrken, var och en kan vara betald eller obetald. Varje yrke bör registreras i en separat instans av denna arketyp.\r\n\r\nOm yrkesattribut förändras väsentligt, till exempel roll / titel eller antal timmar, bör detta registreras som en separat instans av denna arketyp.\r\n\r\nDen här arketypen har utformats speciellt för att användas i 'Yrkesepisod' SLOT inom EVALUATION.occupation_summary arketyp, men kan också användas inom alla andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.\r\n\r\nDet kan finnas någon uppenbar eller verklig överlappning mellan dataelementen i denna arketyp och yrkes- / anställningsdetaljer som kan lagras som demografiska detaljer i kliniska eller administrativa system. Dessa dataelement har utformats specifikt för att stödja kliniska ändamål, inklusive generering av ett läkarintyg till en nuvarande arbetsgivare.",
-          "misuse" : "Inte utformad för att registrera tillfälliga ändringar eller avsnitt inom en enda yrkesregistrering, som att vara ledig. Detta är utom räckhåll för denna arketyp och bör ingå i en arbetsgivares HR-system.\r\n\r\nInte utformad för att användas till detaljerade beskrivningar av hälsorisker eller exponering för farliga ämnen på arbetsplatsen. Använd arketyperna EVALUATION.health_risk eller EVALUATION.exposure för detta ändamål.\r\n\r\nInte utformad för att registrera information om inkomstkällor eller inkomstuppgifter för individen. Använd arketypen EVALUATION.income_summary för detta ändamål.\r\n\r\nAnvänds inte för att registrera information om en persons ockupation vid en viss tidpunkt (till exempel den 16 juni 2014) eller under ett relativt tidsintervall (till exempel \"under de senaste 30 dagarna\". Använd en lämplig OBSERVATION arketyp för detta ändamål.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -3523,8 +3521,7 @@
         "de" : { },
         "fr" : { },
         "pt-br" : { },
-        "pt" : { },
-        "sv" : { }
+        "pt" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3640,20 +3637,6 @@
         "email" : "diebosto@veratech.es"
       },
       "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Therese Lindberg",
-        "organisation" : "Cambio CDS",
-        "email" : "therese.lindberg@cambio.se"
-      },
-      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -3767,10 +3750,6 @@
                     "value" : "Engaged"
                   }, {
                     "terminologyId" : "CMC-MaritalStatus",
-                    "code" : "R",
-                    "value" : "In a relationship"
-                  }, {
-                    "terminologyId" : "CMC-MaritalStatus",
                     "code" : "L",
                     "value" : "Living With Partner"
                   }, {
@@ -3808,20 +3787,20 @@
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0003.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-telecom_cc-001.v0",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
           "occurrences" : "0..1",
           "nodeId" : "at0002.2",
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-name_cc-002.v0",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "0..*",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-telecom_cc-001.v0",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -4433,6 +4412,899 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "97170741-1f53-41fb-b22d-84c04bcf0d17",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : {
+        "date" : "2022-03-15"
+      },
+      "otherContributors" : [ ],
+      "lifecycleState" : {
+        "codeString" : "unmanaged"
+      },
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+        "custodian_organisation" : "openEHR Foundation",
+        "original_namespace" : "org.openehr",
+        "original_publisher" : "openEHR Foundation",
+        "custodian_namespace" : "org.openehr",
+        "MD5-CAM-1.0.1" : "e052eaf094292235fb71b96dd336647b",
+        "PARENT:MD5-CAM-1.0.1" : "b176a7563435e97534bb9c57f4739f71"
+      },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.communication_capability-uk.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-communication_capability-uk-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0002.0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0015.1.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "name",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.0.44" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0021.0.4",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0.4.3",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "ac0.0.56" ],
+                          "selectedTerminologies" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_ARCHETYPE_ROOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0003.0.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ],
+                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-005.v1",
+                  "referenceType" : "archetypeOverlay"
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0015.1.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "name",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.0.36" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0021.0.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0.4.2",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "ac0.0.55" ],
+                          "selectedTerminologies" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_ARCHETYPE_ROOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0003.0.2",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ],
+                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-006.v1",
+                  "referenceType" : "archetypeOverlay"
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0015.1.3",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "name",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.0.53" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0021.0.5",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0.4.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "ac0.0.54" ],
+                          "selectedTerminologies" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_ARCHETYPE_ROOT",
+                  "rmTypeName" : "CLUSTER",
+                  "occurrences" : "0..1",
+                  "nodeId" : "at0003.0.3",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ],
+                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-007.v1",
+                  "referenceType" : "archetypeOverlay"
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0022.0.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "UCP-Communication-Aids"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "UCP-Communication-Aids" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "1",
+                        "value" : "Glasses"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "2",
+                        "value" : "Hearing aid"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "3",
+                        "value" : "Apps on mobile device"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "4",
+                        "value" : "Switches"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "5",
+                        "value" : "My Communication Passport"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "6",
+                        "value" : "Hearing Loop"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "7",
+                        "value" : "Pen and paper or white board"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "8",
+                        "value" : "Yes/No board"
+                      }, {
+                        "terminologyId" : "UCP-Communication-Aids",
+                        "code" : "9",
+                        "value" : "My personal communication book or device"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0009.0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0.1.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "CODE_PHRASE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "at0.2", "at0.3" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0005.0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-additional_communication_support-001.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0011",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0013.0.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000.1",
+      "termDefinitions" : {
+        "en" : {
+          "at0015.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "Preferred language",
+            "description" : "Preferred language and/or method of communication for an individual."
+          },
+          "at0015.1.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "Alternative language",
+            "description" : "Other language, and/or method of communication that could be used for an individual."
+          },
+          "ac0.0.36" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.36",
+            "description" : ""
+          },
+          "ac0.0.44" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.44",
+            "description" : ""
+          },
+          "at0015.1.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "Parental language",
+            "description" : "The preferred language or other method of communication of a parent or carer."
+          },
+          "ac0.0.53" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.53",
+            "description" : ""
+          },
+          "at0021.0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021.0.3",
+            "text" : "Other languages",
+            "description" : "Additional narrative about the specific language capability not captured in other fields."
+          },
+          "at0021.0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021.0.5",
+            "text" : "Parental language details",
+            "description" : "Additional narrative about the specific language capability not captured in other fields."
+          },
+          "at0009.0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009.0.1",
+            "text" : "Impact of stress on communication",
+            "description" : "Additional overall narrative about the communication capability of an individual not captured in other fields."
+          },
+          "ac0.0.54" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.54",
+            "description" : ""
+          },
+          "ac0.0.55" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.55",
+            "description" : ""
+          },
+          "ac0.0.56" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.0.56",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0015.1.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "Foretrukket språk",
+            "description" : "Individets foretrukne språk og kommunikasjonsmetode."
+          },
+          "at0015.1.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "Alternativt språk",
+            "description" : "Individets alternative språk og/eller kommunikasjonsmetoder."
+          },
+          "ac0.0.36" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.36",
+            "description" : ""
+          },
+          "ac0.0.44" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.44",
+            "description" : ""
+          },
+          "at0015.1.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0015.1.1",
+            "text" : "*Parental language (en)",
+            "description" : "*The preferred language or other method of communication of a parent or carer. (en)"
+          },
+          "ac0.0.53" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.53",
+            "description" : ""
+          },
+          "ac0.0.54" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.54",
+            "description" : ""
+          },
+          "ac0.0.55" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.55",
+            "description" : ""
+          },
+          "ac0.0.56" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.0.56",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.1",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.2",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.3",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.4",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.5",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.6",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.7",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.8",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.9",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.10" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.10",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.11" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.11",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.12" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.12",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.13" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.13",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.14",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.15" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.15",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.16" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.16",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.17" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.17",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.18",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.19" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.19",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.20" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.20",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.21" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.21",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.22" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.22",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.23" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.23",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.24" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.24",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.25",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.26" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.26",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.27" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.27",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.28",
+          "members" : [ "at0019", "at0020", "at0.7" ]
+        },
+        "ac0.0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.29",
+          "members" : [ "at0019", "at0020", "at0.7" ]
+        },
+        "ac0.0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.30",
+          "members" : [ "at0019", "at0020", "at0.7" ]
+        },
+        "ac0.0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.31",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.32",
+          "members" : [ "at0019", "at0020" ]
+        },
+        "ac0.0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.33",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.34",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.35",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.36",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.37",
+          "members" : [ "at0019", "at0.7" ]
+        },
+        "ac0.0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.38",
+          "members" : [ "at0019", "at0.7" ]
+        },
+        "ac0.0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.39",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.40",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.41",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.42",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.43",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.44",
+          "members" : [ "at0019" ]
+        },
+        "ac0.0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.45",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.46" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.46",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.47" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.47",
+          "members" : [ "at0020" ]
+        },
+        "ac0.0.48" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.48",
+          "members" : [ "at0020", "at0.7" ]
+        },
+        "ac0.0.49" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.49",
+          "members" : [ "at0020", "at0.7" ]
+        },
+        "ac0.0.50" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.50",
+          "members" : [ "at0.7" ]
+        },
+        "ac0.0.51" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.51",
+          "members" : [ "at0.7" ]
+        },
+        "ac0.0.52" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.52",
+          "members" : [ "at0.7" ]
+        },
+        "ac0.0.53" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.53",
+          "members" : [ "at0.7" ]
+        },
+        "ac0.0.54" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.54",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.55" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.55",
+          "members" : [ "at0.5", "at0.6" ]
+        },
+        "ac0.0.56" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.0.56",
+          "members" : [ "at0.5", "at0.6" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "e996134c-76f8-35b8-900f-31f5b92fde02",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "6f4c3f44-aaed-455b-bc65-716f325ba32d",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -4503,7 +5375,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.6" ],
+                  "constraint" : [ "ac0.8" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -4593,10 +5465,10 @@
             "text" : "Preferred name",
             "description" : "Name details aligned with FHIR resource."
           },
-          "ac0.6" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.6",
+            "code" : "ac0.8",
             "description" : ""
           }
         }
@@ -4633,6 +5505,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.6",
           "members" : [ "at0005" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0002", "at0005" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0002" ]
         }
       }
     },
@@ -4880,6 +5762,357 @@
       "codeString" : "en"
     },
     "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "804da343-cee0-4779-87f0-12f32eedf6e4",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "75F0FE57A0A92ECC8129254AAAE50E4F"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen, die normalerweise durch die Person selbst identifiziert werden.",
+          "keywords" : [ "Ethnizität", "Kultur", "Sprache", "Rasse", "Stamm", "Zugehörigkeit", "Glauben", "Verwandtschaft", "Identität", "Clan", "Gruppe", "Staatsangehörigkeit", "Staatsbürgerschaft", "Nation", "politisch" ],
+          "use" : "Wird verwendet, um die Zugehörigkeit, Verwandtschaft oder Verbindung einer Person zu einer oder mehreren Personengruppen darzustellen, die normalerweise selbst identifiziert werden.\r\n\r\nEthnizität ist ein Konzept, das häufig uneinheitlich verwendet wird, sodass vorhandene oder ältere Daten inhaltlich sehr unterschiedlich sein können, einschließlich, aber nicht beschränkt auf:\r\n- Eine lange gemeinsame Geschichte (schriftlich oder mündlich);\r\n- Eine kulturelle Tradition, einschließlich familiärer, sozialer und religiöser Bräuche;\r\n- Ein gemeinsamer geografischer Ursprung;\r\n- Eine gemeinsame Sprache oder\r\n- Eine Minderheit oder eigenständige Gruppe innerhalb des lokalen Gemeindekontexts.\r\n\r\nBei der Gestaltung dieses Archetyps wurde die Struktur bewusst einfach gehalten, um alle Anforderungen an die Repräsentation von Ethnizität zu unterstützen. Wenn das Verständnis für ethnische Zugehörigkeit und angemessene Wertesätze identifiziert und vereinbart wird, kann dieser Archetyp wachsen, um die sich entwickelnde Klarheit der Anforderungen zu unterstützen. Das Datenelement „Ethnizität“ ermöglicht Mehrfachvorkommen, sodass mehr als eine ethnische und kulturelle Identität für die Person aus einem einzigen Wertesatz erfasst werden kann, und dass auch mehr als eine Darstellung von „Ethnizität“ erfasst werden kann, z. B. explizite Erfassung First People-Status.\r\n\r\nDas Datenelement „Herkunft“ wurde ebenfalls aufgenommen, um die Bewertung des Gesundheitsrisikos in Bezug auf die Familiengeschichte und Erbkrankheiten zu unterstützen, wie z. B. genetische Variationen, die das Risiko für Morbus Crohn bei aschkenasischen Juden erhöhen.\r\n\r\nDas Ausmaß der Überschneidung zwischen „Ethnizität“ und „Herkunft“ kann von Person zu Person sehr unterschiedlich sein, aber die Aufteilung in einzelne Datenelemente ermöglicht eine angemessene Verwendung im klinischen Kontext zur Entscheidungsunterstützung und Bereitstellung von Gesundheitsleistungen.\r\n\r\nDieser Archetyp wurde so konzipiert, dass er als einzelne Instanz in einer Gesundheitsakte aufgezeichnet und im Laufe der Zeit als neue Version beibehalten, aktualisiert und überarbeitet werden kann.\r\n\r\nEthnizität wird oft als Bestandteil einer demografischen Aufzeichnung einer Person angesehen, wurde jedoch innerhalb dieses klinischen Archetyps für Situationen dargestellt, in denen sie in einer klinischen Datensammlung dargestellt werden muss oder beispielsweise zur Unterstützung einer kultursensiblen und angemessenen Gesundheitsversorgung erforderlich ist in Gemeinschaften der First Nations.\r\n\r\nDas Konzept der Kategorisierung nach Rasse oder Hautfarbe ist umstritten. An einigen Stellen mag der Begriff „Rasse“ als akzeptabel und austauschbar mit „Ethnizität“ angesehen werden, an anderen ist er jedoch illegal. Um zur Verwirrung beizutragen, enthalten viele Wertesätze für ethnische Zugehörigkeit auch Werte, die körperliche Merkmale wie Hautfarbe oder geografische Herkunft beschreiben. Das Konzept „Rasse“ kann manchmal als unbeholfener Proxy zur Identifizierung von Risikofaktoren im Zusammenhang mit sozialen Determinanten der Gesundheit (SDOH) verwendet werden, es wird jedoch dringend empfohlen, Archetypen zu verwenden, die SDOH-Konzepte für eine genauere Datenerfassung darstellen.",
+          "misuse" : "Darf nicht verwendet werden, um das „Geburtsland“ einer Person darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geburtsland“ innerhalb des Archetyps EVALUATION.birth_details.\r\n\r\nNicht zur Darstellung einer Religionszugehörigkeit verwenden. Verwenden Sie dazu den Archetyp CLUSTER.religion.\r\n\r\nDarf nicht verwendet werden, um das selbst identifizierte Geschlecht darzustellen. Verwenden Sie zu diesem Zweck das Datenelement „Geschlechtsidentität“ innerhalb des Archetyps EVALUATION.gender.\r\n\r\nNicht zur Darstellung von Sprachanforderungen für Übersetzungszwecke verwenden. Verwenden Sie dazu die CLUSTER.language.\r\n\r\nDarf nicht verwendet werden, um formelle Aufzeichnungen über den ethnischen Hintergrund darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.",
+          "keywords" : [ "etnisitet", "kultur", "språk", "nasjon", "stamme", "rase", "tilknytning", "tro", "slektskap", "nasjonalitet", "statsborgerskap", "identitet", "klan", "gruppe" ],
+          "use" : "Bruk for å registrere et individs selvopplevde og vanligvis selvrapporterte tilknytning, likhet eller forbindelse med en eller flere grupperinger av mennesker.\r\n\r\nEtnisitet er et konsept som ofte brukes inkonsekvent, som gjør at eksisterende eller historiske data kan variere voldsomt i innhold. Dette inkluderer, men er ikke begrenset til:\r\n\r\n- Langvarig og delt historie (muntlig eller skriftlig)\r\n- Kulturelle tradisjoner, inkludert familiære, sosiale og religiøse skikker\r\n- Delt geografisk opphav\r\n- Felles språk\r\n- En minoritet eller særskilt gruppe innenfor lokalsamfunnet\r\n\r\nI utarbeidelsen av denne arketypen har strukturen bevisst blitt laget enkel, for å kunne støtte hvilket som helst krav for å representere etnisitet. Når det er en allmenn og omforent forståelse av etnisitet og tilhørende verdisett, kan denne arketypen utvides for å dekke de kravene som utkrystalliserer seg. Dataelementet \"Etnisitet\" er åpen for å kunne repeteres, slik at mer enn én etnisk og kulturell identitet kan lagres, enten i form av et flervalg i et verdisett, eller ved at flere forekomster av \"Etnisitet\" blir registrert. For eksempel hvis man skal registrere eksplisitt tilhørighet til en urbefolkningsgruppe.\r\n\r\nDataelementet \"Opphav\" er også lagt til, for å legge til rette for å registrere tilhørighet til grupper som kan ha familiær og arvelig sykdom, slik som genetiske variasjoner som øker sannsynligheten for Crohns sykdom hos askenasiske jøder.\r\n\r\nAndel av overlapp mellom \"Etnisitet\" og \"Avstamning\" kan variere veldig mellom individer, men å separere disse to til distinkte dataelementer vil øke muligheten til å bruke dem til beslutningsstøtte og tilpasning av helsetjenester på en god måte.\r\n\r\nArketypen er utformet for å kunne fungere som en enkeltstående forekomst i en pasientjournal og som blir oppdatert som en ny versjon når den blir revidert.\r\n\r\nEtnisitet er ofte ansett som en del av de demografiske oppføringene i en journal. Likevel er etnisitet tatt inn som del av denne kliniske arketypen i de tilfellene en trenger å samle data som kan støtte kulturelt tilpasset og hensiktsmessige helsetjenester, for eksempel for urbefolkningsgrupper.\r\n\r\nKonseptet med kategorisering etter rase eller hudfarge er kontroversielt. Noen steder kan begrepet \"rase\" være akseptabelt og anses å være synonymt med \"etnisitet\", mens det er ulovlig andre steder. Noe som øker forvirring er at mange verdisett for etnisitet også inneholder verdier som beskriver fysiske karaktertrekk som hudfarge eller geografisk opprinnelse. \"Rase\" også er i noen myndighetsområder brukt som et klossete stedfortredende begrep for sosiale determinanter for helse. Vi anbefaler imidlertid sterkt å bruke arketyper som er laget spesielt for sosiale determinanter for helse for å få mer presis datafangst.",
+          "misuse" : "Skal ikke brukes for å registrere fødeland til et individ. Bruk elementet \"Country of birth\" i arketypen EVALUATION.birth_details til dette.\r\n\r\nSkal ikke brukes for å registrere religiøs tilknytning. Bruk arketypen CLUSTER.religion (Livssyn) til dette.\r\n\r\nSkal ikke brukes for å registrere den selvopplevde kjønnsidentiteten til et individ. Bruk elementet \"Kjønnsidentitet\" i arketypen EVALUATION.gender til dette.\r\n\r\nSkal ikke brukes for å registrere individets språk i forbindelse med behov for tolking. Bruk arketypen CLUSTER.language til dette.\r\n\r\nSkal ikke brukes for å representere eller erstatte formelle registreringer av etnisk bakgrunn eller for å vedlikeholde et offisielt demografisk register eller indeks. Bruk en formell Master Pasient Indeks for dette, eller arketyper som er basert på openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.",
+          "keywords" : [ "ethnicity", "culture", "language", "race", "tribe", "affiliation", "belief", "kinship", "identity", "clan", "group", "nationality", "citizenship", "nation", "political" ],
+          "use" : "Use to record the affiliation, kinship or connection of an individual with one or more groupings of people, usually self-identified.\r\n\r\nEthnicity is a concept that is frequently used inconsistently, such that existing or legacy data may be quite varied in content, including but not limited to:\r\n- A long-shared history (written or oral);\r\n- A cultural tradition, including family, social and religious customs;\r\n- A common geographic origin;\r\n- A common language; or\r\n- A minority or distinct group within the local community context.\r\n\r\nIn designing this archetype, the structure has deliberately been kept simple, to support any and all requirements for representing ethnicity. As the understanding around ethnicity and appropriate value sets are identified and agreed upon, this archetype may grow to support evolving clarity of requirements. The data element 'Ethnicity' allows multiple occurrences so that more than one ethnic and cultural identity to be recorded for the individual from a single value set, and also so that more than one representation of 'Ethnicity' can be recorded, for example explicitly recording First People status.\r\n\r\nThe 'Ancestry' data element has also been included to support health risk assessment related to family history and inherited disease, such as a genetic variations that increase the risk of Crohn's disease in Ashkenazi Jews. \r\n\r\nThe amount of overlap between 'Ethnicity' and 'Ancestry may vary enormously between individuals, but separating each into distinct data elements will allow appropriate usage within the clinical context for decision support and provision of healthcare.\r\n\r\nThis archetype has been designed to be recorded as a single instance within a health record, persisted, updated and revised over time as a new version.\r\n\r\nEthnicity is often considered as a component of a demographic record for an individual however it has been represented within this clinical archetype for situations when it needs to be represented in a clinical data collection or is required to support culturally sensitive and appropriate healthcare delivery, for example in First Nations communities.\r\n\r\nThe concept of categorisation by race or skin colour is controversial. In some places, the term 'race' may be considered acceptable and interchangeable with 'ethnicity', yet is illegal in others. Contributing to the confusion, many value sets for ethnicity also contain values that describe physical characteristics such as skin colour or geographical origin. The concept of 'Race' may sometimes be used as a clumsy proxy for identifying risk factors related to social determinants of health (SDOH), however it is strongly recommended that archetypes that represent SDOH concepts be used for more accurate data capture.",
+          "misuse" : "Not to be used to represent the 'Country of birth' of an individual. Use the 'Country of birth' data element within the EVALUATION.birth_details archetype for this purpose.\r\n\r\nNot to be used to record a religious affiliation. Use the CLUSTER.religion archetype for this purpose.\r\n\r\nNot to be used to record self-identified gender. Use the 'Gender identity' data element within the EVALUATION.gender archetype for this purpose. \r\n\r\nNot to be used to record language requirements for translation purposes. Use the CLUSTER.language for this purpose.\r\n\r\nNot to be used to represent or replace formal records of ethnic background or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index for this purpose, or archetypes based on the openEHR Demographic Information Model.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.ethnicity.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-ethnicity-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "CMC-Ethnicity"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "CMC-Ethnicity" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "P",
+                        "value" : "Any other black background"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "K",
+                        "value" : "Asian or Asian British Bangladeshi"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "H",
+                        "value" : "Asian or Asian British Indian"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "J",
+                        "value" : "Asian or Asian British Pakistani"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "N",
+                        "value" : "Black or Black British African"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "M",
+                        "value" : "Black or Black British Caribbean"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "R",
+                        "value" : "Chinese"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "G",
+                        "value" : "Mixed Other"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "F",
+                        "value" : "Mixed White & Asian"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "E",
+                        "value" : "Mixed White & Black African"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "D",
+                        "value" : "Mixed White & Black Caribbean"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "Z2",
+                        "value" : "Not Divulged"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "Z3",
+                        "value" : "Not Known"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "Z",
+                        "value" : "Not Stated"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "L",
+                        "value" : "Other Asian"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "E2",
+                        "value" : "Other Ethnic Groups"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "C5",
+                        "value" : "Sikh"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "A",
+                        "value" : "White British"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "Y",
+                        "value" : "White European"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "B",
+                        "value" : "White Irish"
+                      }, {
+                        "terminologyId" : "CMC-Ethnicity",
+                        "code" : "C",
+                        "value" : "White Other"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0003.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0004.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0010.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0005.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0009.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-religion-002.v1",
+              "referenceType" : "archetypeOverlay"
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0006",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0008.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Cultural and ethnic identity V1",
+            "description" : "Affiliation, kinship or connection with one or more groupings of people, according to common origins or background."
+          },
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.2",
+            "text" : "Other cultural identity",
+            "description" : "Name of the ethnic or cultural grouping with whom the individual identifies an affiliation, kinship or connection.",
+            "comment" : "For example: Australian; Torres Strait Islander; Maori; Roma Gypsy; Sikh, or Greek.\r\nCoding with a terminology is preferred, where possible - for example ABS 1249.0 - Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), 2019. The occurrences for this data element is set to multiple occurences to allow for more than one social grouping to be selected."
+          }
+        },
+        "nb" : {
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Etnisitet (2)",
+            "description" : "Navn på den etnisiteten eller kulturell gruppe som individet angir som tilknytning eller likhet med.",
+            "comment" : "For eksempel \"Australsk\", \"Maori\", \"Rom\", \"Sikh\", \"Skandinavisk\". \r\nDet anbefales å kode etnisitet med en terminologi, dersom mulig. For eksempel: ABS 1249.0 - Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), 2019, eller https://volven.no/produkt.asp?id=456538&catID=3&subID=8. Forekomsten av dette dataelementet er satt til repeterende, for å tillate at flere enn en etnisitet kan bli valgt."
+          }
+        },
+        "de" : {
+          "at0003.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Ethnizität (2)",
+            "description" : "Name der ethnischen oder kulturellen Gruppierung, mit der die Person eine Zugehörigkeit, Verwandtschaft oder Verbindung identifiziert.",
+            "comment" : "Zum Beispiel: Australier, Torres-Strait-Insulaner, Maori, Roma-Zigeuner, Sikh, Grieche.\r\nWenn möglich, wird die Kodierung mit einer Terminologie bevorzugt – zum Beispiel ABS 1249.0 – Australian Standard Classification of Cultural and Ethnic Groups (ASCCEG), 2019. Die Kardinalität für dieses Datenelement ist auf mehrfache Vorkommen eingestellt, um die Auswahl von mehr als eine soziale Gruppierung zu ermöglichen."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d2cfb346-5c18-4cd1-8b0b-95326d3c9815",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Vebjørn Arntzen",
+        "organisation" : "Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "15521c2c-3377-4de6-9c07-84a04b0dad72",
@@ -5218,6 +6451,170 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4d2e4122-27db-44ad-bf47-b6e023cc28bc",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "b6365962dad1af1ebda85198a01c3566"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "A place to record narrative text about a person's important information for their care,",
+          "keywords" : [ ],
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.about_me.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-about_me-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0004.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0002.1",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "nodeId" : "at0004.2",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0002.2",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0005",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Goals and support",
+            "description" : "About me"
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Goals",
+            "description" : ""
+          },
+          "at0004.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.2",
+            "text" : "Additional support",
+            "description" : ""
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Goals",
+            "description" : "Narrative supplied by the patient about the topic."
+          },
+          "at0002.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.2",
+            "text" : "Additional support",
+            "description" : "Narrative supplied by the patient about the topic."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "7d297b96-cd1e-4eb6-975b-b9b400882b27",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "7883f639-e287-4600-afba-e52c54aa68ab",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -5347,98 +6744,6 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "aa79c183-22c3-4969-adf5-c9112fe2e1bf",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "4DD4327B2A07666ACC92DBB0FDE0B2EC"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "For the recording of organisation details aligned with corresponding FHIR resource.",
-          "keywords" : [ ],
-          "use" : "Use to record organisation details aligned with the corresponding FHIR resources.\r\n\r\nThe slots for telecoms, address and contact should be filled with the appropriate FHIR resource-aligned clusters.\r\n\r\nThis cluster archetype is intended to be used inside FHIR resource aligned archetypes such as CLUSTER.fhir_contact.v0 and CLUSTER.fhir_practitioner.v0.",
-          "copyright" : "© Apperta Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_cc.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0010.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0011.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0013.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "f520ff83-5512-4d8e-b00d-1716f3f1ef43",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "51a4dcad-7b22-43cf-9f50-a10175e9fcfc",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -5518,7 +6823,7 @@
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-language-001.v1"
+      "value" : "openEHR-EHR-CLUSTER.ovl-language-005.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -6681,7 +7986,7 @@
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-language-002.v1"
+      "value" : "openEHR-EHR-CLUSTER.ovl-language-006.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -7843,7 +9148,7 @@
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-language-003.v1"
+      "value" : "openEHR-EHR-CLUSTER.ovl-language-007.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -8920,6 +10225,527 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "204148aa-b099-4c65-b34c-01cdb45b11c1",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "24F9269BA97E8326019D7D780C318873"
+      },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et individs livssyn og/eller religiøs eller ikke-religiøs praksis som kan ha betydning for utføring av helsetjenester eller andre tjenester.",
+          "keywords" : [ "religion", "åndelig", "tro", "religiøs", "ateisme", "ateist", "agnostisisme", "agnostiker", "holdning", "hellig", "profan", "sekulær", "verdisyn", "overbevisning", "humanisme" ],
+          "use" : "Brukes for å registrere et individs livssyn og/eller religiøs eller ikke-religiøs praksis og en overordnet beskrivelse om hvordan livssynet kan ha betydning for utføringen av helsetjenester eller andre tjenester. \r\n\r\nBrukes denne arketypen i et EPJ som benytter seg av et sentralt demografiregister, kan relevante demografiske data fra registeret benyttes for å populere dataelementer i denne arketypen. \r\n\r\nArketypen er ment brukt i arketypen EVALUATION.social_summary (Sosialanamnese) eller i andre relevante arketyper.\r\n\r\nHar man behov for å registrere livssynet til noen andre enn individet som dokumentasjonen omhandler, for eksempel individets foreldre, settes begrensinger på referansemodellelementet \"Subject\" for å spesifisere rollen.",
+          "misuse" : "Brukes ikke for å registrere pasientens behandlingsønsker som kan være knyttet til et livssyn, særlig de som kan benyttes ved beslutningsstøtte. For eksempel skal ønsker knyttet til ernæring registreres i arketyper som omhandler ernæringsbehov. Behandlingsønsker registreres i arketyper som omhandler pasientens behandlingsønsker.",
+          "copyright" : "*© Nasjonal IKT HF, openEHR Foundation (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the identification of the individual's religious or non-religious beliefs and/or practices which may be used for purposes related to provision of healthcare or other services.",
+          "keywords" : [ "religion", "spiritual", "belief", "religious", "atheism", "agnosticism", "attitude", "sacred", "profane", "secular", "atheist", "agnostic", "faith", "creed", "practice" ],
+          "use" : "Use to record the identification of the individual's religious or non-religious beliefs and/or practices and a general description about the impact of the individual's identified religious affiliation on the delivery of health services.\r\n\r\nIf this archetype is being used within a health record context where a demographic server is deployed, then the relevant demographic data may be used to populate the data elements in this archetype.\r\n\r\nThis archetype has been designed to be used within the EVALUATION.social_summary or other archetypes where clinically relevant.\r\n\r\nIf the religion of someone other than the subject of care, such as their parents, needs to be recorded, restrict the \"Subject\" reference model element to specify the role.",
+          "misuse" : "Not to be used to record the specific preferences for care that may be related to a religious affiliation, especially those that might drive decision support. For example, record a dietary preference within archetypes recording diet requirements or a treatment preference within archetypes recording patient preferences.",
+          "copyright" : "© Nasjonal IKT HF, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.religion.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-religion-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "CMC-Religion"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "CMC-Religion" ],
+                  "limitToList" : false,
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "1",
+                    "value" : "Agnostic"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "2",
+                    "value" : "Anglican"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "3",
+                    "value" : "Arcane School"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "4",
+                    "value" : "Arminianist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "5",
+                    "value" : "Atheist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "6",
+                    "value" : "Babis"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "7",
+                    "value" : "Baptist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "8",
+                    "value" : "Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "9",
+                    "value" : "Calvinist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "10",
+                    "value" : "Catholic"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "11",
+                    "value" : "Centra Asian Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "12",
+                    "value" : "Chinese Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "13",
+                    "value" : "Christadelphian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "14",
+                    "value" : "Christian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "15",
+                    "value" : "Christian Scientist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "16",
+                    "value" : "Church of England"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "17",
+                    "value" : "Church of Ireland"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "18",
+                    "value" : "Church of Scotland"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "19",
+                    "value" : "Confucian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "20",
+                    "value" : "Conservative Jewish"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "21",
+                    "value" : "Druze"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "22",
+                    "value" : "Eckankar"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "23",
+                    "value" : "Eminist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "24",
+                    "value" : "Evangelist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "GCO",
+                    "value" : "Greek Orthodox"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "25",
+                    "value" : "Hindu"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "71",
+                    "value" : "Humanist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "26",
+                    "value" : "Ismailis"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "27",
+                    "value" : "Japanese Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "Jedi",
+                    "value" : "Jedi Knight"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "28",
+                    "value" : "Jehovahs Witness"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "29",
+                    "value" : "Jewish"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "30",
+                    "value" : "Liberal Jewish"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "31",
+                    "value" : "Liberal Protestant"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "32",
+                    "value" : "Mahayana Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "33",
+                    "value" : "Methodist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "34",
+                    "value" : "Mixed Religion"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "MORM",
+                    "value" : "Mormon"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "35",
+                    "value" : "Muslim"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "36",
+                    "value" : "Nonconformist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "37",
+                    "value" : "None"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "38",
+                    "value" : "Orthodox Christian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "39",
+                    "value" : "Pentecostalist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "40",
+                    "value" : "Pietist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "41",
+                    "value" : "Plymouth Brethren"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "42",
+                    "value" : "Presbyterian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "43",
+                    "value" : "Primal Society"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "44",
+                    "value" : "Protestant"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "45",
+                    "value" : "Quaker"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "46",
+                    "value" : "Rastafarian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "47",
+                    "value" : "Reconstructionist Jewish"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "48",
+                    "value" : "Religion Withheld"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "50",
+                    "value" : "Roman Catholic"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "RO",
+                    "value" : "Russian Orthodox"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "52",
+                    "value" : "Safardi Jewish"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "51",
+                    "value" : "Scottish Protestant"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "53",
+                    "value" : "Seventh Day Adventist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "54",
+                    "value" : "Shiite Muslim"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "55",
+                    "value" : "Sikh"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "56",
+                    "value" : "Sinhalese Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "57",
+                    "value" : "Society of Friends"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "58",
+                    "value" : "South East Asia Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "66",
+                    "value" : "Spiritualist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "59",
+                    "value" : "Sufi Muslim"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "60",
+                    "value" : "Sunni Muslim"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "61",
+                    "value" : "Theravada Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "62",
+                    "value" : "Tibetan Buddhist"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "63",
+                    "value" : "Unitarian"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "64",
+                    "value" : "United Reform Church"
+                  }, {
+                    "terminologyId" : "CMC-Religion",
+                    "code" : "65",
+                    "value" : "Western Buddhist"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0003.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "a8e84a14-c94f-4443-b660-03aaf0d07d17",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand, Silje Ljosland Bakke, Vebjørn Arntzen, Kristian Berg",
+        "organisation" : "Helse Bergen HF, Nasjonal IKT HF, Oslo universitetssykehus HF",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "aa79c183-22c3-4969-adf5-c9112fe2e1bf",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "4DD4327B2A07666ACC92DBB0FDE0B2EC"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of organisation details aligned with corresponding FHIR resource.",
+          "keywords" : [ ],
+          "use" : "Use to record organisation details aligned with the corresponding FHIR resources.\r\n\r\nThe slots for telecoms, address and contact should be filled with the appropriate FHIR resource-aligned clusters.\r\n\r\nThis cluster archetype is intended to be used inside FHIR resource aligned archetypes such as CLUSTER.fhir_contact.v0 and CLUSTER.fhir_practitioner.v0.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_cc.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-organisation_cc-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0011.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0013.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "f520ff83-5512-4d8e-b00d-1716f3f1ef43",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "4880cb27-afe7-450c-9037-72e16cf3e012",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -9397,899 +11223,6 @@
       "codeString" : "en"
     },
     "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "97170741-1f53-41fb-b22d-84c04bcf0d17",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : {
-        "date" : "2023-11-28"
-      },
-      "otherContributors" : [ ],
-      "lifecycleState" : {
-        "codeString" : "unmanaged"
-      },
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-        "custodian_organisation" : "openEHR Foundation",
-        "original_namespace" : "org.openehr",
-        "original_publisher" : "openEHR Foundation",
-        "custodian_namespace" : "org.openehr",
-        "MD5-CAM-1.0.1" : "77fdbcbe63246f8064e695598bba8352",
-        "PARENT:MD5-CAM-1.0.1" : "b176a7563435e97534bb9c57f4739f71"
-      },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.communication_capability-uk.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-communication_capability-uk-002.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0002.0.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0015.1.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "name",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.0.44" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "occurrences" : "0..0",
-                  "nodeId" : "at0021.0.4",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0.4.3",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "1..1",
-                          "terminologyId" : {
-                            "value" : "local"
-                          },
-                          "constraint" : [ "ac0.0.56" ],
-                          "selectedTerminologies" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0003.0.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-001.v1",
-                  "referenceType" : "archetypeOverlay"
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "nodeId" : "at0015.1.2",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "name",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.0.36" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0021.0.3",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0.4.2",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "1..1",
-                          "terminologyId" : {
-                            "value" : "local"
-                          },
-                          "constraint" : [ "ac0.0.55" ],
-                          "selectedTerminologies" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0003.0.2",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-002.v1",
-                  "referenceType" : "archetypeOverlay"
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0015.1.3",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "name",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "ac0.0.53" ],
-                      "selectedTerminologies" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0021.0.5",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0.4.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "1..1",
-                          "terminologyId" : {
-                            "value" : "local"
-                          },
-                          "constraint" : [ "ac0.0.54" ],
-                          "selectedTerminologies" : [ ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_ARCHETYPE_ROOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0003.0.3",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-language-003.v1",
-                  "referenceType" : "archetypeOverlay"
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0022.0.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "UCP-Communication-Aids"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "UCP-Communication-Aids" ],
-                      "limitToList" : false,
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "1",
-                        "value" : "Glasses"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "2",
-                        "value" : "Hearing aid"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "3",
-                        "value" : "Apps on mobile device"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "4",
-                        "value" : "Switches"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "5",
-                        "value" : "My Communication Passport"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "6",
-                        "value" : "Hearing Loop"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "7",
-                        "value" : "Pen and paper or white board"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "8",
-                        "value" : "Yes/No board"
-                      }, {
-                        "terminologyId" : "UCP-Communication-Aids",
-                        "code" : "9",
-                        "value" : "My personal communication book or device"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0009.0.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0.1.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "local"
-                      },
-                      "constraint" : [ "at0.2", "at0.3" ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0005.0.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-additional_communication_support-001.v1",
-              "referenceType" : "archetypeOverlay"
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0011",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0013.0.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000.1",
-      "termDefinitions" : {
-        "en" : {
-          "at0015.1.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "Preferred language",
-            "description" : "Preferred language and/or method of communication for an individual."
-          },
-          "at0015.1.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "Alternative language",
-            "description" : "Other language, and/or method of communication that could be used for an individual."
-          },
-          "ac0.0.36" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.36",
-            "description" : ""
-          },
-          "ac0.0.44" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.44",
-            "description" : ""
-          },
-          "at0015.1.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "Parental language",
-            "description" : "The preferred language or other method of communication of a parent or carer."
-          },
-          "ac0.0.53" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.53",
-            "description" : ""
-          },
-          "at0021.0.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.0.3",
-            "text" : "Other languages",
-            "description" : "Additional narrative about the specific language capability not captured in other fields."
-          },
-          "at0021.0.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.0.5",
-            "text" : "Parental language details",
-            "description" : "Additional narrative about the specific language capability not captured in other fields."
-          },
-          "at0009.0.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009.0.1",
-            "text" : "Impact of stress on communication",
-            "description" : "Additional overall narrative about the communication capability of an individual not captured in other fields."
-          },
-          "ac0.0.54" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.54",
-            "description" : ""
-          },
-          "ac0.0.55" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.55",
-            "description" : ""
-          },
-          "ac0.0.56" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.0.56",
-            "description" : ""
-          }
-        },
-        "nb" : {
-          "at0015.1.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "Foretrukket språk",
-            "description" : "Individets foretrukne språk og kommunikasjonsmetode."
-          },
-          "at0015.1.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "Alternativt språk",
-            "description" : "Individets alternative språk og/eller kommunikasjonsmetoder."
-          },
-          "ac0.0.36" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.36",
-            "description" : ""
-          },
-          "ac0.0.44" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.44",
-            "description" : ""
-          },
-          "at0015.1.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1.1",
-            "text" : "*Parental language (en)",
-            "description" : "*The preferred language or other method of communication of a parent or carer. (en)"
-          },
-          "ac0.0.53" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.53",
-            "description" : ""
-          },
-          "ac0.0.54" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.54",
-            "description" : ""
-          },
-          "ac0.0.55" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.55",
-            "description" : ""
-          },
-          "ac0.0.56" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.0.56",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : {
-        "ac0.0.1" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.1",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.2" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.2",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.3" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.3",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.4" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.4",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.5" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.5",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.6" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.6",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.7" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.7",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.8" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.8",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.9" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.9",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.10" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.10",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.11" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.11",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.12" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.12",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.13" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.13",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.14" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.14",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.15" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.15",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.16" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.16",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.17" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.17",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.18" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.18",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.19" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.19",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.20" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.20",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.21" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.21",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.22" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.22",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.23" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.23",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.24" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.24",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.25" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.25",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.26" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.26",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.27" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.27",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.28" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.28",
-          "members" : [ "at0019", "at0020", "at0.7" ]
-        },
-        "ac0.0.29" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.29",
-          "members" : [ "at0019", "at0020", "at0.7" ]
-        },
-        "ac0.0.30" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.30",
-          "members" : [ "at0019", "at0020", "at0.7" ]
-        },
-        "ac0.0.31" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.31",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.32" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.32",
-          "members" : [ "at0019", "at0020" ]
-        },
-        "ac0.0.33" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.33",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.34" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.34",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.35" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.35",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.36" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.36",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.37" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.37",
-          "members" : [ "at0019", "at0.7" ]
-        },
-        "ac0.0.38" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.38",
-          "members" : [ "at0019", "at0.7" ]
-        },
-        "ac0.0.39" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.39",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.40" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.40",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.41" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.41",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.42" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.42",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.43" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.43",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.44" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.44",
-          "members" : [ "at0019" ]
-        },
-        "ac0.0.45" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.45",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.46" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.46",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.47" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.47",
-          "members" : [ "at0020" ]
-        },
-        "ac0.0.48" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.48",
-          "members" : [ "at0020", "at0.7" ]
-        },
-        "ac0.0.49" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.49",
-          "members" : [ "at0020", "at0.7" ]
-        },
-        "ac0.0.50" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.50",
-          "members" : [ "at0.7" ]
-        },
-        "ac0.0.51" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.51",
-          "members" : [ "at0.7" ]
-        },
-        "ac0.0.52" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.52",
-          "members" : [ "at0.7" ]
-        },
-        "ac0.0.53" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.53",
-          "members" : [ "at0.7" ]
-        },
-        "ac0.0.54" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.54",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.55" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.55",
-          "members" : [ "at0.5", "at0.6" ]
-        },
-        "ac0.0.56" : {
-          "@type" : "VALUE_SET",
-          "id" : "ac0.0.56",
-          "members" : [ "at0.5", "at0.6" ]
-        }
-      }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "e996134c-76f8-35b8-900f-31f5b92fde02",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : { },
-      "otherDetails" : { }
-    } ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
