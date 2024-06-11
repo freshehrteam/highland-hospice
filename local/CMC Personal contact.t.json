@@ -8,19 +8,19 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "unmanaged"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
       "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-      "custodian_organisation" : "One London UCP",
-      "original_namespace" : "org.onelondon.ucp",
-      "original_publisher" : "One London UCP",
-      "custodian_namespace" : "org.onelondon.ucp",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
       "MD5-CAM-1.0.1" : "7961e05277f41cbecf84dda6bf602094",
-      "sem_ver" : "1.6.0",
+      "sem_ver" : "1.5.0",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "fc97777fee48889620dd0d66030cf22d"
     },
@@ -421,7 +421,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "e5f5a4fe-7fbb-3ed9-99b6-6fe3f4b6d509",
+  "buildUid" : "bc102f0f-a0ce-3d8c-9969-d8b98b6dd971",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
