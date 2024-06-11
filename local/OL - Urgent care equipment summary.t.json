@@ -11,21 +11,22 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "unmanaged"
+      "codeString" : "published"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
-      "licence" : "",
-      "custodian_organisation" : "",
-      "original_namespace" : "",
-      "original_publisher" : "",
-      "custodian_namespace" : "",
-      "sem_ver" : "1.4.0-alpha",
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "One London UCP",
+      "original_namespace" : "org.onelondon.ucp",
+      "original_publisher" : "One London UCP",
+      "custodian_namespace" : "org.onelondon.ucp",
+      "sem_ver" : "1.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "458474c6b3b2b32e9ff62d86b6df57bb",
-      "PARENT:MD5-CAM-1.0.1" : "c176ef39a6fce6356ab6bc554bc86c61"
+      "MD5-CAM-1.0.1" : "64eacb7b7619a52217947a1a48a3adcf",
+      "PARENT:MD5-CAM-1.0.1" : "c176ef39a6fce6356ab6bc554bc86c61",
+      "is_singleton" : "ehr-tag-carePlanId"
     },
     "details" : {
       "en" : {
@@ -161,7 +162,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "7f00b75a-61c3-3e20-827f-f2c134b3652a",
+  "buildUid" : "cac74cbf-b72f-3388-ba87-55c09ad6f332",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -422,8 +423,8 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.",
-        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943"
+        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943",
+        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
         "de" : {
@@ -496,7 +497,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -519,7 +519,7 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_TEXT",
                           "defaultValue" : {
-                            "value" : "Feeding, elimination and intravenous access",
+                            "value" : "Feeding and elimination equipment",
                             "@type" : "DV_TEXT"
                           },
                           "attributes" : [ ],
@@ -584,24 +584,24 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "UCP-iv-access"
+                                    "value" : "UCP-Catheters"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "UCP-iv-access" ],
+                                  "selectedTerminologies" : [ "UCP-Catheters" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-Catheters",
                                     "code" : "1",
                                     "value" : "Suprapubic"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-Catheters",
                                     "code" : "2",
                                     "value" : "Indwelling"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-Catheters",
                                     "code" : "3",
                                     "value" : "Intermittent"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-Catheters",
                                     "code" : "4",
                                     "value" : "Sheath"
                                   } ]
@@ -792,18 +792,6 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "UCP-iv-access",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "1",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Stoma",
-                                "@type" : "DV_CODED_TEXT"
-                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -978,18 +966,6 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "UCP-iv-access",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "1",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Stoma",
-                                "@type" : "DV_CODED_TEXT"
-                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -1520,8 +1496,8 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.",
-        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943"
+        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943",
+        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
         "de" : {
@@ -1594,7 +1570,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -1681,33 +1656,33 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "UCP-iv-access"
+                                    "value" : "UCP-respiratory-support"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "UCP-iv-access" ],
+                                  "selectedTerminologies" : [ "UCP-respiratory-support" ],
                                   "limitToList" : false,
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "1",
                                     "value" : "Home oxygen"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "2",
                                     "value" : "Ambulatory oxygen"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "3",
                                     "value" : "Breathing support machine"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "4",
                                     "value" : "Tracheostomy"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "5",
                                     "value" : "Nebuliser"
                                   }, {
-                                    "terminologyId" : "UCP-iv-access",
+                                    "terminologyId" : "UCP-respiratory-support",
                                     "code" : "6",
                                     "value" : "Suction device"
                                   } ]
@@ -2423,18 +2398,6 @@
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
                               "occurrences" : "1..1",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "terminology_id" : {
-                                    "value" : "UCP-breathing-support",
-                                    "@type" : "TERMINOLOGY_ID"
-                                  },
-                                  "code_string" : "1",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "value" : "Tracheotomy",
-                                "@type" : "DV_CODED_TEXT"
-                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -2443,14 +2406,14 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "UCP-Tracheotomy"
+                                    "value" : "UCP-Respiratory-support"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "UCP-Tracheotomy" ],
+                                  "selectedTerminologies" : [ "UCP-Respiratory-support" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "UCP-Tracheotomy",
-                                    "code" : "1",
-                                    "value" : "Tracheotomy"
+                                    "terminologyId" : "UCP-Respiratory-support",
+                                    "code" : "4",
+                                    "value" : "Tracheostomy"
                                   } ]
                                 } ]
                               } ],
@@ -2510,6 +2473,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
                           "nodeId" : "at0043.2",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -2527,7 +2491,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.17" ],
+                                  "constraint" : [ "ac0.33" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -2546,6 +2510,155 @@
                           "rmTypeName" : "ELEMENT",
                           "occurrences" : "0..0",
                           "nodeId" : "at0025.5",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.6",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "1..1",
+                          "nodeId" : "at0004.6",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "UCP-Tracheotomy",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "1",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Emergency tracheotomy kit",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "UCP-Tracheotomy"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "UCP-Tracheotomy" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "UCP-Tracheotomy",
+                                    "code" : "1",
+                                    "value" : "Emergency tracheotomy kit"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0042.6",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.6",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.31" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
+                          "nodeId" : "at0040.9",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
+                          "nodeId" : "at0041.6",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0043.6",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.32" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0046.6",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.6",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
@@ -2665,12 +2778,6 @@
             "text" : "Reason for tracheotomy",
             "description" : "Additional narrative about the specified device, not captured in other fields."
           },
-          "ac0.17" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.17",
-            "description" : ""
-          },
           "ac0.20" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -2717,6 +2824,42 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0040.8",
             "text" : "Ambulatory oxygen therapy details",
+            "description" : ""
+          },
+          "at0022.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.6",
+            "text" : "Tracheotomy kit",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0042.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0042.5",
+            "text" : "Size of tube",
+            "description" : ""
+          },
+          "at0043.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0043.6",
+            "text" : "Emergency tracheotomy kit to be transported",
+            "description" : ""
+          },
+          "at0046.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0046.3",
+            "text" : "Date inserted",
+            "description" : "The date and time that the device or equipment was last replaced."
+          },
+          "at0025.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0025.5",
+            "text" : "Reason for tracheotomy",
+            "description" : "Additional narrative about the specified device, not captured in other fields."
+          },
+          "ac0.33" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.33",
             "description" : ""
           }
         },
@@ -2781,12 +2924,6 @@
             "code" : "ac0.16",
             "description" : ""
           },
-          "ac0.17" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.17",
-            "description" : ""
-          },
           "ac0.20" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -2821,6 +2958,18 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0040",
             "text" : "*DV_TEXT (en) (2)",
+            "description" : ""
+          },
+          "at0022.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "*Specific device (en) (6)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "ac0.33" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.33",
             "description" : ""
           }
         },
@@ -2885,12 +3034,6 @@
             "code" : "ac0.16",
             "description" : ""
           },
-          "ac0.17" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.17",
-            "description" : ""
-          },
           "ac0.20" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
@@ -2925,6 +3068,18 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0040",
             "text" : "*DV_TEXT (en) (2)",
+            "description" : ""
+          },
+          "at0022.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "*Specific device (en) (6)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "ac0.33" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.33",
             "description" : ""
           }
         }
@@ -3081,6 +3236,21 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.30",
           "members" : [ "at0044", "at0045" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0023" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0044", "at0045" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0044", "at0045" ]
         }
       }
     },
@@ -3136,8 +3306,8 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.",
-        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943"
+        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943",
+        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
         "de" : {
@@ -3210,7 +3380,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -3297,25 +3466,25 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "UCP-breathing-support"
+                                    "value" : "UCP-personal-assistive-devices"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "UCP-breathing-support" ],
+                                  "selectedTerminologies" : [ "UCP-personal-assistive-devices" ],
                                   "limitToList" : false,
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "UCP-breathing-support",
+                                    "terminologyId" : "UCP-personal-assistive-devices",
                                     "code" : "1",
                                     "value" : "Specatacles"
                                   }, {
-                                    "terminologyId" : "UCP-breathing-support",
+                                    "terminologyId" : "UCP-personal-assistive-devices",
                                     "code" : "2",
                                     "value" : "Hearing aid"
                                   }, {
-                                    "terminologyId" : "UCP-breathing-support",
+                                    "terminologyId" : "UCP-personal-assistive-devices",
                                     "code" : "3",
                                     "value" : "Dentures"
                                   }, {
-                                    "terminologyId" : "UCP-breathing-support",
+                                    "terminologyId" : "UCP-personal-assistive-devices",
                                     "code" : "4",
                                     "value" : "Contact lenses"
                                   } ]
@@ -3421,13 +3590,6 @@
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "defaultValue" : {
-                                "defining_code" : {
-                                  "code_string" : "at0044",
-                                  "@type" : "CODE_PHRASE"
-                                },
-                                "@type" : "DV_CODED_TEXT"
-                              },
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
@@ -3438,7 +3600,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.16" ],
+                                  "constraint" : [ "ac0.25" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -3498,16 +3660,16 @@
             "code" : "ac0.15",
             "description" : ""
           },
-          "ac0.16" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.16",
-            "description" : ""
-          },
           "ac0.24" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.24",
+            "description" : ""
+          },
+          "ac0.25" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.25",
             "description" : ""
           }
         },
@@ -3530,16 +3692,16 @@
             "code" : "ac0.15",
             "description" : ""
           },
-          "ac0.16" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.16",
-            "description" : ""
-          },
           "ac0.24" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.24",
+            "description" : ""
+          },
+          "ac0.25" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.25",
             "description" : ""
           }
         },
@@ -3562,16 +3724,16 @@
             "code" : "ac0.15",
             "description" : ""
           },
-          "ac0.16" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.16",
-            "description" : ""
-          },
           "ac0.24" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.24",
+            "description" : ""
+          },
+          "ac0.25" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.25",
             "description" : ""
           }
         }
@@ -3698,6 +3860,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.24",
           "members" : [ "at0031", "at0032" ]
+        },
+        "ac0.25" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.25",
+          "members" : [ "at0044", "at0045" ]
         }
       }
     },
@@ -3753,8 +3920,8 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.",
-        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943"
+        "PARENT:MD5-CAM-1.0.1" : "d7a5d8ed0e689a209beb3f04d7be6943",
+        "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
       },
       "details" : {
         "de" : {
@@ -3827,7 +3994,6 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "EVENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -3850,7 +4016,7 @@
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_TEXT",
                           "defaultValue" : {
-                            "value" : "Feeding, elimination and intravenous access",
+                            "value" : "Critical care equipment",
                             "@type" : "DV_TEXT"
                           },
                           "attributes" : [ ],
