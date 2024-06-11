@@ -8,20 +8,21 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "unmanaged"
+      "codeString" : "published"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
       "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-      "custodian_organisation" : "openEHR Foundation",
-      "original_namespace" : "org.openehr",
-      "original_publisher" : "openEHR Foundation",
-      "custodian_namespace" : "org.openehr",
+      "custodian_organisation" : "One London UCP",
+      "original_namespace" : "org.onelondon.ucp",
+      "original_publisher" : "One London UCP",
+      "custodian_namespace" : "org.onelondon.ucp",
       "MD5-CAM-1.0.1" : "7961e05277f41cbecf84dda6bf602094",
-      "sem_ver" : "1.5.0",
-      "build_uid" : ""
+      "sem_ver" : "1.6.0",
+      "build_uid" : "",
+      "PARENT:MD5-CAM-1.0.1" : "fc97777fee48889620dd0d66030cf22d"
     },
     "details" : {
       "en" : {
@@ -420,7 +421,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "bc102f0f-a0ce-3d8c-9969-d8b98b6dd971",
+  "buildUid" : "e5f5a4fe-7fbb-3ed9-99b6-6fe3f4b6d509",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
@@ -436,7 +437,9 @@
       "ipAcknowledgements" : { },
       "references" : { },
       "conversionDetails" : { },
-      "otherDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "837216B3380EEE7CDC8C974E487FE65F"
+      },
       "details" : {
         "en" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
@@ -597,7 +600,8 @@
         "original_namespace" : "org.openehr",
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
-        "MD5-CAM-1.0.1" : "2486d52dd8c78af812dc36dee7b3d091"
+        "MD5-CAM-1.0.1" : "2486d52dd8c78af812dc36dee7b3d091",
+        "PARENT:MD5-CAM-1.0.1" : "895F99CC13DF97E2BEE2DD159E440414"
       },
       "details" : {
         "en" : {
@@ -849,7 +853,8 @@
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "cfc9ac11f3234cd4ff91afa470c87246",
         "sem_ver" : "0.3.0",
-        "build_uid" : ""
+        "build_uid" : "",
+        "PARENT:MD5-CAM-1.0.1" : "DCA924293B6B69683E31819BD3FDFF50"
       },
       "details" : {
         "fi" : {
