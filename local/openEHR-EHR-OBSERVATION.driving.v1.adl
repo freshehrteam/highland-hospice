@@ -14,7 +14,7 @@ description
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"unmanaged">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,14 +22,12 @@ description
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"One London UCP">
-		["current_contact"] = <"Lucy Colleer, One London UCP, UK <Lucy.Colleer@swlondon.nhs.uk>">
-		["original_namespace"] = <"org.onelondon.ucp">
-		["original_publisher"] = <"One London UCP">
-		["custodian_namespace"] = <"org.onelondon.ucp">
-		["MD5-CAM-1.0.1"] = <"665b9b80b32005dc603d33905e052a8f">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b3795ec08fb1b0606e3b1856c6daaf26">
 		["build_uid"] = <"0eaf34ec-98fe-3452-878c-bab67003f738">
-		["revision"] = <"1.0.0">
 	>
 
 definition
