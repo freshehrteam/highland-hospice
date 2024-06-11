@@ -22,8 +22,8 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "71f4abc8b1824dbaa4115c0bb759c299",
+      "sem_ver" : "1.0.0-alpha.2",
+      "MD5-CAM-1.0.1" : "56fd07d8621d1576bac4c077128c3bb5",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -196,384 +196,6 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0004.14",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515921000000101",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - also worth knowing about me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.14",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.6",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515911000000107",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - how and when to support me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515911000000107",
-                            "value" : "About me - how and when to support me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.2",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.7",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515911000000107",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - how and when to support me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515911000000107",
-                            "value" : "About me - how and when to support me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.2",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.3",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.2",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515921000000101",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - also worth knowing about me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.3",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.4",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.3",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515921000000101",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - also worth knowing about me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.4",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.5",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.14",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515921000000101",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - also worth knowing about me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.5",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
               "nodeId" : "at0004.6",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -637,14 +259,14 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0004.7",
+              "nodeId" : "at0004.13",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.12",
+                  "nodeId" : "at0008.13",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -658,10 +280,10 @@
                             "value" : "SNOMED-CT",
                             "@type" : "TERMINOLOGY_ID"
                           },
-                          "code_string" : "1515921000000101",
+                          "code_string" : "1515871000000105",
                           "@type" : "CODE_PHRASE"
                         },
-                        "value" : "About me - also worth knowing about me",
+                        "value" : "About me - people who are important to me",
                         "@type" : "DV_CODED_TEXT"
                       },
                       "attributes" : [ {
@@ -678,8 +300,8 @@
                           "selectedTerminologies" : [ "SNOMED-CT" ],
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
+                            "code" : "1515871000000105",
+                            "value" : "About me - people who are important to me"
                           } ]
                         } ]
                       } ],
@@ -690,7 +312,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.7",
+                  "nodeId" : "at0002.13",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
@@ -700,77 +322,14 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0004.8",
+              "nodeId" : "at0004.15",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.5",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515921000000101",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - also worth knowing about me",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.8",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.9",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.4",
+                  "nodeId" : "at0008.15",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -792,8 +351,8 @@
                           "selectedTerminologies" : [ "SNOMED-CT" ],
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "SNOMED-CT",
-                            "code" : "1515921000000101",
-                            "value" : "About me - also worth knowing about me"
+                            "code" : "1515881000000107",
+                            "value" : "About me - how I communicate and how to communicate with me"
                           } ]
                         } ]
                       } ],
@@ -804,7 +363,58 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.9",
+                  "nodeId" : "at0002.15",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0004.16",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0008.16",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "occurrences" : "1..1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "TERMINOLOGY_CODE",
+                          "occurrences" : "0..1",
+                          "terminologyId" : {
+                            "value" : "SNOMED-CT"
+                          },
+                          "constraint" : [ ],
+                          "selectedTerminologies" : [ "SNOMED-CT" ],
+                          "includedExternalTerminologyCodes" : [ {
+                            "terminologyId" : "SNOMED-CT",
+                            "code" : "1515891000000109",
+                            "value" : "About me - my wellness"
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "nodeId" : "at0002.16",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
@@ -877,14 +487,14 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0004.11",
+              "nodeId" : "at0004.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.10",
+                  "nodeId" : "at0008.6",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -898,10 +508,10 @@
                             "value" : "SNOMED-CT",
                             "@type" : "TERMINOLOGY_ID"
                           },
-                          "code_string" : "1515901000000105",
+                          "code_string" : "1515911000000107",
                           "@type" : "CODE_PHRASE"
                         },
-                        "value" : "About me - please do and please do not",
+                        "value" : "About me - how and when to support me",
                         "@type" : "DV_CODED_TEXT"
                       },
                       "attributes" : [ {
@@ -918,8 +528,8 @@
                           "selectedTerminologies" : [ "SNOMED-CT" ],
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "SNOMED-CT",
-                            "code" : "1515901000000105",
-                            "value" : "About me - please do and please do not"
+                            "code" : "1515911000000107",
+                            "value" : "About me - how and when to support me"
                           } ]
                         } ]
                       } ],
@@ -930,79 +540,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.11",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
-                      "defaultValue" : {
-                        "defining_code" : {
-                          "terminology_id" : {
-                            "value" : "SNOMED-CT",
-                            "@type" : "TERMINOLOGY_ID"
-                          },
-                          "code_string" : "1515901000000105",
-                          "@type" : "CODE_PHRASE"
-                        },
-                        "value" : "About me - please do and please do not",
-                        "@type" : "DV_CODED_TEXT"
-                      },
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0004.12",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "items",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.11",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_CODED_TEXT",
-                      "occurrences" : "1..1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "defining_code",
-                        "children" : [ {
-                          "@type" : "C_TERMINOLOGY_CODE",
-                          "rmTypeName" : "TERMINOLOGY_CODE",
-                          "occurrences" : "0..1",
-                          "terminologyId" : {
-                            "value" : "SNOMED-CT"
-                          },
-                          "constraint" : [ ],
-                          "selectedTerminologies" : [ "SNOMED-CT" ],
-                          "includedExternalTerminologyCodes" : [ {
-                            "terminologyId" : "SNOMED-CT",
-                            "code" : "1515901000000105",
-                            "value" : "About me - please do and please do not"
-                          } ]
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                }, {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.12",
+                  "nodeId" : "at0002.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
@@ -1012,14 +550,14 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
-              "nodeId" : "at0004.13",
+              "nodeId" : "at0004.14",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0008.13",
+                  "nodeId" : "at0008.1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "value",
@@ -1033,10 +571,10 @@
                             "value" : "SNOMED-CT",
                             "@type" : "TERMINOLOGY_ID"
                           },
-                          "code_string" : "1515871000000105",
+                          "code_string" : "1515921000000101",
                           "@type" : "CODE_PHRASE"
                         },
-                        "value" : "About me - people who are important to me",
+                        "value" : "About me - also worth knowing about me",
                         "@type" : "DV_CODED_TEXT"
                       },
                       "attributes" : [ {
@@ -1053,8 +591,8 @@
                           "selectedTerminologies" : [ "SNOMED-CT" ],
                           "includedExternalTerminologyCodes" : [ {
                             "terminologyId" : "SNOMED-CT",
-                            "code" : "1515871000000105",
-                            "value" : "About me - people who are important to me"
+                            "code" : "1515921000000101",
+                            "value" : "About me - also worth knowing about me"
                           } ]
                         } ]
                       } ],
@@ -1065,7 +603,7 @@
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
-                  "nodeId" : "at0002.13",
+                  "nodeId" : "at0002.14",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
@@ -1107,169 +645,85 @@
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.1",
-            "text" : "What does a normal day look like?",
-            "description" : ""
-          },
-          "at0004.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.2",
-            "text" : "What routines are important?",
-            "description" : ""
-          },
-          "at0004.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.3",
-            "text" : "Interests and hobbies",
-            "description" : ""
-          },
-          "at0004.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.4",
-            "text" : "Favourite TV shows, music and movies",
-            "description" : ""
-          },
-          "at0004.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.5",
-            "text" : "Skills or strengths",
+            "text" : "How and when to support me",
             "description" : ""
           },
           "at0004.6" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.6",
-            "text" : "Hopes for the future",
-            "description" : ""
-          },
-          "at0004.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.7",
-            "text" : "Important upcoming events",
-            "description" : ""
-          },
-          "at0004.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.8",
-            "text" : "Previous places lived",
-            "description" : ""
-          },
-          "at0004.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.9",
-            "text" : "Places that the person would to visit",
+            "text" : "What is most important to me",
             "description" : ""
           },
           "at0004.10" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.10",
-            "text" : "Likes to dress",
-            "description" : ""
-          },
-          "at0004.11" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.11",
-            "text" : "Likes to eat and drink",
-            "description" : ""
-          },
-          "at0004.12" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004.12",
-            "text" : "Does not like to eat and drink",
+            "text" : "Please do and please don't",
             "description" : ""
           },
           "at0004.13" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.13",
-            "text" : "Other family and friends who are important",
+            "text" : "People who are important to me",
             "description" : ""
-          },
-          "at0002.9" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.9",
-            "text" : "Places that the person would like to visit",
-            "description" : "Narrative supplied by the patient about the topic."
           },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.1",
-            "text" : "What does a normal day look like?",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.2",
-            "text" : "What routines are important?",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.3" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.3",
-            "text" : "Interests and hobbies",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.4" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.4",
-            "text" : "Favourite TV shows, music and movies",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.5" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.5",
-            "text" : "Skills or strengths",
+            "text" : "How and when to support me",
             "description" : "Narrative supplied by the patient about the topic."
           },
           "at0002.6" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.6",
-            "text" : "Hopes for the future",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.7" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.7",
-            "text" : "Important upcoming events",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.8" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.8",
-            "text" : "Previous places lived",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.11" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.11",
-            "text" : "Likes to eat and drink",
+            "text" : "What is most important to me",
             "description" : "Narrative supplied by the patient about the topic."
           },
           "at0002.10" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.10",
-            "text" : "Likes to dress",
+            "text" : "Please do and please don't",
             "description" : "Narrative supplied by the patient about the topic."
           },
           "at0002.13" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.13",
-            "text" : "Other family and friends who are important",
-            "description" : "Narrative supplied by the patient about the topic."
-          },
-          "at0002.12" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.12",
-            "text" : "Does not like to eat and drink",
+            "text" : "People who are important to me",
             "description" : "Narrative supplied by the patient about the topic."
           },
           "at0004.14" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0004.14",
-            "text" : "Who they are",
+            "text" : "Also worth knowing about me",
             "description" : ""
           },
           "at0002.14" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002.14",
-            "text" : "Who they are",
+            "text" : "Also worth knowing about me",
+            "description" : "Narrative supplied by the patient about the topic."
+          },
+          "at0004.15" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.15",
+            "text" : "How I communicate and how to communicate with me",
+            "description" : ""
+          },
+          "at0002.15" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.15",
+            "text" : "How I communicate and how to communicate with me",
+            "description" : "Narrative supplied by the patient about the topic."
+          },
+          "at0004.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.16",
+            "text" : "My wellness",
+            "description" : ""
+          },
+          "at0002.16" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.16",
+            "text" : "My wellness",
             "description" : "Narrative supplied by the patient about the topic."
           }
         }
