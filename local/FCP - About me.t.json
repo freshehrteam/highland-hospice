@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.8.0",
+      "sem_ver" : "1.0.0-alpha.1",
       "MD5-CAM-1.0.1" : "71f4abc8b1824dbaa4115c0bb759c299",
       "build_uid" : "",
       "is_singleton" : "ehr",
