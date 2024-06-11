@@ -11,7 +11,7 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "in_development"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -22,9 +22,9 @@
       "original_namespace" : "org.onelondon.ucp",
       "original_publisher" : "One London UCP",
       "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "1.1.0",
+      "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "5947a10e353c7f5559c2fc06a8855a35",
+      "MD5-CAM-1.0.1" : "17e8170fc004a0c107c739e74a7bbe23",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "3ae573d4758588a886d3ef8f8f7e3576"
     },
@@ -94,7 +94,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "004c1ec9-75fe-3c82-9018-f9f669f08cae",
+  "buildUid" : "07868fdf-83c1-3074-97f5-9d13ae0ddf4a",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -317,29 +317,6 @@
                 } ]
               } ],
               "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0018",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0.2",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "CMC - InfoProvider",
-              "referenceType" : "templateId"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1099,15 +1076,6 @@
               "nodeId" : "at0017.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0036.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "CMC - InfoProvider",
-              "referenceType" : "templateId"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -1809,15 +1777,6 @@
               "nodeId" : "at0017.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0036.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "CMC - InfoProvider",
-              "referenceType" : "templateId"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2519,15 +2478,6 @@
               "nodeId" : "at0017.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0036.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "CMC - InfoProvider",
-              "referenceType" : "templateId"
             } ]
           } ],
           "attributeTuples" : [ ]
