@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a18b968356954ec917d53c1ee693fefe">
+		["MD5-CAM-1.0.1"] = <"8632f86bd516b362e85c0a88cd9762f9">
 		["build_uid"] = <"54af651f-9eb1-3e34-add8-1e9bc698e64f">
 	>
 
@@ -68,7 +68,6 @@ ontology
 				["at0000"] = <
 					text = <"CMC Party identifiers">
 					description = <"cmc party identifiers">
-					candidate = <"local">
 				>
 				["at0001"] = <
 					text = <"Registry Id">
