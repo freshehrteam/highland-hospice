@@ -26,7 +26,7 @@ life care, awareness of prognosis is taken to mean awareness that life-span is l
 	>
 	other_details = <
 		["references"] = <"ISB End of Life Care Co-ordination: Core content Standard Specification http://www.isb.nhs.uk/library/standard/236">
-		["MD5-CAM-1.0.1"] = <"7eb37794a90d1c2eef8770d73ad32523">
+		["MD5-CAM-1.0.1"] = <"bf543ed1c3f294cf18dcd6bd94e108de">
 		["build_uid"] = <"448bcf83-658c-396d-8f12-9bf2413f403b">
 	>
 
@@ -39,6 +39,10 @@ definition
 						value matches {
 							DV_TEXT matches {*}
 						}
+					}
+					allow_archetype CLUSTER[at0017] occurrences matches {0..*} matches {    -- Indicator
+						include
+							archetype_id/value matches {/.*/}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Rationale
 						value matches {
@@ -60,11 +64,6 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Main carer insight comment
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
 					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Patient insight
 						value matches {
 							DV_CODED_TEXT matches {
@@ -75,11 +74,6 @@ definition
 									at0016]    -- Patient not aware of prognosis
 								}
 							}
-							DV_TEXT matches {*}
-						}
-					}
-					ELEMENT[at0021] occurrences matches {0..1} matches {    -- Patient insight comment
-						value matches {
 							DV_TEXT matches {*}
 						}
 					}
@@ -98,10 +92,6 @@ definition
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
-					}
-					allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {    -- Extension
-						include
-							archetype_id/value matches {/.*/}
 					}
 				}
 			}
@@ -181,18 +171,8 @@ life care, awareness of prognosis is taken to mean awareness that life-span is l
 					text = <"Patient not aware of prognosis">
 					description = <"The patient is not aware of the prognosis of their illness.">
 				>
-				["at0018"] = <
-					text = <"Extension">
-					description = <"Additional information required to capture local context or to align with other reference models/formalisms.
-Comment:">
-					comment = <" For example: Local hospital departmental information or additional metadata to align with FHIR or CIMI equivalents.">
-				>
-				["at0020"] = <
-					text = <"Main carer insight comment">
-					description = <"">
-				>
-				["at0021"] = <
-					text = <"Patient insight comment">
+				["at0017"] = <
+					text = <"Indicator">
 					description = <"">
 				>
 			>
