@@ -11,7 +11,7 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "in_development"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -22,9 +22,9 @@
       "original_namespace" : "org.onelondon.ucp",
       "original_publisher" : "One London UCP",
       "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "2.6.0",
+      "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "bd45fd6e-2d7a-4b26-924a-0932e2072727",
-      "MD5-CAM-1.0.1" : "6ca51e890a94b0f59987ebb42adeb483",
+      "MD5-CAM-1.0.1" : "784b95b446ac5a56627924b48935e373",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "3ae573d4758588a886d3ef8f8f7e3576"
     },
@@ -181,7 +181,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "004c1ec9-75fe-3c82-9018-f9f669f08cae",
+  "buildUid" : "07868fdf-83c1-3074-97f5-9d13ae0ddf4a",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -1224,7 +1224,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0A06AC36BF82029DCD53C8C128EE29DD"
+        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
       },
       "details" : {
         "de" : {
