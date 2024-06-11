@@ -22,8 +22,8 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "1bada1cb6bb92220b139764f96606929",
+      "sem_ver" : "1.1.0-alpha.1",
+      "MD5-CAM-1.0.1" : "5efcc60f723c90a020f4637592a66ba0",
       "build_uid" : "f53b9464-1a30-4e66-ab86-fc836f1abdae",
       "PARENT:MD5-CAM-1.0.1" : "3ae573d4758588a886d3ef8f8f7e3576"
     },
@@ -3091,7 +3091,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0030.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -3539,6 +3538,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.411",
             "description" : ""
+          },
+          "at0030.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0030.1",
+            "text" : "Wishes around death",
+            "description" : "Any other specifc personal request or preference, including cultural or religious preferences."
           }
         }
       },
