@@ -14,7 +14,7 @@ description
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"published">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,12 +22,13 @@ description
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"onelondon.ucp">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6e1394dc4502ca8d6a2c9d1c39459d24">
+		["custodian_organisation"] = <"One London UCP">
+		["original_namespace"] = <"org.onelondon.ucp">
+		["original_publisher"] = <"One London UCP">
+		["custodian_namespace"] = <"org.onelondon.ucp">
+		["MD5-CAM-1.0.1"] = <"ef4746827bc5a62b1d1afb9ce14228c0">
 		["build_uid"] = <"375387c7-d4f7-35da-a60c-98d02d2b6665">
+		["revision"] = <"1.0.0">
 	>
 
 definition
@@ -82,7 +83,7 @@ definition
 								include
 									archetype_id/value matches {/.*/}
 							}
-							CLUSTER[at0013] occurrences matches {0..1} matches {    -- Replacement carer
+							CLUSTER[at0013] occurrences matches {0..*} matches {    -- Replacement carer
 								items cardinality matches {1..*; unordered} matches {
 									allow_archetype CLUSTER[at0015] occurrences matches {0..*} matches {    -- Replacement carer details
 										include
