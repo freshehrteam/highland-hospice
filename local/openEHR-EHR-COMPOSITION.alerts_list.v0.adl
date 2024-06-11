@@ -1,0 +1,87 @@
+archetype (adl_version=1.4; uid=efe1532c-c15a-4c4c-873e-4f82c24d5611)
+	openEHR-EHR-COMPOSITION.alerts_list.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2019-04-19">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record or a list of Alerts, normally managed and curated, of potential risks to the health of the patient or carers, to which special attention should normally be given by decision support and/or the application user interface.">
+			keywords = <"alert, nota-bene, warming, risk,", ...>
+			copyright = <"openEHR Foundation">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"119dc65fa2910f90915adaf1b41cb303">
+		["build_uid"] = <"1764e7ad-f499-3e02-83d9-a13fdd64f47c">
+	>
+
+definition
+	COMPOSITION[at0000] matches {    -- Alerts list
+		category matches {
+			DV_CODED_TEXT[at0001] matches {    -- DvCodedText
+				defining_code matches {
+					[openehr::433]
+				}
+			}
+		}
+		context matches {
+			EVENT_CONTEXT[at0002] matches {    -- Context
+				other_context matches {
+					ITEM_TREE[at0003] matches {    -- ItemTree
+						items cardinality matches {0..*; unordered} matches {
+							allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Extension
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Alerts list">
+					description = <"A list of Alerts, normally managed and curated, of potential risks to the health of the patient or carers, to which special attention should normally be given by decision support and/or the application user interface.">
+				>
+				["at0001"] = <
+					text = <"DvCodedText">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"Context">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Extension">
+					description = <"*">
+				>
+			>
+		>
+	>
