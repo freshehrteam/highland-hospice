@@ -1,0 +1,150 @@
+archetype (adl_version=1.4; uid=d6814900-3f0a-35b6-b531-ddcc05bb2248)
+	openEHR-EHR-ADMIN_ENTRY.place_of_death_uk.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2013-10-18">
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"Ocean Informatics, UK">
+		["email"] = <"ian.mcnicoll@oceaninformatics.com">
+	>
+	lifecycle_state = <"AuthorDraft">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record the place of death of an individual, primarily to ascertain if their advanced care precferences have been met.">
+			keywords = <"death", ...>
+			copyright = <"© Clinical Models UK">
+			misuse = <"Not suitable for use for forensic or other post-mortem diagnostic purposes.">
+		>
+	>
+	other_details = <
+		["references"] = <"Information Standards Board ISB Data Dictionary Available at http://www.datadictionary.nhs.uk/
+
+End of Life Care Co-ordination: Core Content Standard Specification Available at http://www.isb.nhs.uk/documents/isb-1580/amd-29-2012/index_html
+
+NHS Scotland Key Information Summary">
+		["MD5-CAM-1.0.1"] = <"57fd329bfd16cbdf4976fdc19297742e">
+		["build_uid"] = <"142199ae-ca49-3ac6-9b88-bdba65521f5e">
+		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Place of death (UK)
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Type of place of death
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0020] occurrences matches {0..*} matches {    -- Death details
+						include
+							archetype_id/value matches {/.*/}
+					}
+					CLUSTER[at0013] occurrences matches {0..1} matches {    -- Variance from preference
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0012] occurrences matches {0..1} matches {    -- Achievement of preference
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0014,    -- First choice place of death achieved
+											at0015,    -- Second choice place of death achieved
+											at0016]    -- Choice of place of death not achieved
+										}
+									}
+								}
+							}
+							ELEMENT[at0011] occurrences matches {0..1} matches {    -- Reason for variance
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+							ELEMENT[at0021] occurrences matches {0..1} matches {    -- Other variance details
+								value matches {
+									DV_TEXT matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0023] occurrences matches {0..1} matches {    -- Source of information
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"SNOMED-CT", ...>
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Place of death (UK)">
+					description = <"The location at which the subject died and any variance from their preferred place of death.">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Type of place of death">
+					description = <"The place at which the patient died.">
+				>
+				["at0011"] = <
+					text = <"Reason for variance">
+					description = <"The reason why the patient's choice of death was not achieved.">
+				>
+				["at0012"] = <
+					text = <"Achievement of preference">
+					description = <"Did the person achieve their preferred place of death?">
+				>
+				["at0013"] = <
+					text = <"Variance from preference">
+					description = <"Details of the extent to which the patient's place of death varied from their expressed preference.">
+				>
+				["at0014"] = <
+					text = <"First choice place of death achieved">
+					description = <"The patient achieved their first choice of place of death.">
+				>
+				["at0015"] = <
+					text = <"Second choice place of death achieved">
+					description = <"The patient achieved their second choice of place of death.">
+				>
+				["at0016"] = <
+					text = <"Choice of place of death not achieved">
+					description = <"The patient did not achieve their choice of place of death.">
+				>
+				["at0020"] = <
+					text = <"Death details">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Other variance details">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Source of information">
+					description = <"">
+				>
+			>
+		>
+	>
+	term_binding = <
+		["SNOMED-CT"] = <
+			items = <
+				["at0002"] = <[SNOMED-CT::313384009]>
+			>
+		>
+	>
