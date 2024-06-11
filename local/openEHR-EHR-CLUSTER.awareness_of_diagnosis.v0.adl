@@ -1,0 +1,127 @@
+archetype (adl_version=1.4; uid=3596ca31-9975-40a2-bc4f-2e32125f74e0)
+	openEHR-EHR-CLUSTER.awareness_of_diagnosis.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2021-12-07">
+		["name"] = <"Helen Maguire">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"helen.maguire@freshehr.com">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To record details of patient, main carer and/or family awareness of diagnosis.">
+			keywords = <"Awareness, insight.", ...>
+			use = <"Use to record details of patient, main carer and/or family awareness of diagnosis.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["current_contact"] = <"Helen Maguire, helen.maguire@freshehr.com">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"2862134d44b68753e91fde6776463a55">
+		["build_uid"] = <"f5228037-a771-3eb9-b314-838218e8e8b2">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Awareness of diagnosis
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Patient awareness
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003,    -- Yes
+							at0004,    -- No
+							at0005]    -- Unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Patient awareness comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- Family awareness
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Yes
+							at0008,    -- No
+							at0009]    -- Unknown
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Family awareness comment
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Awareness of diagnosis">
+					description = <"Patient and family awareness of diagnosis.">
+				>
+				["at0002"] = <
+					text = <"Patient awareness">
+					description = <"Does the patient have awareness of their diagnosis?">
+				>
+				["at0003"] = <
+					text = <"Yes">
+					description = <"Patient is aware of diagnosis.">
+				>
+				["at0004"] = <
+					text = <"No">
+					description = <"Patient is unaware of diagnosis.">
+				>
+				["at0005"] = <
+					text = <"Unknown">
+					description = <"It is not known whether the patient is aware of the diagnosis.">
+				>
+				["at0006"] = <
+					text = <"Family awareness">
+					description = <"Does the patient's main carer/family members have awareness of their diagnosis?">
+				>
+				["at0007"] = <
+					text = <"Yes">
+					description = <"Family is aware of diagnosis.">
+				>
+				["at0008"] = <
+					text = <"No">
+					description = <"Family is unaware of diagnosis.">
+				>
+				["at0009"] = <
+					text = <"Unknown">
+					description = <"It is not known whether the family is aware of the diagnosis.">
+				>
+				["at0010"] = <
+					text = <"Patient awareness comment">
+					description = <"Narrative relating to patient awareness of diagnosis.">
+				>
+				["at0011"] = <
+					text = <"Family awareness comment">
+					description = <"Narrative relating to family awareness of patient's diagnosis.">
+				>
+			>
+		>
+	>
