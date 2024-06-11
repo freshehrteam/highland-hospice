@@ -93,7 +93,7 @@ ZIB Centrum. [Internet]. Netherlands: Nictiz. BehandelAanwijzing-v3.2(2019NL); 2
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"430dc418daeffba8409fbffa5dc09936">
+		["MD5-CAM-1.0.1"] = <"FEF12ACA9033560751C7E28A75C5EF54">
 		["build_uid"] = <"3d99df16-8886-4c9a-b00d-7e1cbc9bd825">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.0.0">
