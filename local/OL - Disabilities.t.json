@@ -1,0 +1,3778 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "e38612d6-e13c-423b-b630-2e522952400a",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "name" : "Ian McNicoll",
+      "organisation" : "freshEHR Clinical Informatics Ltd.",
+      "email" : "ian@freshehr.com",
+      "date" : "2022-03-09"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "published"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "One London UCP",
+      "original_namespace" : "org.onelondon.ucp",
+      "original_publisher" : "One London UCP",
+      "custodian_namespace" : "org.onelondon.ucp",
+      "sem_ver" : "1.3.0",
+      "build_uid" : "",
+      "MD5-CAM-1.0.1" : "97767a57e8ae1c95a9a2dcaa110d28dd",
+      "is_singleton" : "ehr-tag-carePlanId",
+      "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
+    },
+    "details" : {
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-COMPOSITION.anticipatory_care_information.v0",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-COMPOSITION.t_anticipatory_care_information.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "COMPOSITION",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "context",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "EVENT_CONTEXT",
+        "nodeId" : "at0002",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "other_context",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ITEM_TREE",
+            "nodeId" : "at0003",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "items",
+              "children" : [ {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0004.1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-xds_metadata-001.v0",
+                "referenceType" : "archetypeOverlay"
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0004.2",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0",
+                "referenceType" : "archetypeOverlay"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "content",
+      "existence" : "0..1",
+      "cardinality" : {
+        "@type" : "CARDINALITY",
+        "interval" : "1..*",
+        "ordered" : false,
+        "unique" : false
+      },
+      "children" : [ {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.4",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-cmc_disabilities_summary-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.5",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.15",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-care_setting_adjustments-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.28",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.22",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-six_cit_assessment-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.30",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-002.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.32",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-phq_9-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.34",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-gad_7_score-001.v0",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Disabilities summary",
+          "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "11c6edc2-7669-32f7-a71a-6d396810a6c0",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "OL - Disabilities",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "ac460357-d5de-423d-a200-5738be5a8539",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "E62D896E2577FA727C75A9EFFD7CA63E"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-xds_metadata-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "defaultValue" : {
+                "value" : "Disabilities",
+                "@type" : "DV_TEXT"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0009.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0011.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_MULTIMEDIA",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "media_type",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "openEHR"
+                  },
+                  "constraint" : [ "406", "407", "408", "414", "415", "416", "417", "418", "419", "420", "421", "422", "423", "424", "427", "429", "517", "518", "387", "388", "389", "390", "391", "392", "393", "394", "395", "396", "397", "398", "399", "400", "409", "410", "411", "412", "413", "401", "402", "404", "405", "519", "637", "682", "683" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "feed3fab-2d92-470b-a6c9-f19499a58c8b",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4a2f8d39-221d-4f10-a970-e5e82f01b1f2",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "c5270ddae5aaaf816de72655bc61c831"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.cmc_disabilities_summary.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-cmc_disabilities_summary-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "CMC-HaveDisability"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "CMC-HaveDisability" ],
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "CMC-HaveDisability",
+                                "code" : "Y",
+                                "value" : "Yes"
+                              }, {
+                                "terminologyId" : "CMC-HaveDisability",
+                                "code" : "N",
+                                "value" : "No"
+                              }, {
+                                "terminologyId" : "CMC-HaveDisability",
+                                "code" : "DK",
+                                "value" : "Don't know"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "occurrences" : "1..1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "0..1",
+                              "terminologyId" : {
+                                "value" : "CMC-Disabilities"
+                              },
+                              "constraint" : [ ],
+                              "selectedTerminologies" : [ "CMC-Disabilities" ],
+                              "limitToList" : false,
+                              "includedExternalTerminologyCodes" : [ {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "CANTSUMMON",
+                                "value" : "Unable to summon help in case of emergency"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "HEARING",
+                                "value" : "Hearing loss"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "LACKAWAR",
+                                "value" : "Lacks safety awareness"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "MENTAL",
+                                "value" : "Mental impairment"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "NKD",
+                                "value" : "No known disability"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "PHYSICAL",
+                                "value" : "Physical disability"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "VERBAL",
+                                "value" : "Difficulty with verbal communication"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "VISUAL",
+                                "value" : "Visual impairment"
+                              }, {
+                                "terminologyId" : "CMC-Disabilities",
+                                "code" : "OTHER",
+                                "value" : "Other disability"
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Disabilities",
+            "description" : "CMC Disabilities summary"
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Condition name",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "20bf5213-c08a-3dbd-b805-1e7d01e4039d",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "dbcfea57-811e-4290-98ee-90e1816e7a61",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "0A06AC36BF82029DCD53C8C128EE29DD"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Die manuelle Herstellung und Aufnahme einer Zusammenfassung einer Patientengeschichte, aus der Sicht eines Gesundheitsdienstleisters.",
+          "keywords" : [ "Zusammenfassung", "Schlussfolgerung", "Kurzdarstellung", "Abriss", "Abstract", "Beurteilung", "Synopsis", "Epikrise", "Anmerkung", "Bemerkung" ],
+          "use" : "Benutzung für die Aufnahme einer geschichtlichen, zusammenfassenden Ansicht des Gesundheitszustandes des Patienten. Diese unstrukturierte Zusammenfassung kann identifizierte Gesundheitsprobleme, erbrachte Gesundheitsdienstleistungen, dazugehörige Interpretationen und Verständnis des Patienten enthalten sowie die Mitteilung mancher der subjektiverern, weicheren Aspekte über die Erfahrung und Geschichte aus Sicht des Patienten ermöglichen. Typischerweise hängt diese Zusammenfassung mit einem bestimmten Gesundheitsereignis zusammen, z. B. einem bestimmten Arztbesuch oder einer spezifischen Krankenhausaufnahme, kann jedoch auch benutzt werden um das Erlebnis des Patienten über verschiedene Zeitperioden zusammenzufassen.\r\nIn Wirklichkeit ist Clinical Synopsis eine Meta-Beobachtung, die die bestehende strukturierte klinische Akte ergänzt, um subtile, subjektive oder interpretative Informationen über den Patienten ausdrücken zu können, die sonst alleine durch strukturierte Daten möglicherweise nicht deutlich werden; dies soll eine balancierte, kontextspezifische elektronische Patientenakte unterstützen.\r\nBeispielsweise kann eine Clinical Synopsis eine kurze Zusammenfassung der Aufnahme eines Patienten als eine Komponente eines umfassenden und strukturierten Epikrise-Dokuments übermitteln.",
+          "misuse" : "Nicht zu benutzen um genaue und strukturierte Informationen aufzunehmen. Beispielsweise sollten detaillierte Informationen über Probleme, Diagnosen und Testergebnisse durch die entsprechend relevanten Archetypen EVALUATION.problem, EVALUATION.problem-diagnosis und OBSERVATION-Archetypen für Labpr- oder radiologische Ergebnisse aufgenommen werden. Die Clinical Synopsis darf manche kritische bzw. ausgewählte numerische Ergebnisse aus diesen strukturierten Details überbringen, wenn diese als wichtig für die Vollständigkeit der Synopsis beurteilt werden; sie ist jedoch NICHT die primäre Stelle zur Aufnahme solcher Informationen.\r\nDer Begriff \"Klinische Synopsis\" kann sich manchmal auf komplexe und umfangreiche Dokumente beziehen, z. B. eine Epikrise (Discharge Summary) oder ein Bericht (Report). In openEHR sollten diese Dokumente als Aggregationen eingeschränkter Archetypen dargestellt werden (sprich openEHR \"templates\"), d. h. eine Epikrise- oder Bericht-Vorlage, die aus mehreren einzelnen Archetypen besteht, wovon der Clinical Synopsis-Archetyp einer sein könnte.\r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera en beskrivande sammanfattning om en patient, ur vårdgivarens perspektiv.",
+          "keywords" : [ "sammanfattning", "slutsats", "sammandrag", "exakt", "abstrakt", "bedömning", "synopsis", "epikris", "kommentar", "anteckning" ],
+          "use" : "Används för att sammanfatta patientens hälsotillstånd. Denna ostrukturerade sammanfattning kan innehålla identifierade hälsoproblem, vilken hälsovård som tillhandahållits, tolkning av sammanhanget, för patientens förståelse. Här kan några av de mjukare, mer subjektiva aspekterna av patientens upplevelse och resa kan beskrivas. Vanligtvis är den här sammanfattningen relaterad till en specifik hälsohändelse, exempelvis en specifik konsultation eller sjukhusvistelse, men den kan också användas för att sammanfatta patientens hälsohistorik under olika tidsperioder.\r\n\r\nI praktiken är klinisk synopsis en metaobservation som kompletterar det befintliga strukturerade kliniska registret. Den tillåter uttryck för subtil, subjektiv eller tolkande information om patienten som kanske inte annars är uppenbar genom enbart strukturerade data, vilket ger en balans och kontext till EHR-dokumentet. Exempelvis kan en klinisk sammanfattning återge en kortfattad sammanfattning av patientens sjukhusvistelse som en del i ett omfattande och strukturerat utskrivningsdokument.",
+          "misuse" : "Ska inte användas för att beskriva specifika och strukturerade hälsouppgifter. Exempelvis vid detaljerad information om problem, diagnoser och testresultat ska den specifika relevanta arketypen EVALUATION.problem, EVALUATION.problem-diagnos samt laboratorie- eller radiologiresultat i OBSERVATIONER användas. \r\n\r\nDen kliniska synopsisen kan återge några kritiska och numeriska resultat när de bedömts viktiga för synopsisens helhet, men det är INTE den primära registreringsplatsen för dem.\r\nUttrycket \"klinisk synopsis\" kan ibland referera till komplexa och omfattande dokument, exempelvis som översikter över utskrivningar eller rapporter. I openEHR ska dessa dokument presenteras som samlingar av begränsade arketyper, dvs. som en mall för sammanfattning av utskrivning eller en rapportmall som innehåller ett antal separata arketyper, av vilka denna kliniska sammanfattnings-arketyp kan vara en.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å sammenfatte og dokumentere et fritekstsammendrag om en pasient fra helsepersonellets perspektiv.",
+          "keywords" : [ "sammendrag", "konklusjon", "disposisjon", "abstrakt", "vurdering", "beskrivelse", "epikrise", "notat" ],
+          "use" : "Anvendes for å registrere en fritekstoppsummering av pasientens helse. Denne ustrukturerte oppsummeringen kan omfatte identifiserte helseproblemer; helsetjenester som er ytt, klinisk fortolkning, pasientens forståelse samt at den muliggjør kommunikasjon vedrørende mer subtile og subjektive aspekter rundt pasientens helseerfaringer. Vanligvis vil denne oppsummeringen bli brukt ved spesifikke hendelser, for eksempel ved en konsultasjon eller sykehusinnleggelse, men oppsummeringen kan også brukes til å sammenfatte pasientens egne erfaringer over varierende tidsperioder. \r\n\r\nI praksis er Klinisk sammendrag en overordnet (meta) observasjon som vil fungere som et tillegg til eksisterende strukturert journal. Dette for å kunne fange og dokumentere pasientenes subtile, subjektive og/eller fortolkede informasjon som ellers alene ikke vil bli tydeliggjort godt nok ved hjelp av strukturerte data alene. Klinisk sammendrag vil således bidra til å gi kontekst og balanse i den elektroniske pasientjournalen. For eksempel kan Klinisk sammendrag gi en konkret oppsummering av pasientens sykehusinnleggelse som en del av en strukturert epikrise.",
+          "misuse" : "Anvendes ikke for å registrere spesifikk strukturert helseinformasjon. For eksempel vil detaljer om problemer, diagnoser og prøveresultat registreres ved hjelp av arketyper som for eksempel EVALUATION.problem_diagnosis, og laboratorie- eller radiologi svar i passende OBSERVATION-arketyper. \"Klinisk sammendrag\" kan for helhetens skyld inkludere og referere enkelte viktige numeriske resultat fra de strukturerte data, men er ikke det primære stedet for registrering av dem.\r\n\r\nBegrepet \"Klinisk sammendrag\" kan i enkelte tilfeller henvise til sammensatte og omfattende dokumenter, som epikriser og ut-notater. I openEHR vil en epikrise eller ut-notat representeres med aggregert informasjon fra underliggende arketyper ved hjelp av templater. Klinisk Sammendrag vil da være kun én av flere arketyper som blir inkludert.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para sintetizar manualmente y registrar en forma narrativa un sumario acerca de un paciente, desde la perspectiva de un profesional del cuidado de la salud.",
+          "keywords" : [ "sumario", "conclusión", "visión global", "resumen", "extracto", "evaluación", "sinopsis", "epicrisis", "comentario", "nota" ],
+          "use" : "Usado para registrar en forma narrativa, una vista resumida del estado de salud del paciente. Este sumario no estructurado, puede incluir problemas/condiciones de salud identificados, cuidados de la salud provistos, interpretaciones clínicas asociadas y el entendimiento del paciente acerca de su condición clínica. Esta síntesis puede permitir la comunicación acerca de aspectos más sutiles y subjetivos en relación con la experiencia del paciente. Mas comúnmente este sumario estará probablemente relacionado con eventos de salud específicos tales como consultas médicas concretas o internaciones, pero puede también ser usado para sumarizar la experiencia del paciente en relación con su salud, en diferentes periodos de tiempo. \r\nEn la práctica, la Sinopsis Clínica es una meta-observación que complementará el registro clínico estructurado existente, permitiendo la expresión de información sutil, subjetiva o interpretativa acerca del paciente, que podría no ser obvia a través de solamente analizar los datos estructurados, proveyendo de esta forma balance y contexto al registro clínico.\r\nPor ejemplo, una Sinopsis Clínica puede comunicar un sumario sucinto de una internación del paciente, como un componente dentro de un documento de Epicrisis completo y estructurado.",
+          "misuse" : "No debe usarse para registrar información de salud estructurada y específica. Por ejemplo, información detallada relacionada con Problemas, Diagnósticos y Resultados de Estudios debería ser registrada usando los arquetipos específicos y relevantes EVALUATION.problem, EVALUATION.problem-diagnosis y resultados de laboratorio o imágenes en OBSERVATIONs. La Sinopsis Clínica puede expresar algunos resultados numéricos seleccionados críticos (presentes en secciones estructuradas específicas), cuando sean juzgados importantes para la completitud de la Sinopsis pero NO es el sitio primario de registro para esta información.\r\nEl término “Sinopsis Clínica” puede referirse a veces a documentos complejos y detallados tales como Epicrisis o Reportes. En openEHR, estos documentos deberían ser representados como agregaciones de arquetipos restringidos. Por ejemplo, una plantilla de Epicrisis o de Reporte deberían estar compuestos por un grupo de arquetipos (entre los que se encontraría la Sinopsis Clínica).",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para sintetizar manualmente e gravar um sumário narrativo sobre um paciente, a partir da perspectiva de um profissional de saúde.",
+          "keywords" : [ "sumário", "conclusão", "esboço", "resumo", "abstrato", "avaliação", "sinopse", "epícrise", "comentário", "anotações" ],
+          "use" : "Usado para registrar uma narrativa, visão sumarizada da saúde do paciente. Esse sumário não estruturado pode incluir questões médicas identificadas; plano de saúde fornecido; interpretação associada; compreensão do paciente; e permite comunicação sobre alguns dos mais sutis, mais subjetivos aspectos da experiência do paciente e jornada. Mais comumente esse sumário aparenta estar relacionado para um evento médico específico como uma consulta específica ou admissão hospitalar, mas também pode ser usado para sumarizar a experiência médica do paciente em diferentes períodos de tempo. \r\nNa prática, Sinopse Clínica é uma meta-observação que complementará o registro clínico estruturado existente, permitindo a expressão da sutil, subjetiva ou interpretativa informação sobre o paciente que de outra forma, através de um documento estruturado sozinho pode não ser óbvia , provendo balanceamento e contexto ao registro Eletrônico de Saúde. \r\nPor exemplo, uma Sinopse Clínica pode comunicar um sumário sucinto da admissão hospitalar do paciente como um componente de um estruturado e compreensivo Documento de Sumário de Alta.",
+          "misuse" : "*Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.\r\nThe term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To manually synthesise and record a narrative summary about a patient, from the perspective of a healthcare provider.",
+          "keywords" : [ "summary", "conclusion", "outline", "precis", "abstract", "assessment", "synopsis", "epicrisis", "comment", "note" ],
+          "use" : "Use to record a narrative, summary view of the patient's health.  This unstructured summary may include identified health issues; health care provided; associated interpretation; patient understanding; and enable communication about some of the softer, more subjective aspects of the patient’s experience and journey. Most commonly this summary is likely to be related to a specific health event such as a specific consultation or hospital admission, but may also be used to summarise the patient's health experience over varying time periods. \r\nIn practice, Clinical Synopsis is a meta observation that will complement the existing structured clinical record, allowing for expression of subtle, subjective or interpretive information about the patient that might not otherwise be obvious through structured data alone, providing balance and context to the EHR record.  \r\nFor example, a Clinical Synopsis can communicate a succinct summary of the patient's hospital admission as one component of a comprehensive and structured Discharge Summary document.",
+          "misuse" : "Not to be used to record specific and structured health information. For example, detailed information about Problems, Diagnoses, and Test Results should be recorded using the specific relevant archetypes EVALUATION.problem, EVALUATION.problem-diagnosis, and laboratory or radiology results in OBSERVATIONs. The Clinical Synopsis may convey some critical and selected numerical results from these structured details when judged important for completeness of the Synopsis but is NOT the primary recording site for them.\r\nThe term “Clinical Synopsis” can sometimes refer to complex and comprehensive documents, such as a Discharge Summary or a Report. In openEHR these documents should be represented as aggregations of constrained archetypes, that is, a Discharge Summary template or a Report template, comprising a number of separate archetypes, of which this Clinical Synopsis archetype may be one.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل ملخص برواية تم توليفها يدويا عن مريض من وجهة نظر مقدم الرعاية الصحية ",
+          "keywords" : [ "ملخص", "استنتاج", "إطار", "دقيق", "مستخلص", "تقييم", "مختصر", "نوبة إضافية", "تعليق", "ملحوظة" ],
+          "use" : "لتسجيل رؤية ملخصة بتوليف رواية عن صحة المريض. هذا الملخص غير المركب قد يتضمن قضايا صحية مُعَرَّفة, تم تقديمها بواسطة مقدم الخدمة الصحية, مع إرفاق تفسير, و تفَهُّم المريض, و يُمَكِّن من توصيل بعض من الجوانب البسيطة غير موضوعية من خبرة و رحلة المريض.\r\nو غالبا ما يكون هذا الملخص ذي احتمال عالي أن يكون متعلقا بواقعة صحية, مثل استشارة معينة أو إدخال إلى المستشفى, و لكن قد يستخدم في تلخيص الخبرة الصحية للمريض خلال فترات زمنية متعددة.\r\nفي الممارسة المعتادة, يعتبر المختصر السريري هو ملاحظة عامة تُكَمِّل السجل السريري المركب, و تسمح بالتعبير عن المعلومات الرقيقة غير الموضوعية التفسيرية عن المريض, و التي قد لا تكون واضحة إذا استخدم البيانات المركبة وحدها, بما يزوِّد اتزانا و سياقا للسجل الطبي الإلكتروني. \r\nمثل, قد يقوم المختصر السريري بتوصيل ملخص موجز عن إدخال المريض إلى المستشفى كجزء من وثيقة شاملة و مركبة حول ملخص الخروج.",
+          "misuse" : "لا يستخدم لتسجيل المعلومات الصحية المحددة و المركبة. مثلا, ينبغي تسجيل المعلومات التفصيلية حول المشكلات, التشخيصات, و نتائج الاختبارات باستخدام النماذج المخصصة ذات الصلة مثل (تقييم. مشكلة) و (تقييم. مشكلة - تشخيص) و نتائج اختبارات المعمل و التصوير الإشعاعي في نماذج الملاحظات.\r\nقد يوصل المختصر السريري بعض النتائج الرقمية من هذه التفاصيل إذا كان ذلك هاما لاكتمال المختصر, و لكن لا يعتبر الموضع الأولي لتسجيل هذه النتائج.\r\n\r\nقد يشير اللفظ (المختصر السريري) أحيانا إلى وثائق مركبة و شاملة, مثل ملخص الخروج أو تقرير ما.\r\nو ينبغي التعبير عن هذه الوثائق في نماذج مقيدة, و التي هي قالب ملخص الخروج و قالب التقرير, وسط مجموعة من النماذج يعتبر المختصر السريري واحدا منها.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fa" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fa"
+          },
+          "purpose" : "به صورت دستی ترکیب و ثبت توضیحی خلاصه در مورد یک بیمار ، از نظر ارائه دهنده خدمات درمانی",
+          "keywords" : [ "خلاصه", "نتیجه", "رئوس مطالب", "خلاصه رئوس مطالب", "چکیده", "ارزیابی", "خلاصه", "خلاصه انتقادی یا تحلیلی", "توضیحات", "یادداشت" ],
+          "use" : "برای ثبت توضیح ، نظری خلاصه در مورد سلامت بیمار استفاده می شود.این خلاصه ساختار بندی نشده ممکن است شامل شناسایی مسایل بهداشتی ، مراقبت های بهداشتی ارایه شده همراه با تفسیر ، درک بیمار ، توانایی ارتباط با بیمار در مورد برخی جنبه های ذهنی و... در مورد تجربیات وسفرهای بیمار .معمولا این خلاصه به رویدادهای خاص سلامت نظیر مشاوره های خاص یا پذیرش بیمارستانی مربوط می شود اما ممکن است همچنین برای خلاصه نمودن تجربیات بیمار در طی دوره های زمانی مختلف استفاده شود\r\nدر عمل،خلاصه بالینی مشاهده .... است که متمم مدارک ساختارمند بالینی کنونی خواهد بود که بیان اطلاعات دقیق ، ذهنی یا تفسیر را امکان پذیر می کند در غیر اینصورت از طریق داده های ساختار یافته به تنهایی امکان پذیر نیست و تعادل و چهارجوچوبی برای ثبت پرونده الکترونیک سلامت ارایه می کنند\r\nبرای مثال خلاصه  بالینی می تواند بین خلاصه کوتاه پذیرش بیمارستانی بیمار به عنوان یکی از اجزا جامع و برگه ساختار مند خلاصه ترخیص ارتباط برقرار کند            ",
+          "misuse" : "برای ثبت اطلاعات سلامت خاص و ساختار مند استفاده نمی شود. برای مثال اطلاعات جزیی درباره مشکلات ، تشخیصها و نتایج تست باید با استفاده از الگو ساز خاص ومربوطه .....و نتایج آزمایشگاهی یا رادیولوژی در ....ثبت شود. خلاصه بالینی ممکن است شامل برخی نتایج عددی حیاتی و انتخاب شده  از  جزییات ساختار مند باشد زمانی که برای تکمیل خلاصه مهم باشدامااین الگو ساز محل اولیه ثبت این موارد نیست\r\nواژه \"خلاصه بالینی \"کاهی به اسناد پیچیده و جامع اشاره می کند نظیر خلاصه ترخیص یا گزارش. در ... اسناد باید به عنوان توده ای از الگوسازهای محدود شده ارایه شود ، الگوی خلاصه ترخیص یا  الگوی گزارش شامل تعدادی از الگوسازهای جداگانه می باشد که الگوساز خلاصه بالینی یکی از این الگوسازها می باشد    \r\n  ",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "从医疗保健服务提供者的角度，手工综合并记录关于患者的叙述型摘要。",
+          "keywords" : [ "摘要", "小结", "概要", "概况", "概略", "结论", "总结", "梗概", "大纲", "提要", "要点", "评估", "评价", "总览", "评论", "病案讨论", "病情分析", "备注", "注释", "记录", "笔记" ],
+          "use" : "用于记录患者相关健康状况的叙述性摘要。这种非结构化摘要可以包括所确定的健康事项、所提供的医疗保健服务、相关联的解释和患者的理解，并且便于表达关于患者体验和经历的某些较为委婉和较为主观的方面。最为常见的情况就是，这种摘要很可能与特定的健康事件相关，如某次特定的会诊咨询或收治入院（住院），但也可以用于总结概括患者在不同时间段内的健康历程。临床摘要是一种元观察（meta observation，超级观察），将对已有的结构化临床记录起到补充作用，允许表达关于患者的微妙的、主观的或解释性的信息，而仅仅借助于结构化数据，此类信息可能并非显而易见，从而为EHR记录提供了平衡和背景。例如，临床摘要可以作为综合性、结构化的患者入院情况的简要概述，用于出院摘要（出院小结、出院记录）文档的一个组成部分。",
+          "misuse" : "并非旨在用于记录具体的结构化健康信息。例如，对于有关问题、诊断和检验项目结果的详细信息，应当分别采用具体相关的原始型来加以记录，比如，分别采用评价类之中的问题（EVALUATION.problem）, 评价类之中的诊断（EVALUATION.problem-diagnosis）和观察类（OBSERVATION）之中实验室或放射医学结果。当判断认为此类结构化细节信息之中的某些至关重要的和精选的数值型结果对于当前提要的完整性具有重要作用的时候，临床提要可以传达此类结果，但这里并不是此类信息的原始记录位置。有时，“临床提要（Clinical Synopsis）”可能指的是复杂的综合性文档，如出院摘要（出院小结、出院记录）或报告。在openEHR之中，应当将此类文档表达为若干经过约束的原始型的聚合体，也就是说，出院摘要模板或报告模板是由许多不同的原始型构成，而临床提要原始型则可能只是后面所说的这些原始型之一。\r\n\r\n不用于记录特定和结构化的健康信息。例如，有关问题、诊断和测试结果的详细信息应使用特定的相关原型evaluation.problem、evaluation.problem-diagnosis和观察中的实验室或放射学结果进行记录。临床概要可以传达一些关键的和精选的数值型结果，从这些结构化的细节，当判断为概要的完整性重要，但不是他们的主要记录地点。\r\n\r\n“临床概要”一词有时可以指复杂和全面的文件，如出院总结或报告。在openehr中，这些文档应该表示为约束原型的集合，即出院总结模板或报告模板，包含多个独立的原型，其中临床概要原型可能是其中之一。",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.clinical_synopsis.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-clinical_synopsis-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Other disability",
+            "description" : "Narrative summary or overview about a patient, specifically from the perspective of a healthcare provider, and with or without associated interpretations."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Other disability notes",
+            "description" : "The summary, assessment, conclusions or evaluation of the clinical findings."
+          }
+        },
+        "fa" : { },
+        "ar-sy" : { },
+        "de" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "zh-cn" : { },
+        "nb" : { },
+        "sv" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "263a2a2e-9098-49b1-b4ab-1a243de3fbb9",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Nadim Anani",
+        "organisation" : "Health Informatics Centre, Karolinska Institutet, Sweden"
+      },
+      "accreditation" : "fluent in both English and German, Medical Informatics 'MSc' degree from Heidelberg, 2 years professional experience in health informatics, some translation experience, openEHR knowledge.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Kirsi Poikela",
+        "organisation" : "Tieto Sweden AB",
+        "email" : "ext.kirsi.poikela@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Dr. Leonardo Der Jachadurian",
+        "organisation" : "Bitios.com"
+      },
+      "accreditation" : "Medical Doctor (Internal Medicine Specialist)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Ingrid Heitmann",
+        "organisation" : "NTNU and OUS, Registered nurse",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Emerson Urushibata",
+        "organisation" : "Universidade de São Paulo"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fa"
+      },
+      "author" : {
+        "name" : "Shahla Foozonkhah",
+        "organisation" : "Ocean Informatics",
+        "email" : "shahla.foozonkhah@oceaninformatics.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "MAY L",
+        "organisation" : "CSDC",
+        "email" : "hcn2020@126.com"
+      },
+      "accreditation" : "What goes here?",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "ee377ef4-0e57-45da-b59b-272f672e1a11",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "cb43f0f90b4194cfafa7c2a55a56f648"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.care_journey_metadata.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "cb42d24f-9773-3a1e-abb6-163b93b0074e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "32c4bd64-89e8-4f9f-bea0-742fadcc25bc",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "bd7367f7261770247b2ab32faca8d535"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Care setting adjustments",
+          "keywords" : [ ],
+          "use" : "Care setting adjustments",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.care_setting_adjustments.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-care_setting_adjustments-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0007.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "UCP-Care-settings-adjustments"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "UCP-Care-settings-adjustments" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "1",
+                        "value" : "Wheelchair access"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "2",
+                        "value" : "Service dog"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "3",
+                        "value" : "Emotional support animal"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "4",
+                        "value" : "Extended appointment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "5",
+                        "value" : "Familiarisation with care procedure"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "6",
+                        "value" : "Home visit appointments"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "7",
+                        "value" : "Minimal waiting time between arrival and being seen in care environment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "8",
+                        "value" : "Priority appointment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "9",
+                        "value" : "Distraction technique whilst undergoing care procedure"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "10",
+                        "value" : "Familiarisation with care environment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "11",
+                        "value" : "First appointment in appointment schedule"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "12",
+                        "value" : "Last appointment in appointment schedule"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "13",
+                        "value" : "Single room during inpatient care"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "14",
+                        "value" : "Appointment reminders"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "15",
+                        "value" : "Low light environment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "16",
+                        "value" : "Low noise environment"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "17",
+                        "value" : "Having someone familiar with them"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "18",
+                        "value" : "Needs extra observations and support from carer"
+                      }, {
+                        "terminologyId" : "UCP-Care-settings-adjustments",
+                        "code" : "19",
+                        "value" : "Needs help with healthcare phobias and fears"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0010.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0008.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "UCP-Sensory-differences"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "UCP-Sensory-differences" ],
+                      "limitToList" : false,
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "1",
+                        "value" : "Sense of smell, olfactory"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "2",
+                        "value" : "Sense of taste, gustatory"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "3",
+                        "value" : "Sense of touch, tactile"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "7",
+                        "value" : "Sense of hearing"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "8",
+                        "value" : "Sense of vision"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "4",
+                        "value" : "Vestibular sense of body position, motion head position"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "5",
+                        "value" : "Proprioception, sense of body position, force, coordination"
+                      }, {
+                        "terminologyId" : "UCP-Sensory-differences",
+                        "code" : "6",
+                        "value" : "Interoception, internal senses, recognition of them"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "89fc6fa6-47ed-321c-8125-a81b21ffb083",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "be48a9ed-7020-4f03-b6a9-8c815e04330d",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "089BF08253D467A2040D166189CFFA04"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of the 6CIT score.\r\nThe 6 Item Cognitive Impairment Test (6CIT) has been found to be a valid screening instrument for detection of dementia (Brooke & Bullock, 1999).\r\nThe 6CIT is brief and easy to administer and score.\r\nIt is now widely used by Primary Care Physicians in the UK and internationally.\r\nIts primary use is as a 'Recognition tool' to help identify people who should be referred on to a 'Memory Clinic' for more specialist investigation.",
+          "keywords" : [ "6CIT", "cognitive", "impairment", "dementia" ],
+          "use" : "Use to record the individual items and the total score for the 6 Item Cognitive Impairment test for the detection of dementia.",
+          "copyright" : "© Clinical Models UK",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.six_cit_assessment.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-six_cit_assessment-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0007.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0010.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0017.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0021.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0029",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0030.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d46d0855-7f7b-4aa4-bb33-a670943d3b86",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b1e82107-048b-431c-bbce-19c664f03641",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "CABF06A8F8DEDD38822B1B0CB013AA81"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Antworten in einem Screening-Fragebogen zur Ermittlung von Zuständen.",
+          "keywords" : [ ],
+          "use" : "*Use to record the responses to a screening questionnaire for conditions.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation; or\r\n- Specific questioning related to infectious disease surveillance.\r\n\r\nIn order to record the response at a specific point in time or within an interval of time, use the EVENT RM attribute.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening process identifies the presence of a health condition and it is intended that the details are to be recorded and persisted as part of an ongoing health record, any further specific details about the condition (such as the date of clinical recognition) should be recorded using the EVALUATION.problem_diagnosis archetype. (en)",
+          "misuse" : "Nicht zu verwenden, um Details zu einem bestimmten gesundheitlichen Zustand im Rahmen einer typischen klinischen Beratung darzustellen. Verwenden Sie dazu EVALUATION.problem_diagnosis.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å dokumentere responsen gitt i et selvregistreringsskjema eller undersøkelsesskjema om et individs helsetilstander.",
+          "keywords" : [ ],
+          "use" : "Brukes for å dokumentere responsen gitt i et selvregistreringsskjema eller undersøkelsesskjema om et individs helsetilstander.\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematisk bruk av selvregistrering- eller undersøkelsesskjema ved konsultasjoner.\r\n- Spesifikk spørring relatert til overvåkning av infeksjonssykdommer.\r\n\r\nFor å registrere det spesifikke tidspunktet, eller tidsintervallet responsen ble gitt, bruk referansemodellens EVENT RM attributt\r\n\r\nDenne arketypen er laget for bruk som et screeningverktøy for å registrere enkle data i et spørreskjema/undersøkelsesskjema, som for eksempel til et sykdomsregister. Dersom det i screeningsprosessen blir identifisert at en medisinsk tilstand er tilstede, og som bør være en del av den løpende journalen, bruk arketypen EVALUATION.problem_diagnosis (Problem diagnose) for dette formålet. Her kan det registreres spesifikke detaljer om tilstanden som for eksempel diagnosedato.\r\n\r\n",
+          "misuse" : "Skal ikke brukes for å registrere spesifikke detaljer om en helsetilstand som en del av en typisk klinisk konsultasjon. Bruk arketypen EVALUATION.problem_diagnosis (Problem/ diagnose) for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the responses to a screening questionnaire for conditions.",
+          "keywords" : [ ],
+          "use" : "Use to record the responses to a screening questionnaire for conditions.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation; or\r\n- Specific questioning related to infectious disease surveillance.\r\n\r\nIn order to record the response at a specific point in time or within an interval of time, use the EVENT RM attribute.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening process identifies the presence of a health condition and it is intended that the details are to be recorded and persisted as part of an ongoing health record, any further specific details about the condition (such as the date of clinical recognition) should be recorded using the EVALUATION.problem_diagnosis archetype.",
+          "misuse" : "Not to be used to record details about a specific condition as part of a typical clinical consultation. Use EVALUATION.problem_diagnosis for this purpose.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.condition_screening.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0034.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "defaultValue" : {
+                            "value" : "Cognitive impairment",
+                            "@type" : "DV_TEXT"
+                          },
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0028.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.5" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "UCP-Cognitive-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "1",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Concerns about memory",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "UCP-Cognitive-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "UCP-Cognitive-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "UCP-Cognitive-issues",
+                                    "code" : "1",
+                                    "value" : "Concerns about memory"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.1" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "local_terms",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "2",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "History of delirium",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "local_terms"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "local_terms" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "local_terms",
+                                    "code" : "2",
+                                    "value" : "History of delirium"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.2" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.2",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.3",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "local_terms",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "3",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Problems of orientation",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "local_terms"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "local_terms" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "local_terms",
+                                    "code" : "3",
+                                    "value" : "Problems of orientation"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.4" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.3",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.4",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "local_terms",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "4",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Difficulties with processing or understanding information",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "local_terms"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "local_terms" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "local_terms",
+                                    "code" : "4",
+                                    "value" : "Difficulties with processing or understanding information"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.3" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.4",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Cognition",
+            "description" : "An individual- or self-reported questionnaire screening for health conditions, including problems and diagnoses."
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Concerns about memory",
+            "description" : "Presence of the condition."
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Concerns about memory",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.2",
+            "text" : "History of delirium",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.2",
+            "text" : "History of delirium",
+            "description" : "Presence of the condition."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.3",
+            "text" : "Problems of orientation",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.3",
+            "text" : "Problems of orientation",
+            "description" : "Presence of the condition."
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.4",
+            "text" : "Difficulties with processing or understanding information",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.4",
+            "text" : "Difficulties with processing or understanding information",
+            "description" : "Presence of the condition."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Any cognitive impairment?",
+            "description" : "Presence of any relevant conditions."
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.5",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (2)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (3)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (4)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (2)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (3)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (4)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0031", "at0032", "at0033" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "52a4ab8e-360a-4be5-87d3-3142a143f829",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Marit Alice Venheim, Silje Ljosland Bakke, John Tore Valand",
+        "organisation" : "Helse Vest IKT, Helse Vest IKT AS, Helse Bergen",
+        "email" : "marit.alice.venheim@helse-vest-ikt.no, silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "029dfc62-e5f4-4a2b-aad6-70ffab47f706",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "CABF06A8F8DEDD38822B1B0CB013AA81"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung der Antworten in einem Screening-Fragebogen zur Ermittlung von Zuständen.",
+          "keywords" : [ ],
+          "use" : "*Use to record the responses to a screening questionnaire for conditions.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation; or\r\n- Specific questioning related to infectious disease surveillance.\r\n\r\nIn order to record the response at a specific point in time or within an interval of time, use the EVENT RM attribute.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening process identifies the presence of a health condition and it is intended that the details are to be recorded and persisted as part of an ongoing health record, any further specific details about the condition (such as the date of clinical recognition) should be recorded using the EVALUATION.problem_diagnosis archetype. (en)",
+          "misuse" : "Nicht zu verwenden, um Details zu einem bestimmten gesundheitlichen Zustand im Rahmen einer typischen klinischen Beratung darzustellen. Verwenden Sie dazu EVALUATION.problem_diagnosis.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å dokumentere responsen gitt i et selvregistreringsskjema eller undersøkelsesskjema om et individs helsetilstander.",
+          "keywords" : [ ],
+          "use" : "Brukes for å dokumentere responsen gitt i et selvregistreringsskjema eller undersøkelsesskjema om et individs helsetilstander.\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematisk bruk av selvregistrering- eller undersøkelsesskjema ved konsultasjoner.\r\n- Spesifikk spørring relatert til overvåkning av infeksjonssykdommer.\r\n\r\nFor å registrere det spesifikke tidspunktet, eller tidsintervallet responsen ble gitt, bruk referansemodellens EVENT RM attributt\r\n\r\nDenne arketypen er laget for bruk som et screeningverktøy for å registrere enkle data i et spørreskjema/undersøkelsesskjema, som for eksempel til et sykdomsregister. Dersom det i screeningsprosessen blir identifisert at en medisinsk tilstand er tilstede, og som bør være en del av den løpende journalen, bruk arketypen EVALUATION.problem_diagnosis (Problem diagnose) for dette formålet. Her kan det registreres spesifikke detaljer om tilstanden som for eksempel diagnosedato.\r\n\r\n",
+          "misuse" : "Skal ikke brukes for å registrere spesifikke detaljer om en helsetilstand som en del av en typisk klinisk konsultasjon. Bruk arketypen EVALUATION.problem_diagnosis (Problem/ diagnose) for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the responses to a screening questionnaire for conditions.",
+          "keywords" : [ ],
+          "use" : "Use to record the responses to a screening questionnaire for conditions.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation; or\r\n- Specific questioning related to infectious disease surveillance.\r\n\r\nIn order to record the response at a specific point in time or within an interval of time, use the EVENT RM attribute.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening process identifies the presence of a health condition and it is intended that the details are to be recorded and persisted as part of an ongoing health record, any further specific details about the condition (such as the date of clinical recognition) should be recorded using the EVALUATION.problem_diagnosis archetype.",
+          "misuse" : "Not to be used to record details about a specific condition as part of a typical clinical consultation. Use EVALUATION.problem_diagnosis for this purpose.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.condition_screening.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-condition_screening-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0034.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "defaultValue" : {
+                            "value" : "Mental wellbeing",
+                            "@type" : "DV_TEXT"
+                          },
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0028.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0022.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "CMC-Mental-health-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "1",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Suicidal ideation",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "CMC-Mental-health-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "CMC-Mental-health-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "1",
+                                    "value" : "Suicidal ideation"
+                                  }, {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "2",
+                                    "value" : "Problems with appetite"
+                                  }, {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "3",
+                                    "value" : "Hallucinations or delusions"
+                                  }, {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "4",
+                                    "value" : "Agitation or distressed reactions"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.2" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.1",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "CMC-Mental-health-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "1",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Suicidal ideation",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "CMC-Mental-health-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "CMC-Mental-health-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "1",
+                                    "value" : "Suicidal ideation"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.6" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.2",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.2",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.3",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "CMC-Mental-health-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "2",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Problems with appetite",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "CMC-Mental-health-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "CMC-Mental-health-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "2",
+                                    "value" : "Problems with appetite"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.7" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.3",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.4",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "CMC-Mental-health-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "3",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Hallucinations or delusions",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "CMC-Mental-health-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "CMC-Mental-health-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "3",
+                                    "value" : "Hallucinations or delusions"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.8" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.4",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.5",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0004.5",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "defaultValue" : {
+                                "defining_code" : {
+                                  "terminology_id" : {
+                                    "value" : "CMC-Mental-health-issues",
+                                    "@type" : "TERMINOLOGY_ID"
+                                  },
+                                  "code_string" : "4",
+                                  "@type" : "CODE_PHRASE"
+                                },
+                                "value" : "Agitation or distressed reactions",
+                                "@type" : "DV_CODED_TEXT"
+                              },
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "CMC-Mental-health-issues"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "CMC-Mental-health-issues" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "CMC-Mental-health-issues",
+                                    "code" : "4",
+                                    "value" : "Agitation or distressed reactions"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0005.5",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "1..1",
+                                  "terminologyId" : {
+                                    "value" : "local"
+                                  },
+                                  "constraint" : [ "ac0.9" ],
+                                  "selectedTerminologies" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0040.5",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DURATION",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            }, {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                              "attributes" : [ ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0041.5",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mental wellbeing",
+            "description" : "An individual- or self-reported questionnaire screening for health conditions, including problems and diagnoses."
+          },
+          "at0028.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0028.1",
+            "text" : "Any issues with mental wellbeing??",
+            "description" : "Presence of any relevant conditions."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.2",
+            "text" : "Suicidal ideation",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.2",
+            "text" : "Suicidal ideation?",
+            "description" : "Presence of the condition."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.3",
+            "text" : "Problems with appetite",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.3",
+            "text" : "Problems with appetite?",
+            "description" : "Presence of the condition."
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.4",
+            "text" : "Hallucinations or delusions",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.4",
+            "text" : "Hallucinations or delusions?",
+            "description" : "Presence of the condition."
+          },
+          "at0022.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.5",
+            "text" : "Agitation or distressed reactions",
+            "description" : "Screening details about a specified condition or grouping of conditions."
+          },
+          "at0005.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.5",
+            "text" : "Agitation or distressed reactions?",
+            "description" : "Presence of the condition."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Kartlegging av helsetilstander (2)",
+            "description" : "En individuell eller selvrapportert kartlegging av et individs helsetilstander, inkludert problemer og diagnoser i et spørreskjema."
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (2)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (3)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (4)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          },
+          "at0022.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Spesifikk helsetilstand (5)",
+            "description" : "Detaljer om en spesifikk helsetilstand eller en gruppe av helsetilstander."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Screening-Fragebogen für Zustände (2)",
+            "description" : "*An individual- or self-reported questionnaire screening for health conditions, including problems and diagnoses. (en)"
+          },
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "at0022.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (2)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "at0022.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (3)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "at0022.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (4)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          },
+          "at0022.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Bestimmter Zustand (5)",
+            "description" : "*Screening details about a specified condition or grouping of conditions. (en)"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0031", "at0032", "at0033" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.9" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.9",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "52a4ab8e-360a-4be5-87d3-3142a143f829",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Marit Alice Venheim, Silje Ljosland Bakke, John Tore Valand",
+        "organisation" : "Helse Vest IKT, Helse Vest IKT AS, Helse Bergen",
+        "email" : "marit.alice.venheim@helse-vest-ikt.no, silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "4cb8d408-0cde-43f8-9086-04b0d264fd80",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "5591953BB82BBEFBD0AB521E8EF5DB71"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.",
+          "keywords" : [ "screening", "depression", "mood", "assessment", "mental health" ],
+          "use" : "Use to record the results of the Patient Health Questionnaire-9 (PHQ-9) and its subset assessment PHQ-2.\r\n\r\nThe archetype has been designed such that the actual PHQ questions are recorded as the description for each questionnaire data element. The data element name is a pragmatic description that is indicative of the question intent.\r\n\r\nThe original PHQ‐9 tool was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. From the PHQ Screeners website (http://www.phqscreeners.com/overview.aspx): \"All PHQ, GAD-7 screeners and translations are downloadable from this website and no permission is required to reproduce, translate, display or distribute them.\" And from the PHQ webpage (http://www.phqscreeners.com/pdfs/01_PHQ/English.pdf): \"No permission required to reproduce, translate, display or distribute\". \r\n\r\nThe Australian indigenous adaptation for the PHQ-9 subset assessing mood was developed by Dr. Alex Brown, Baker IDI Heart and Diabetes Institute, Alice Springs, 2009. The adapted questions are expressed within the Comments area for each questionnaire data element. Used with permission.",
+          "copyright" : "© Northern Territory Department of Health (Australia), openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.phq_9.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-phq_9-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "POINT_EVENT",
+              "nodeId" : "at0002",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0004.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0009.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0012.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0014.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0015.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0016.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0017.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0018.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0010.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_COUNT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "magnitude",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0,
+                                "upper" : 6,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0011.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_COUNT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "magnitude",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0,
+                                "upper" : 27,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0019.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0020", "at0021", "at0022", "at0023" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d6653acb-2695-4c08-8840-30198bbddeff",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2a59357b-4f03-45ae-9e15-4490c12f05ac",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "AEEE9C5F8EBAD3C466636062A583D4D8"
+      },
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the results and total score of the GAD-7 scale.",
+          "keywords" : [ ],
+          "use" : "Use to record the results and total score of the GAD-7 scale.",
+          "copyright" : "© Apperta UK, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.gad_7_score.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-gad_7_score-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0008.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0018.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0023.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0028.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0033.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0038.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0043.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_COUNT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "magnitude",
+                            "children" : [ {
+                              "@type" : "C_INTEGER",
+                              "rmTypeName" : "INTEGER",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : 0,
+                                "upper" : 21,
+                                "lowerIncluded" : true,
+                                "upperIncluded" : true,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : false
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0006",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0007.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "e2fa1c7e-1fc9-4099-9415-33ddb8ca95ce",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ ]
+}
