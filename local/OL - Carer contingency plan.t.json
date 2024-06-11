@@ -22,10 +22,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.7.0",
+      "sem_ver" : "0.6.0",
+      "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "eaa69bd7cca8e35a40517a7eb0a8f848",
-      "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
+      "MD5-CAM-1.0.1" : "eefe0c3c205fd6afca667415279d221a"
     },
     "details" : {
       "en" : {
@@ -125,7 +125,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Carer contingency plan",
+          "text" : "OL - Carer contingency plan",
           "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
         }
       }
@@ -283,7 +283,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "6e1394dc4502ca8d6a2c9d1c39459d24"
+        "PARENT:MD5-CAM-1.0.1" : "ef4746827bc5a62b1d1afb9ce14228c0"
       },
       "details" : {
         "en" : {
