@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "3c2549a5952ebe0f19eccaebf88b8c88",
+      "MD5-CAM-1.0.1" : "985fde7a994dd97c0b51742fdb2271fd",
       "PARENT:MD5-CAM-1.0.1" : "c176ef39a6fce6356ab6bc554bc86c61"
     },
     "details" : {
@@ -151,7 +151,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "OL - Urgent care equipment summary",
+          "text" : "Urgent care equipment summary",
           "description" : "A summary of devices and equipment, often maintained for a specific purpose, for example, "
         }
       }
