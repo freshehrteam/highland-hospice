@@ -14,7 +14,7 @@ description
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
 	>
-	lifecycle_state = <"release_candidate">
+	lifecycle_state = <"published">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,13 +22,13 @@ description
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"onelondon.ucp">
+		["custodian_organisation"] = <"One London UCP">
+		["original_namespace"] = <"org.onelondon.ucp">
 		["original_publisher"] = <"One London UCP">
-		["custodian_namespace"] = <"org.openehr">
+		["custodian_namespace"] = <"org.onelondon.ucp">
 		["MD5-CAM-1.0.1"] = <"a656133e22f1d86764b1c5e39b6d1620">
 		["build_uid"] = <"eea048ac-20c8-3bd9-a615-e7066d988d7f">
-		["revision"] = <"1.00">
+		["revision"] = <"1.0.0">
 	>
 
 definition
