@@ -97,7 +97,7 @@ Clinical Frailty Scale [Internet]. Dalhousie University. Dalhousie University; 2
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"945a4051794b4c54cde8341cb385871f">
+		["MD5-CAM-1.0.1"] = <"8211cd7a972b482b7aa9e26948743e51">
 		["build_uid"] = <"0d30467a-375d-4eca-b59b-ae467eeb271a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org. 
 Please note: SNOMED-CT term-bindings currently applied to the individual score values belong to the UK SNOMED_CT namespace.">
