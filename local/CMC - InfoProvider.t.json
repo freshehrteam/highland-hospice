@@ -8,19 +8,19 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "unmanaged"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
       "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-      "custodian_organisation" : "One London UCP",
-      "original_namespace" : "org.ucp.onelondon",
-      "original_publisher" : "One London UCP",
-      "custodian_namespace" : "org.ucp.onelondon",
-      "MD5-CAM-1.0.1" : "6c49c1e762b6383136040e7bd89c4b5b",
-      "sem_ver" : "1.0.0",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "d0a5e4edb58c744c46234e00beef16e3",
+      "sem_ver" : "0.99.3",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "fc97777fee48889620dd0d66030cf22d"
     },
@@ -33,7 +33,6 @@
           },
           "codeString" : "en"
         },
-        "purpose" : "Template fragment to capture CMC Clinical Information provider details for use in multiple contexts.",
         "keywords" : [ ],
         "originalResourceUri" : { },
         "otherDetails" : { }
@@ -612,7 +611,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "53d4fe80-f779-3375-91b0-e9e6037c907e",
+  "buildUid" : "4af2ba4f-0aec-30c8-9692-7a0dbac96a3c",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
@@ -1243,7 +1242,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "a18b968356954ec917d53c1ee693fefe"
+        "PARENT:MD5-CAM-1.0.1" : "8632f86bd516b362e85c0a88cd9762f9"
       },
       "details" : {
         "en" : {
@@ -1390,7 +1389,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "a18b968356954ec917d53c1ee693fefe"
+        "PARENT:MD5-CAM-1.0.1" : "8632f86bd516b362e85c0a88cd9762f9"
       },
       "details" : {
         "en" : {
