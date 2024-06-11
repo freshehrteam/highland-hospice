@@ -18,15 +18,16 @@ description
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
+			keywords = <"local-archetype", ...>
 		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"badcdfbb913a9ce48c458867e9fd01ec">
+		["custodian_organisation"] = <"One London UCP">
+		["original_namespace"] = <"onelondon.ucp">
+		["original_publisher"] = <"One London UCP">
+		["custodian_namespace"] = <"local.onelondon.ucp">
+		["MD5-CAM-1.0.1"] = <"6ac92db1a37344acf0fa6e6f7b29ea28">
 		["build_uid"] = <"ef47e21b-b5a3-34cc-b502-ad8afe719c21">
 	>
 
