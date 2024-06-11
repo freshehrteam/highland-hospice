@@ -11,21 +11,21 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "unmanaged"
     },
     "ipAcknowledgements" : { },
     "references" : { },
     "conversionDetails" : { },
     "otherDetails" : {
-      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
-      "custodian_organisation" : "One London UCP",
-      "original_namespace" : "org.onelondon.ucp",
-      "original_publisher" : "One London UCP",
-      "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "1.9.0",
-      "MD5-CAM-1.0.1" : "0d60a6011401b3465bba70b8f04ff302",
+      "licence" : "",
+      "custodian_organisation" : "",
+      "original_namespace" : "",
+      "original_publisher" : "",
+      "custodian_namespace" : "",
+      "sem_ver" : "1.5.0",
+      "MD5-CAM-1.0.1" : "3d0eebd61d84e580828212db627ae644",
       "build_uid" : "",
-      "is_singleton" : "ehr-tag-carePlanId",
+      "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
     "details" : {
@@ -145,7 +145,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "11c6edc2-7669-32f7-a71a-6d396810a6c0",
+  "buildUid" : "2e12eee5-a6bc-321e-ac37-59a56d8ecada",
   "rmName" : "openehr",
   "rmRelease" : "1.0.3",
   "generated" : true,
@@ -2852,7 +2852,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0009.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -3154,6 +3153,7 @@
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
                   "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
                   "terminologyId" : {
                     "value" : "UCP-housing-issues"
                   },
