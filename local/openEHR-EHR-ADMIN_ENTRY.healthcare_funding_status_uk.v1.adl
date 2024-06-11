@@ -24,7 +24,7 @@ description
 	>
 	other_details = <
 		["references"] = <"ISB End of Life Care Co-ordination: Core content Standard Specification http://www.isb.nhs.uk/library/standard/236">
-		["MD5-CAM-1.0.1"] = <"B58D8A572E5BE734B9A464ECA68B51F7">
+		["MD5-CAM-1.0.1"] = <"094076ef8e77653645312fed6cc784e0">
 		["build_uid"] = <"57ab0bbd-caeb-3767-998f-5ae02bc8e86d">
 	>
 
@@ -33,7 +33,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Healthcare funding status
+					ELEMENT[at0002] occurrences matches {0..*} matches {    -- Healthcare funding status
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
@@ -42,6 +42,12 @@ definition
 									at0010]    -- Continuing healthcare funding refused
 								}
 							}
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Additional details
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Fast-track healthcare funding status
@@ -53,6 +59,11 @@ definition
 									at0005]    -- Continuing healthcare fast track funding refused
 								}
 							}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..*} matches {    -- Addtional benefits
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0008] occurrences matches {0..1} matches {    -- DS1500 Disability living allowance status
@@ -67,6 +78,11 @@ definition
 					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Date last updated
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- SR1 allowance status
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -122,6 +138,18 @@ ontology
 				["at0010"] = <
 					text = <"Continuing healthcare funding refused">
 					description = <"The patient's continuing healthcare funding has been refused.">
+				>
+				["at0011"] = <
+					text = <"Additional details">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"SR1 allowance status">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Addtional benefits">
+					description = <"">
 				>
 			>
 		>
