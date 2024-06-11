@@ -15,19 +15,11 @@ language
 				["email"] = <"Strauch.Natalia@mh-hannover.de">
 			>
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			author = <
-				["name"] = <"Therese Lindberg">
-				["organisation"] = <"Cambio CDS">
-				["email"] = <"therese.lindberg@cambio.se">
-			>
-		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
 				["name"] = <"Silje Ljosland Bakke and Vebjørn Arntzen">
-				["organisation"] = <"Nasjonal IKT HF, Oslo University Hospital">
+				["organisation"] = <"Nasjonal IKT HF">
 				["email"] = <"silje.ljosland.bakke@nasjonalikt.no / varntzen@ous-hf.no">
 			>
 		>
@@ -110,32 +102,33 @@ Darf nicht verwendet werden, um Informationen über Einkommensquellen oder Einko
 
 Nicht zur Darstellung von Informationen über die Beschäftigung einer Person zu einem bestimmten Zeitpunkt (z. B. am 16. Juni 2014) oder während eines relativen Zeitintervalls (z. B. „in den letzten 30 Tagen“) verwenden. Verwenden Sie einen geeigneten OBSERVATION-Archetyp für diesen Zweck.">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"Att registrera detaljer om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.">
-			keywords = <"sysselsättning","arbetsgivare","jobb","ockupation","arbete","yrke","arbetslös","anställd","arbetslöshet","studerar","anställda","studerande","sektor","yrke","volontär","yrke","handel","arbetstagare","volontär","position">
-			use = <"Används för att registrera information om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.">
+			keywords = <"arbeid","arbeidstaker","arbeidsgiver","arbeidsforhold","arbeidshistorikk","jobb","ansatt","yrke","arbeidsløs","studerer","student","elev","trygdet","ufør","arbeidssituasjon","erverv","yrkestilknytning","pensjon","pensjonist","attføring","bransje","arbeidsledig","hjemmeværende","stilling","profesjon","frivillig","vernepliktig","sektor","næring","verv">
+			copyright = <"© 2010 NEHTA, openEHR Foundation, Nasjonal IKT HF">
+			use = <"Brukes for å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.
 
-Omfattningen av denna arketyp inkluderar alla yrken eller aktiviteter som utförs av en individ. Till exempel: ett betalt jobb eller anställning; obetalt arbete av vilken typ som helst som en volontärposition; eller roller som att gå i pension eller studera.
+Arketypen omfatter alle typer arbeid eller aktiviteter individet har eller har hatt. For eksempel: En/et betalt eller ubetalt jobb/arbeid/verv, samt ulike roller som for eksempel pensjonist, hjemmeværende eller student.
 
-Flera instanser av den här arketypen som skapats över tid kommer att resultera i en sammanställning av en historia av tidigare och nuvarande jobb och/eller roller.
+Ved å benytte denne arketypen til gjentatte registreringer, vil en få fram en historisk oversikt over nåværende og tidligere arbeidsforhold /roller et individ har eller har hatt.
 
-En aktiv eller nuvarande ockupation kan antydas från ett 'Datum inleddes' men inget 'Datum upphört'.
+Et aktivt, nåværende arbeidsforhold/roller kan bli utledet fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\".
 
-En individ kan utföra många samtidiga yrken, var och en kan vara betald eller obetald. Varje yrke bör registreras i en separat instans av denna arketyp.
+Et individ kan ha mange samtidige arbeidsforhold/rolle, og de kan hver for seg være betalt eller ubetalt. Hvert slik arbeidsforhold registreres i egne instanser av denne arketypen.
 
-Om yrkesattribut förändras väsentligt, till exempel roll / titel eller antal timmar, bör detta registreras som en separat instans av denna arketyp.
+Hvis detaljer om et arbeidsforhold/rolle endrer seg vesentlig, som forandring av tittel eller stillingsprosent, registreres dette i egne instanser av denne arketypen.
 
-Den här arketypen har utformats speciellt för att användas i 'Yrkesepisod' SLOT inom EVALUATION.occupation_summary arketyp, men kan också användas inom alla andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.
+Arketypen er laget for å benyttes i SLOTet \"Arbeidsepisode\" i arketypen EVALUATION.occupation_summary (Arbeidssammendrag), men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.
 
-Det kan finnas någon uppenbar eller verklig överlappning mellan dataelementen i denna arketyp och yrkes- / anställningsdetaljer som kan lagras som demografiska detaljer i kliniska eller administrativa system. Dessa dataelement har utformats specifikt för att stödja kliniska ändamål, inklusive generering av ett läkarintyg till en nuvarande arbetsgivare.">
-			misuse = <"Inte utformad för att registrera tillfälliga ändringar eller avsnitt inom en enda yrkesregistrering, som att vara ledig. Detta är utom räckhåll för denna arketyp och bör ingå i en arbetsgivares HR-system.
+Det kan fremstå som å være overlapp, reell eller tilsynelatende, mellom dataelementene i denne arketypen og demografiske opplysninger om sysselsetting/arbeidsforhold andre steder i kliniske systemer. Dataelementene i denne arketypen er laget spesifikt for å støtte kliniske bruksområder, inkludert sykemeldinger eller legeerklæringer.">
+			misuse = <"Brukes ikke for å registrere midlertidige endringer eller episoder innen en enkelt arbeidsepisode, som å være i permisjon. Dette er ikke innenfor anvendelsesområdet for denne arketypen, og skal registreres i et personal- eller HR-system.
 
-Inte utformad för att användas till detaljerade beskrivningar av hälsorisker eller exponering för farliga ämnen på arbetsplatsen. Använd arketyperna EVALUATION.health_risk eller EVALUATION.exposure för detta ändamål.
+Brukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.
 
-Inte utformad för att registrera information om inkomstkällor eller inkomstuppgifter för individen. Använd arketypen EVALUATION.income_summary för detta ändamål.
+Brukes ikke for å registrere informasjon om individets inntektskilder eller detaljer om inntekt. Bruk arketypen EVALUATION.income_summary for dette formålet.
 
-Används inte för att registrera information om en persons ockupation vid en viss tidpunkt (till exempel den 16 juni 2014) eller under ett relativt tidsintervall (till exempel \"under de senaste 30 dagarna\". Använd en lämplig OBSERVATION arketyp för detta ändamål.">
+Brukes ikke for å registrere informasjon om arbeid /rolle for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Dette kan utledes fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\", og må registreres i en egen OBSERVATION-arketype for dette formålet.">
 		>
 		["pt"] = <
 			language = <[ISO_639-1::pt]>
@@ -165,34 +158,6 @@ Não deve ser usado para descrições detalhadas de riscos para a saúde ou expo
 Não deve ser usado para registrar informações sobre fontes de renda ou detalhes de renda da pessoa. Use o arquétipo EVALUATION.income_summary para esse fim.
 
 Não deve ser usado para registrar informações sobre a ocupação de um indivíduo em um momento específico (por exemplo, em 16 de junho de 2014) ou durante um intervalo de tempo relativo (por exemplo, 'nos últimos 30 dias'). Use um arquétipo do tipo OBSERVATION para esse fim.">
-		>
-		["nb"] = <
-			language = <[ISO_639-1::nb]>
-			purpose = <"For å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.">
-			keywords = <"arbeid","arbeidstaker","arbeidsgiver","arbeidsforhold","arbeidshistorikk","jobb","ansatt","yrke","arbeidsløs","studerer","student","elev","trygdet","ufør","arbeidssituasjon","erverv","yrkestilknytning","pensjon","pensjonist","attføring","bransje","arbeidsledig","hjemmeværende","stilling","profesjon","frivillig","vernepliktig","sektor","næring","verv">
-			copyright = <"© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF">
-			use = <"Brukes for å registrere detaljert informasjon om en jobb eller rolle individet har, eller har hatt i en spesifisert tidsperiode.
-
-Arketypen omfatter alle typer arbeid eller aktiviteter individet har eller har hatt. For eksempel: En/et betalt eller ubetalt jobb/arbeid/verv, samt ulike roller som for eksempel pensjonist, hjemmeværende eller student.
-
-Ved å benytte denne arketypen til gjentatte registreringer, vil en få fram en historisk oversikt over nåværende og tidligere arbeidsforhold /roller et individ har eller har hatt.
-
-Et aktivt, nåværende arbeidsforhold/roller kan bli utledet fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\".
-
-Et individ kan ha mange samtidige arbeidsforhold/rolle, og de kan hver for seg være betalt eller ubetalt. Hvert slik arbeidsforhold registreres i egne instanser av denne arketypen.
-
-Hvis detaljer om et arbeidsforhold/rolle endrer seg vesentlig, som forandring av tittel eller stillingsprosent, registreres dette i egne instanser av denne arketypen.
-
-Arketypen er laget for å benyttes i SLOTet \"Arbeidsepisode\" i arketypen EVALUATION.occupation_summary (Arbeidssammendrag), men kan også brukes innen andre ENTRY- eller CLUSTER-arketyper der det er klinisk relevant.
-
-Det kan fremstå som å være overlapp, reell eller tilsynelatende, mellom dataelementene i denne arketypen og demografiske opplysninger om sysselsetting/arbeidsforhold andre steder i kliniske systemer. Dataelementene i denne arketypen er laget spesifikt for å støtte kliniske bruksområder, inkludert sykemeldinger eller legeerklæringer.">
-			misuse = <"Brukes ikke for å registrere midlertidige endringer eller episoder innen en enkelt arbeidsepisode, som å være i permisjon. Dette er ikke innenfor anvendelsesområdet for denne arketypen, og skal registreres i et personal- eller HR-system.
-
-Brukes ikke for å beskrive helserisikoer eller eksponering for farlige substanser i arbeidssituasjonen. Til dette brukes henholdsvis arketypene EVALUATION.health_risk (Helserisiko) eller EVALUATION.exposure.
-
-Brukes ikke for å registrere informasjon om individets inntektskilder eller detaljer om inntekt. Bruk arketypen EVALUATION.income_summary for dette formålet.
-
-Brukes ikke for å registrere informasjon om arbeid /rolle for et individ på en bestemt dato (for eksempel 16. juni 2014) eller i løpet av en relativ tidsperiode, som for eksempel \"siste 30 dager\". Dette kan utledes fra \"Dato for oppstart\" hvis det ikke er registrert noe i \"Dato for opphør\", og må registreres i en egen OBSERVATION-arketype for dette formålet.">
 		>
 		["pt-br"] = <
 			language = <[ISO_639-1::pt-br]>
@@ -339,15 +304,15 @@ No debe ser usado para registrar información sobre la ocupación de un individu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CCCCDE9C51907743EF877C58497B8484">
-		["build_uid"] = <"057597cc-4591-4325-b201-14f0543c41af">
-		["revision"] = <"1.1.0">
+		["MD5-CAM-1.0.1"] = <"C186DA445F8C45636F769D02CD5758DF">
+		["build_uid"] = <"57df50c6-664f-4a07-b135-14f775278cfe">
+		["revision"] = <"1.0.5">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- Occupation record
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- Job title/role
+			ELEMENT[at0005] matches {    -- Job title/role
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -572,7 +537,7 @@ For example: Sales manager or software engineer.">
 					comment = <"For eksempel: Administrerende direktør, hjemmeværende eller student. Hver av disse stillingstitlene eller rollene kan omfatte flere arbeidsoppgaver.">
 				>
 				["at0006"] = <
-					text = <"Yrkeskategori">
+					text = <"Yrke">
 					description = <"Klassifisering av yrket individet har.">
 					comment = <"Koding med en terminologi er ønskelig om mulig. For eksempel kategorisering i henhold til STYRK-08.
 For eksempel: \"Salgssjef\" eller \"Programvareutvikler\".">
@@ -1054,78 +1019,6 @@ Por exemplo: Gerente de vendas ou engenheiro de software.">
 				["at0021"] = <
 					text = <"Tempo parcial">
 					description = <"O indivíduo realiza essa ocupação por menos do que o tempo considerado oficialmente como 'período integral' para a ocupação.">
-				>
-			>
-		>
-		["sv"] = <
-			items = <
-				["at0000"] = <
-					text = <"Yrkesregistrering">
-					description = <"Ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.">
-				>
-				["at0001"] = <
-					text = <"Betald anställningsstatus">
-					description = <"Arbetarens status när det gäller att få betalt eller inte.">
-					comment = <"Till exempel: obetalt; betald; egenföretagare; eller volontär. Kodning med en terminologi är önskvärd, där det är möjligt.">
-				>
-				["at0002"] = <
-					text = <"Branschkategori">
-					description = <"Den typ av bransch där individen arbetar.">
-					comment = <"Till exempel: Gruvdrift, tillverkning, konstruktion. Kodning med en terminologi är önskvärd, där det är möjligt.">
-				>
-				["at0004"] = <
-					text = <"Organisationsinformation">
-					description = <"Detaljer om arbetsgivaren eller institutionen.">
-				>
-				["at0005"] = <
-					text = <"Jobbtitel / roll">
-					description = <"Individens jobbtitel eller arbetsroll.">
-					comment = <"Till exempel: verkställande direktör; Vårdgivare; eller student. Var och en av dessa jobbtitlar eller roller kan bestå av flera uppgifter.">
-				>
-				["at0006"] = <
-					text = <"Jobbkategori">
-					description = <"Typ av jobb som individen utför.">
-					comment = <"Kodning med en terminologi är önskvärt, där det är möjligt, såsom ISCO-08.
-Till exempel: försäljningschef eller programvarutekniker.">
-				>
-				["at0007"] = <
-					text = <"Startdatum">
-					description = <"Datumet då en person började jobbet eller rollen.">
-				>
-				["at0008"] = <
-					text = <"Upphörandedatum">
-					description = <"Datumet då en person slutade på ett jobb eller avslutade en roll.">
-				>
-				["at0013"] = <
-					text = <"Heltidsekvivalent">
-					description = <"Tiden i det här jobbet eller rollen i förhållande till heltid.">
-					comment = <"Heltidsekvivalent kan också kallas 'FTE'. Till exempel: 0,5; 50%; eller \"deltid\".">
-				>
-				["at0014"] = <
-					text = <"Kommentar">
-					description = <"Ytterligare beskrivning om yrkesregistreringen som inte redan inkluderats.">
-				>
-				["at0016"] = <
-					text = <"Beskrivning">
-					description = <"Berättande beskrivning om jobbet eller rollen som utförs av individen.">
-				>
-				["at0018"] = <
-					text = <"Ytterligare detaljer">
-					description = <"Mer information om en yrkesregistrering.">
-					comment = <"Till exempel: arbetsplats och arbetsförhållanden; eller stridszonupplevelse.">
-				>
-				["at0019"] = <
-					text = <"Tilldelad tid">
-					description = <"Hur lång tid en individ har tilldelats för att utföra jobbet eller rollen per angiven period av detta yrkesregister.">
-					comment = <"Till exempel: \"3 dagar per vecka\", \"10 dagar per månad\" eller \"2 timmar per dag\".">
-				>
-				["at0020"] = <
-					text = <"Heltid">
-					description = <"Individen utför ockupationen lika med eller mer än den tid som officiellt betraktas som ”heltid” för ockupationen.">
-				>
-				["at0021"] = <
-					text = <"Deltid">
-					description = <"Individen utför ockupationen under mindre tid än vad som officiellt betraktas som ”heltid” för ockupationen.">
 				>
 			>
 		>
