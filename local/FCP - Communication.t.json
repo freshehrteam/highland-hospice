@@ -22,8 +22,8 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.7.2",
-      "MD5-CAM-1.0.1" : "3c2686bf67150d28b282ce2093dc0b2d",
+      "sem_ver" : "2.8.0",
+      "MD5-CAM-1.0.1" : "96f3503cd789c6599d74e82804d62631",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -207,7 +207,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "About me",
+          "text" : "Communication needs",
           "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
         }
       }
