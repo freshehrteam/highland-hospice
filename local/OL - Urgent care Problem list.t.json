@@ -11,7 +11,7 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "published"
+      "codeString" : "in_development"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -22,9 +22,9 @@
       "original_namespace" : "org.onelondon.ucp",
       "original_publisher" : "One London UCP",
       "custodian_namespace" : "org.onelondon.ucp",
-      "sem_ver" : "1.13.0",
+      "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "3005d487bdc526628251f6a0fa08a3f8",
+      "MD5-CAM-1.0.1" : "5f662a271d25ef21179be8484f81edb1",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "A198E225F67F0E4A49653AC9C6EBCC0A"
     },
@@ -257,7 +257,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "131de316-2f22-3bee-9c36-7d7f53996f3a",
+  "buildUid" : "140075d6-3fd2-3967-afb5-d070a8dc9966",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -1429,78 +1429,6 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
-              "nodeId" : "at0079.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "TERMINOLOGY_CODE",
-                      "occurrences" : "0..1",
-                      "terminologyId" : {
-                        "value" : "SNOMED-CT"
-                      },
-                      "constraint" : [ ],
-                      "selectedTerminologies" : [ "SNOMED-CT" ],
-                      "limitToList" : false,
-                      "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "127040003",
-                        "value" : "Sickle cell haemoglobin SS disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "35434009",
-                        "value" : "Sickle cell haemoglobin SC disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "127043001",
-                        "value" : "Sickle cell haemoglobin SB 0 (beta-zero) thalassemia"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "127042006",
-                        "value" : "Sickle cell haemoglobin SB+ (beta) thalassemia"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "25472008",
-                        "value" : "Sickle cell haemoglobin SD Punjab disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "47024008",
-                        "value" : "Sickle cell haemoglobin E disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "127048005",
-                        "value" : "Sickle cell haemoglobin O Arab disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "127047000",
-                        "value" : "Sickle cell haemoglobin Lepore disease"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "783254003",
-                        "value" : "Hereditary persistence of fetal hemoglobin with sickle cell disease syndrome"
-                      }, {
-                        "terminologyId" : "SNOMED-CT",
-                        "code" : "417357006",
-                        "value" : "Sickling disorder due to hemoglobin S"
-                      } ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
               "nodeId" : "at0009.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
@@ -1788,13 +1716,6 @@
             "text" : "Date of diagnosis",
             "description" : "Estimated or actual date/time the diagnosis or problem was recognised by a healthcare professional.",
             "comment" : "Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of clinical recognition\" should be converted to a date using the subject's date of birth."
-          },
-          "at0079.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079.1",
-            "text" : "Sickle cell subtype",
-            "description" : "Specific variant or subtype of the Diagnosis, if relevant.",
-            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
           }
         },
         "ar-sy" : { },
@@ -2013,7 +1934,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0A06AC36BF82029DCD53C8C128EE29DD"
+        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
       },
       "details" : {
         "de" : {
@@ -3290,13 +3211,6 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0079.1",
-              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
