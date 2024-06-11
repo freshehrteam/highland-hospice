@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.2",
+      "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "c4262f3af808ddf9b923e33409eaf870",
+      "MD5-CAM-1.0.1" : "96d2bbc68328c91fc1130d61df97b83a",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
@@ -44,7 +44,7 @@
     }
   },
   "parentArchetypeId" : "openEHR-EHR-COMPOSITION.anticipatory_care_information.v0",
-  "differential" : false,
+  "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
     "value" : "openEHR-EHR-COMPOSITION.t_anticipatory_care_information.v0"
@@ -52,97 +52,25 @@
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "COMPOSITION",
-    "occurrences" : "1..1",
     "nodeId" : "at0000.1",
     "attributes" : [ {
       "@type" : "C_ATTRIBUTE",
-      "rmAttributeName" : "category",
-      "existence" : "1..1",
-      "children" : [ {
-        "@type" : "C_COMPLEX_OBJECT",
-        "rmTypeName" : "DV_CODED_TEXT",
-        "occurrences" : "1..1",
-        "nodeId" : "at0001",
-        "attributes" : [ {
-          "@type" : "C_ATTRIBUTE",
-          "rmAttributeName" : "defining_code",
-          "existence" : "1..1",
-          "children" : [ {
-            "@type" : "C_TERMINOLOGY_CODE",
-            "rmTypeName" : "CODE_PHRASE",
-            "occurrences" : "1..1",
-            "terminologyId" : {
-              "value" : "openehr"
-            },
-            "constraint" : [ "433" ]
-          } ]
-        } ],
-        "attributeTuples" : [ ]
-      } ]
-    }, {
-      "@type" : "C_ATTRIBUTE",
       "rmAttributeName" : "context",
-      "existence" : "0..1",
       "children" : [ {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "EVENT_CONTEXT",
-        "occurrences" : "1..1",
         "nodeId" : "at0002",
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
           "rmAttributeName" : "other_context",
-          "existence" : "0..1",
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ITEM_TREE",
-            "occurrences" : "1..1",
             "nodeId" : "at0003",
             "attributes" : [ {
               "@type" : "C_ATTRIBUTE",
               "rmAttributeName" : "items",
-              "existence" : "0..1",
-              "cardinality" : {
-                "@type" : "CARDINALITY",
-                "interval" : "0..*",
-                "ordered" : false,
-                "unique" : false
-              },
               "children" : [ {
-                "@type" : "ARCHETYPE_SLOT",
-                "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..*",
-                "nodeId" : "at0004",
-                "includes" : [ {
-                  "@type" : "ASSERTION",
-                  "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.xds_metadata\\.v0/}",
-                  "expression" : {
-                    "@type" : "BINARY_OPERATOR",
-                    "type" : "BOOLEAN",
-                    "operator" : "matches",
-                    "leftOperand" : {
-                      "@type" : "MODEL_REFERENCE",
-                      "type" : "STRING",
-                      "precedenceOverriden" : false,
-                      "referenceType" : "Attribute",
-                      "path" : "archetype_id/value"
-                    },
-                    "rightOperand" : {
-                      "@type" : "CONSTRAINT",
-                      "type" : "STRING",
-                      "precedenceOverriden" : false,
-                      "referenceType" : "Constraint",
-                      "item" : {
-                        "@type" : "C_STRING",
-                        "constraint" : [ "/openEHR-EHR-CLUSTER\\.xds_metadata\\.v0/" ]
-                      }
-                    },
-                    "precedenceOverriden" : false
-                  },
-                  "variables" : [ ]
-                } ],
-                "excludes" : [ ],
-                "closed" : false
-              }, {
                 "@type" : "C_ARCHETYPE_ROOT",
                 "rmTypeName" : "CLUSTER",
                 "occurrences" : "0..1",
@@ -200,48 +128,6 @@
           "code" : "at0000.1",
           "text" : "Advance directives",
           "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
-        },
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Anticipatory care information",
-          "description" : "A framework to communicate information that has been captured and curated in anticipation of future need for care."
-        },
-        "at0001" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0001",
-          "text" : "Coded text",
-          "description" : "*"
-        },
-        "at0002" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0002",
-          "text" : "Context",
-          "description" : ""
-        },
-        "at0003" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
-          "text" : "Item tree",
-          "description" : "@ internal @"
-        },
-        "at0004" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "XDS Metadata",
-          "description" : "*"
-        },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "XDS Metadata",
-          "description" : "*"
-        },
-        "at0004.2" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004",
-          "text" : "XDS Metadata",
-          "description" : "*"
         }
       }
     },
@@ -288,7 +174,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-xds_metadata-001.v0"
@@ -296,18 +182,10 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
@@ -316,7 +194,6 @@
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
@@ -349,108 +226,41 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0003.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0009.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0011.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -460,15 +270,12 @@
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_MULTIMEDIA",
-              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "media_type",
-                "existence" : "1..1",
                 "children" : [ {
                   "@type" : "C_TERMINOLOGY_CODE",
                   "rmTypeName" : "CODE_PHRASE",
@@ -491,128 +298,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "XDS Metadata",
-            "description" : "Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Author specialty",
-            "description" : "The speciality of the author/composer of the document."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Class code",
-            "description" : "A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain.",
-            "comment" : "For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.\r\nThese codes are specific to an XDS Affinity Domain."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Document type",
-            "description" : "The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard.",
-            "comment" : "for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.\r\nThese codes are specific to an XDS Affinity Domain."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Confidentiality code",
-            "description" : "A term specifying the level of confidentiality of the XDS Document.",
-            "comment" : "Coded text is preferred, normally specific to an XDS Affinity Domain."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Health care facility type",
-            "description" : "A term defining the healthcare facility type.",
-            "comment" : "Coded text is preferred. The codes are specific to an XDS Affinity Domain."
-          },
-          "at0009" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Practice setting code",
-            "description" : "The code specifying the clinical specialty where the act that resulted in the document was performed.",
-            "comment" : "For example: Family Practice, Laboratory, Radiology.\r\nCoded text is preferred, normally specific to an XDS Affinity Domain."
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Document_media",
-            "description" : "Additional metadata about the document itself, including size, url."
-          },
-          "at0011" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "Event code",
-            "description" : "This list of codes represents the main clinical acts.",
-            "comment" : "For example: Colonoscopy or appendicectomy."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Class code",
-            "description" : "A high-level document class code, normally selected from a valueset provided by the IHE-XDS Affinity Domain.",
-            "comment" : "For example: Report, Summary, Images, Plan, Patient Preferences, Workflow.\r\nThese codes are specific to an XDS Affinity Domain."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Document type",
-            "description" : "The code specifying the precise type of document from the user perspective. Normally selected from a valueset provided by the local IHE-XDS Affinity Domain or national standard.",
-            "comment" : "for example:  Pulmonary History and Physical, Discharge Summary, Ultrasound Report.\r\nThese codes are specific to an XDS Affinity Domain."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Confidentiality code",
-            "description" : "A term specifying the level of confidentiality of the XDS Document.",
-            "comment" : "Coded text is preferred, normally specific to an XDS Affinity Domain."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Health care facility type",
-            "description" : "A term defining the healthcare facility type.",
-            "comment" : "Coded text is preferred. The codes are specific to an XDS Affinity Domain."
-          },
-          "at0009.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Practice setting code",
-            "description" : "The code specifying the clinical specialty where the act that resulted in the document was performed.",
-            "comment" : "For example: Family Practice, Laboratory, Radiology.\r\nCoded text is preferred, normally specific to an XDS Affinity Domain."
-          },
-          "at0010.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Document_media",
-            "description" : "Additional metadata about the document itself, including size, url."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "XDS Metadata",
-            "description" : "Additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class."
-          },
-          "at0011.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "Event code",
-            "description" : "This list of codes represents the main clinical acts.",
-            "comment" : "For example: Colonoscopy or appendicectomy."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Author specialty",
-            "description" : "The speciality of the author/composer of the document."
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -620,179 +306,6 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "feed3fab-2d92-470b-a6c9-f19499a58c8b",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b4f50bf9-4773-4e0b-a21b-1c676c9e5a21",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "40c2f7799e158c01277df4ec90846469"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.multimedia_details_cmc.v0",
-    "differential" : false,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-multimedia_details_cmc-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0001.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "CMC-AttachmentType"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "CMC-AttachmentType" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "CMC-AttachmentType",
-                    "code" : "ADRT",
-                    "value" : "Advanced Decision to Refuse Treatment"
-                  } ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "ADRT",
-            "description" : "Advanced Decision to Refuse Treatment"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "DISCHARGE",
-            "description" : "Discharge Summary"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "DNACPR",
-            "description" : "Do Not Attempt CPR Document"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "MEDCHART",
-            "description" : "Medication Chart"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "POA",
-            "description" : "Power of Attorney Document"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "OTHER",
-            "description" : "Other"
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Multimedia details",
-            "description" : "multimedia details cmc"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Attachment type",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Multimedia details",
-            "description" : "multimedia details cmc"
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Attachment type",
-            "description" : ""
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "9d896fa9-bb55-3d5f-b936-1701a0c5f864",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -885,7 +398,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.multimedia_source.v0",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-multimedia_source-001.v0"
@@ -893,55 +406,31 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0010.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_IDENTIFIER",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -950,34 +439,13 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0005",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_MULTIMEDIA",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -986,157 +454,13 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0004.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_DATE_TIME",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0012",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/.*/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/.*/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0012.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "CMC - InfoProvider",
-          "referenceType" : "templateId"
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0011",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.device\\.v1/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.device\\.v1/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0013",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/.*/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/.*/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
-        }, {
-          "@type" : "C_ARCHETYPE_ROOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..1",
-          "nodeId" : "at0013.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-multimedia_details_cmc-001.v0",
-          "referenceType" : "archetypeOverlay"
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0007",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -1168,93 +492,6 @@
             "code" : "at0010.1",
             "text" : "Attachment metadata Id",
             "description" : "Identifier for the resource."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Multimedia source",
-            "description" : "A multimedia resource that is generated or acquired during the provision of healthcare."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Content",
-            "description" : "Digital representation of the resource.",
-            "comment" : "The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Resource name",
-            "description" : "Name or title of the multimedia resource."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Created",
-            "description" : "The time, date, partial date or period when the resource was generated or authored."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Description",
-            "description" : "Narrative description about the resource."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Comment",
-            "description" : "Additional narrative about the multimedia source not captured in other fields."
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Identifier",
-            "description" : "Identifier for the resource."
-          },
-          "at0011" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "Source device",
-            "description" : "Details about the device used to generate or author the resource.",
-            "comment" : "For example: the camera used to capture an image."
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "Creator",
-            "description" : "Details about the individual or organisation who generated or authored the resource."
-          },
-          "at0013" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "Additional details",
-            "description" : "Further details about the multimedia source."
-          },
-          "at0013.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "Additional details",
-            "description" : "Further details about the multimedia source."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Created",
-            "description" : "The time, date, partial date or period when the resource was generated or authored."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Content",
-            "description" : "Digital representation of the resource.",
-            "comment" : "The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type."
-          },
-          "at0012.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "Creator",
-            "description" : "Details about the individual or organisation who generated or authored the resource."
           }
         },
         "pt-br" : {
@@ -1263,105 +500,6 @@
             "code" : "at0000.1",
             "text" : "CMC - Multimedia",
             "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en)",
-            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Descrição",
-            "description" : "*Narrative description about the resource. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Comment (en)",
-            "description" : "*Additional narrative about the multimedia source not captured in other fields. (en)"
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0011" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "*Source device (en)",
-            "description" : "*Details about the device used to create or acquire the resource. (en)",
-            "comment" : "*For example: the camera used to capture an image. (en)"
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
-          },
-          "at0013" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0013.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0010.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0012.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
           }
         },
         "de" : {
@@ -1370,105 +508,6 @@
             "code" : "at0000.1",
             "text" : "CMC - Multimedia",
             "description" : "Details zur multimedialen Darstellung der klinischen Daten."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en)",
-            "description" : "Details zur multimedialen Darstellung der klinischen Daten."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Beschreibung",
-            "description" : "*Narrative description about the resource. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Comment (en)",
-            "description" : "*Additional narrative about the multimedia source not captured in other fields. (en)"
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0011" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "*Source device (en)",
-            "description" : "*Details about the device used to create or acquire the resource. (en)",
-            "comment" : "*For example: the camera used to capture an image. (en)"
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
-          },
-          "at0013" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0013.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0010.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0012.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
           }
         },
         "nb" : {
@@ -1477,105 +516,6 @@
             "code" : "at0000.1",
             "text" : "CMC - Multimedia",
             "description" : "Detaljer om en multimediarepresentasjon av kliniske data."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en)",
-            "description" : "Detaljer om en multimediarepresentasjon av kliniske data."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Beskrivelse",
-            "description" : "*Narrative description about the resource. (en)"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "*Comment (en)",
-            "description" : "*Additional narrative about the multimedia source not captured in other fields. (en)"
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0011" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0011",
-            "text" : "*Source device (en)",
-            "description" : "*Details about the device used to create or acquire the resource. (en)",
-            "comment" : "*For example: the camera used to capture an image. (en)"
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
-          },
-          "at0013" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "*Resource name (en)",
-            "description" : "*Name or title of the photo, video, audio file or document. (en)"
-          },
-          "at0013.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0013",
-            "text" : "*Additional details (en)",
-            "description" : "*Further details about the multimedia source. (en)"
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "*Created (en)",
-            "description" : "*The time, date, partial date or period when the resource was generated or authored. (en)"
-          },
-          "at0010.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "*Identifier (en)",
-            "description" : "*Identifier for the resource. (en)"
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Content (en)",
-            "description" : "*Digital representation of the resource. (en)",
-            "comment" : "*The actual content will be captured and stored using the Multimedia data type. For example: RTF or PDF for a document; JPG for an image; MP4 for a video; or WAV for an audio file. If the content is stored elsewhere the external location can be referenced using the URI data type. (en)"
-          },
-          "at0012.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "*Creator (en)",
-            "description" : "*Details about the individual or organisation that generated or authored the resource. (en)"
           }
         }
       },
@@ -1691,7 +631,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.advance_care_directive.v1",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-EVALUATION.ovl-advance_care_directive-001.v1"
@@ -1699,36 +639,24 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "EVALUATION",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "data",
-        "existence" : "1..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
           "nodeId" : "at0001",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0005.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
@@ -1759,20 +687,16 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0004.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_CODED_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "defining_code",
-                    "existence" : "1..1",
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
                       "rmTypeName" : "TERMINOLOGY_CODE",
@@ -1804,177 +728,30 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0006.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0007.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0052",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
               "nodeId" : "at0058.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "items",
-                "existence" : "1..1",
-                "cardinality" : {
-                  "@type" : "CARDINALITY",
-                  "interval" : "1..*",
-                  "ordered" : false,
-                  "unique" : false
-                },
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
                   "nodeId" : "at0030.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "existence" : "0..1",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_TEXT",
-                      "occurrences" : "1..1",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
-                }, {
-                  "@type" : "ARCHETYPE_SLOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0059",
-                  "includes" : [ {
-                    "@type" : "ASSERTION",
-                    "stringExpression" : "archetype_id/value matches {/.*/}",
-                    "expression" : {
-                      "@type" : "BINARY_OPERATOR",
-                      "type" : "BOOLEAN",
-                      "operator" : "matches",
-                      "leftOperand" : {
-                        "@type" : "MODEL_REFERENCE",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Attribute",
-                        "path" : "archetype_id/value"
-                      },
-                      "rightOperand" : {
-                        "@type" : "CONSTRAINT",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Constraint",
-                        "item" : {
-                          "@type" : "C_STRING",
-                          "constraint" : [ "/.*/" ]
-                        }
-                      },
-                      "precedenceOverriden" : false
-                    },
-                    "variables" : [ ]
-                  } ],
-                  "excludes" : [ ],
-                  "closed" : false
-                }, {
-                  "@type" : "ARCHETYPE_SLOT",
-                  "rmTypeName" : "CLUSTER",
-                  "occurrences" : "0..1",
-                  "nodeId" : "at0060",
-                  "includes" : [ {
-                    "@type" : "ASSERTION",
-                    "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.media_file\\.v0/}",
-                    "expression" : {
-                      "@type" : "BINARY_OPERATOR",
-                      "type" : "BOOLEAN",
-                      "operator" : "matches",
-                      "leftOperand" : {
-                        "@type" : "MODEL_REFERENCE",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Attribute",
-                        "path" : "archetype_id/value"
-                      },
-                      "rightOperand" : {
-                        "@type" : "CONSTRAINT",
-                        "type" : "STRING",
-                        "precedenceOverriden" : false,
-                        "referenceType" : "Constraint",
-                        "item" : {
-                          "@type" : "C_STRING",
-                          "constraint" : [ "/openEHR-EHR-CLUSTER\\.media_file\\.v0/" ]
-                        }
-                      },
-                      "precedenceOverriden" : false
-                    },
-                    "variables" : [ ]
-                  } ],
-                  "excludes" : [ ],
-                  "closed" : false
                 }, {
                   "@type" : "C_ARCHETYPE_ROOT",
                   "rmTypeName" : "CLUSTER",
@@ -1992,18 +769,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0038.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -2012,129 +778,40 @@
       }, {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "protocol",
-        "existence" : "0..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
           "nodeId" : "at0010",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0053.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0054.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0056.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..1",
               "nodeId" : "at0055.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "existence" : "0..1",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "occurrences" : "1..1",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0025",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
@@ -2143,57 +820,19 @@
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "value",
-                "existence" : "0..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
-                  "occurrences" : "1..1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_URI",
-                  "occurrences" : "1..1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
-            }, {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0061",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
@@ -2234,237 +873,6 @@
             "text" : "Advance Decision to Refuse Treatment details",
             "description" : "Narrative description of the overall advance care directive.",
             "comment" : "May be used to record a narrative overview of the complete advance care directive, which may or may not be supported by structured data. Details of specific structured findings can be included using CLUSTER archetypes in the 'Directive details' slot. This data element may be used to capture legacy data that is not available in a structured format."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Advance care directive",
-            "description" : "A framework to communicate the preferences of an individual for future medical treatment and care."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Status",
-            "description" : "The status of the advance care directive.",
-            "comment" : "Coding of the advance care directive status with a terminology is preferred, where possible."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Type of directive",
-            "description" : "The type of advance care directive.",
-            "comment" : "A short text description of the nature of the advance care directive. Coding of the type of directive with a terminology is preferred, where possible. It is expected that this is largely localised to reflect local policy and legislation.\r\n\r\nFor example, in the Netherlands, advance care directive types include, but are not limited to, 'Treatment prohibition', 'Treatment prohibition with completion of Completed Life', 'Euthanasia request' and 'Declaration of life'.\r\n\r\nIn the UK, advance care directive types include 'Advance Decision', 'Advance Directive' and 'Advance Statement'."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Description",
-            "description" : "Narrative description of the overall advance care directive.",
-            "comment" : "May be used to record a narrative overview of the complete advance care directive, which may or may not be supported by structured data. Details of specific structured findings can be included using CLUSTER archetypes in the 'Directive details' slot. This data element may be used to capture legacy data that is not available in a structured format."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Condition",
-            "description" : "The conditions or situations in which the individual wishes the advance care directive to apply.",
-            "comment" : "For example: dementia, brain injury, diseases of the central nervous system, and terminal illness. Coding with a terminology is preferred, where possible.\r\n\r\nThe advance care directive applies to all specified conditions if the individual can no longer make or communicate decisions about their medical treatment and is unlikely to regain the ability to make such decisions. Details of specific decisions that apply to different conditions or situations can be included using CLUSTER archetypes in the 'Directive details' slot.\r\n"
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Witness",
-            "description" : "Personal details of a person who witnesses the completion of the advance care directive.",
-            "comment" : "For example, 'John Smith, Lawyer'."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Mandate",
-            "description" : "Description of any legislation or other authoritative guidance that apply.",
-            "comment" : "For example, 'In England and Wales, advance decisions are covered by the Mental Capacity Act.  Mandate: https://www.bma.org.uk/advice/employment/ethics/consent/consent-tool-kit/9-advance-decisions'. \r\n\r\nOr 'Jehovah's Witnesses believe that the Bible prohibits Christians from accepting blood transfusions. Mandate: https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses_and_blood_transfusions'."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Location",
-            "description" : "Information regarding where the advance care directive is stored and how to gain access to it.",
-            "comment" : "For example, 'In the top drawer of the bedside table'."
-          },
-          "at0038" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Comment",
-            "description" : "Additional narrative about the advance care directive not captured in other fields."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Present",
-            "description" : "The individual has an advance care directive."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Absent",
-            "description" : "The individual does not have an advance care directive."
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Unknown",
-            "description" : "It is not known whether the individual has an advance care directive."
-          },
-          "at0052" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0052",
-            "text" : "Directive detail",
-            "description" : "Structured details about the advance care directive decisions.",
-            "comment" : "This SLOT should also be used to record details for specific conditions or as per national or other local requirements. For example, in the UK, there may be a specific statement about whether to actively prolong life but only during pregnancy."
-          },
-          "at0053" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Valid period start",
-            "description" : "The date/time that marks the beginning of the valid period of time for this advance care directive."
-          },
-          "at0054" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Valid period end",
-            "description" : "The date/time that marks the conclusion of the valid period of time for this advance care directive.",
-            "comment" : "'Valid period end' may often overlap with 'Review due date'. However, they may need to be recorded separately in circumstances where a document has an extended period of validity but requires an interim review. That may be due to changed personal circumstances/events or local policy."
-          },
-          "at0055" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Last updated",
-            "description" : "The date when this advance directive record was last updated.",
-            "comment" : "This may not be a formal review but e.g. a typo correction."
-          },
-          "at0056" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Review due date",
-            "description" : "The date at which the advance care directive is due to be reviewed.",
-            "comment" : "'Valid period end' may often overlap with 'Review due date'. However, they may need to be recorded separately in circumstances where a document has an extended period of validity but requires an interim review. That may be due to changed personal circumstances/events or local policy."
-          },
-          "at0058" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Directive location",
-            "description" : "Information regarding where the advance care directive is stored and who has a copy of it."
-          },
-          "at0059" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0059",
-            "text" : "Copy holder",
-            "description" : "Details of a person who has a copy of the advance care directive.",
-            "comment" : "For example, 'John Smith, Lawyer'."
-          },
-          "at0060" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digital representation",
-            "description" : "Digital document, image or video representing the advance care directive."
-          },
-          "at0061" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models/formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0038.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Comment",
-            "description" : "Additional narrative about the advance care directive not captured in other fields."
-          },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Mandate",
-            "description" : "Description of any legislation or other authoritative guidance that apply.",
-            "comment" : "For example, 'In England and Wales, advance decisions are covered by the Mental Capacity Act.  Mandate: https://www.bma.org.uk/advice/employment/ethics/consent/consent-tool-kit/9-advance-decisions'. \r\n\r\nOr 'Jehovah's Witnesses believe that the Bible prohibits Christians from accepting blood transfusions. Mandate: https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses_and_blood_transfusions'."
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Type of directive",
-            "description" : "The type of advance care directive.",
-            "comment" : "A short text description of the nature of the advance care directive. Coding of the type of directive with a terminology is preferred, where possible. It is expected that this is largely localised to reflect local policy and legislation.\r\n\r\nFor example, in the Netherlands, advance care directive types include, but are not limited to, 'Treatment prohibition', 'Treatment prohibition with completion of Completed Life', 'Euthanasia request' and 'Declaration of life'.\r\n\r\nIn the UK, advance care directive types include 'Advance Decision', 'Advance Directive' and 'Advance Statement'."
-          },
-          "at0058.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Directive location",
-            "description" : "Information regarding where the advance care directive is stored and who has a copy of it."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Condition",
-            "description" : "The conditions or situations in which the individual wishes the advance care directive to apply.",
-            "comment" : "For example: dementia, brain injury, diseases of the central nervous system, and terminal illness. Coding with a terminology is preferred, where possible.\r\n\r\nThe advance care directive applies to all specified conditions if the individual can no longer make or communicate decisions about their medical treatment and is unlikely to regain the ability to make such decisions. Details of specific decisions that apply to different conditions or situations can be included using CLUSTER archetypes in the 'Directive details' slot.\r\n"
-          },
-          "at0030.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Location",
-            "description" : "Information regarding where the advance care directive is stored and how to gain access to it.",
-            "comment" : "For example, 'In the top drawer of the bedside table'."
-          },
-          "at0061.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models/formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0060.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digital representation",
-            "description" : "Digital document, image or video representing the advance care directive."
-          },
-          "at0055.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Last updated",
-            "description" : "The date when this advance directive record was last updated.",
-            "comment" : "This may not be a formal review but e.g. a typo correction."
-          },
-          "at0056.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Review due date",
-            "description" : "The date at which the advance care directive is due to be reviewed.",
-            "comment" : "'Valid period end' may often overlap with 'Review due date'. However, they may need to be recorded separately in circumstances where a document has an extended period of validity but requires an interim review. That may be due to changed personal circumstances/events or local policy."
-          },
-          "at0053.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Valid period start",
-            "description" : "The date/time that marks the beginning of the valid period of time for this advance care directive."
-          },
-          "at0054.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Valid period end",
-            "description" : "The date/time that marks the conclusion of the valid period of time for this advance care directive.",
-            "comment" : "'Valid period end' may often overlap with 'Review due date'. However, they may need to be recorded separately in circumstances where a document has an extended period of validity but requires an interim review. That may be due to changed personal circumstances/events or local policy."
           }
         },
         "nb" : {
@@ -2473,251 +881,6 @@
             "code" : "at0000",
             "text" : "Fremtidig behandlingsvalg (2)",
             "description" : "Et rammeverk for å kommunisere et individs viljeserklæring i forbindelse med fremtidig medisinsk behandling og omsorg."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Fremtidig behandlingsvalg",
-            "description" : "Et rammeverk for å kommunisere et individs viljeserklæring i forbindelse med fremtidig medisinsk behandling og omsorg."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Status",
-            "description" : "Statusen til det fremtidige behandlingsvalget.",
-            "comment" : "Dersom det er mulig er det foretrukket å kode det fremtidige behandlingsvalgets status med en terminologi."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Type fremtidig behandlingsvalg",
-            "description" : "Type dokument for fremtidig behandling.",
-            "comment" : "En kort fritekstlig beskrivelse av hvilken type dokument for fremtidig behandlingsvalg det er. Dersom det er mulig, anbefales å kode typen dokument med en terminologi. Det er antatt at dette i stor grad blir tilpasset lokale retningslinjer og lovgivning.\r\n\r\n\"Mitt livstestament\" er en norsk variant. I andre land er det flere typer fremtidige behandlingsvalg, for eksempel finnes det i Nederland fremtidig behandlingsvalg som omfatter \"Treatment prohibition\" (Avstå fra behandling), \"'Treatment prohibition with completion of Completed Life\" (Avstå fra livsforlengende behandling) og \"Euthanasia request\" (Ønske om eutanasi)."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Beskrivelse",
-            "description" : "Fritekstbeskrivelse av det fremtidige behandlingsvalget.",
-            "comment" : "Kan bli brukt til et sammendrag av, eller fullstendig tekst i det fremtidige behandlingsvalget. Dette kan eventuelt være i tillegg til strukturerte data, eller stå for seg selv. Detaljer om spesifikke ønsker kan bli inkludert ved å nøste CLUSTER-arketyper i SLOT'et \"Strukturerte detaljer\". Dette informasjonselementet kan også bli brukt for å lagre data fra et annet system som ikke er tilgjengelig som strukturerte data."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Betingelse",
-            "description" : "Situasjoner eller tilstander hvor individet ønsker at det fremtidige behandlingsvalget skal tre i kraft.",
-            "comment" : "For eksempel: Demens, hjerneskade, sykdommer i sentralnervesystemet og terminal sykdom. Dersom det er mulig er det foretrukket å kode dette med en terminologi.\r\n\r\nDet fremtidige behandlingsvalget gjøres gjeldende for alle tilstander eller situasjoner som nevnes, dersom individet ikke lenger kan formidle beslutninger om sin medisinske behandling, og det er usannsynlig at individet kan få tilbake evnen til å ta slike beslutninger. Dersom det er nødvendig med detaljerte betingelser, for eksempel om enkelte typer behandling kombinert med en gitt tilstand, kan dette dokumenteres ved å nøste CLUSTER-arketyper i SLOT'et \"Detaljerte behandlingsvalg\"."
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Vitner",
-            "description" : "Detaljer om personer som har vært vitne ved ferdigstillelsen (signering) av det fremtidige behandlingsvalget.",
-            "comment" : "For eksempel \"Advokat John Smith\"."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Grunnlag",
-            "description" : "Beskrivelse av hvilken lovgivning eller annen autorativ retningslinje som gjelder for det fremtidige behandlingsvalget.",
-            "comment" : "For eksempel \"Lov om pasient- og brukerrettigheter (pasient- og brukerrettighetsloven) § 4-9. Pasientens rett til å nekte helsehjelp i særlige situasjoner\" eller Jehovas Vitners avvisning av blodtransfusjon: \"https://no.wikipedia.org/wiki/Jehovas_vitner#Avvisning_av_blodtransfusjoner\"."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Plassering",
-            "description" : "Informasjon om hvor det fremtidige behandlingsvalget er lagret, og hvordan man kan få tak i det.",
-            "comment" : "For eksempel \"I øverste skuff i nattbordet\"."
-          },
-          "at0038" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om det fremtidige behandlingsvalget, som ikke er omfattet av andre elementer."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Eksisterer",
-            "description" : "Individet har dokumentert en viljeserklæring for fremtidig behandling."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Eksisterer ikke",
-            "description" : "Individet har ikke dokumentert en viljeserklæring for fremtidig behandling."
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Ukjent",
-            "description" : "Det er ikke kjent om individet har dokumentert en viljeserklæring for fremtidig behandling eller ikke."
-          },
-          "at0052" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0052",
-            "text" : "Detaljerte behandlingsvalg",
-            "description" : "Strukturerte detaljer om det fremtidige behandlingsvalget.",
-            "comment" : "Dette SLOT'et kan også bli brukt til å registrere spesielle betingelser i henhold til nasjonale eller lokale krav. For eksempel kan det i Storbritannia være et eget utsagn om individet aktivt ønsker å motta livsforlengende behandling, men bare hvis individet er gravid."
-          },
-          "at0053" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Gyldighetsperiode start",
-            "description" : "Dato/Tid som markerer når gyldighetsperioden av det fremtidige behandlingsvalget starter."
-          },
-          "at0054" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Gyldighetsperiode slutt",
-            "description" : "Dato/Tid som markerer når gyldighetsperioden av det fremtidige behandlingsvalget slutter.",
-            "comment" : "\"Gyldighetsperiode slutt\" vil ofte overlappe med \"Dato for fornyelse\". Det kan imidlertid være nødvendig å registrere disse separat i tilfelle et fremtidig behandlingsvalg har en forlenget gyldighetsperiode, men trenger en midlertidig gjennomgang. Dette kan skyldes endringer i personlige forhold/hendelser eller lokale retningslinjer."
-          },
-          "at0055" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Sist oppdatert",
-            "description" : "*The date when this advance directive record was last updated. (en)",
-            "comment" : "*This may not be a formal review but e.g. a typo correction. (en)"
-          },
-          "at0056" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Dato for fornyelse",
-            "description" : "Datoen det fremtidige behandlingsvalget må fornyes.",
-            "comment" : "\"Dato for fornyelse\" vil ofte overlappe med \"Gyldighetsperiode slutt\". Det kan imidlertid være nødvendig å registrere disse separat i tilfelle et fremtidig behandlingsvalg har en forlenget gyldighetsperiode, men trenger en midlertidig gjennomgang. Dette kan skyldes endringer i personlige forhold/hendelser eller lokale retningslinjer."
-          },
-          "at0058" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Plassering og kopiholder",
-            "description" : "Informasjon om hvor det fremtidige behandlingsvalget er lagret, samt hvem som har en kopi av det."
-          },
-          "at0059" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0059",
-            "text" : "Kopiholder",
-            "description" : "Detaljer om person som har en kopi av det fremtidige behandlingsvalget.",
-            "comment" : "For eksempel \"Advokat John Smith\"."
-          },
-          "at0060" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digital representasjon",
-            "description" : "Digitalt dokument, bilde eller video som representerer det fremtidige behandlingsvalget."
-          },
-          "at0061" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Status",
-            "description" : "Statusen til det fremtidige behandlingsvalget.",
-            "comment" : "Dersom det er mulig er det foretrukket å kode det fremtidige behandlingsvalgets status med en terminologi."
-          },
-          "at0038.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om det fremtidige behandlingsvalget, som ikke er omfattet av andre elementer."
-          },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Grunnlag",
-            "description" : "Beskrivelse av hvilken lovgivning eller annen autorativ retningslinje som gjelder for det fremtidige behandlingsvalget.",
-            "comment" : "For eksempel \"Lov om pasient- og brukerrettigheter (pasient- og brukerrettighetsloven) § 4-9. Pasientens rett til å nekte helsehjelp i særlige situasjoner\" eller Jehovas Vitners avvisning av blodtransfusjon: \"https://no.wikipedia.org/wiki/Jehovas_vitner#Avvisning_av_blodtransfusjoner\"."
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Type fremtidig behandlingsvalg",
-            "description" : "Type dokument for fremtidig behandling.",
-            "comment" : "En kort fritekstlig beskrivelse av hvilken type dokument for fremtidig behandlingsvalg det er. Dersom det er mulig, anbefales å kode typen dokument med en terminologi. Det er antatt at dette i stor grad blir tilpasset lokale retningslinjer og lovgivning.\r\n\r\n\"Mitt livstestament\" er en norsk variant. I andre land er det flere typer fremtidige behandlingsvalg, for eksempel finnes det i Nederland fremtidig behandlingsvalg som omfatter \"Treatment prohibition\" (Avstå fra behandling), \"'Treatment prohibition with completion of Completed Life\" (Avstå fra livsforlengende behandling) og \"Euthanasia request\" (Ønske om eutanasi)."
-          },
-          "at0058.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Plassering og kopiholder",
-            "description" : "Informasjon om hvor det fremtidige behandlingsvalget er lagret, samt hvem som har en kopi av det."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Beskrivelse",
-            "description" : "Fritekstbeskrivelse av det fremtidige behandlingsvalget.",
-            "comment" : "Kan bli brukt til et sammendrag av, eller fullstendig tekst i det fremtidige behandlingsvalget. Dette kan eventuelt være i tillegg til strukturerte data, eller stå for seg selv. Detaljer om spesifikke ønsker kan bli inkludert ved å nøste CLUSTER-arketyper i SLOT'et \"Strukturerte detaljer\". Dette informasjonselementet kan også bli brukt for å lagre data fra et annet system som ikke er tilgjengelig som strukturerte data."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Betingelse",
-            "description" : "Situasjoner eller tilstander hvor individet ønsker at det fremtidige behandlingsvalget skal tre i kraft.",
-            "comment" : "For eksempel: Demens, hjerneskade, sykdommer i sentralnervesystemet og terminal sykdom. Dersom det er mulig er det foretrukket å kode dette med en terminologi.\r\n\r\nDet fremtidige behandlingsvalget gjøres gjeldende for alle tilstander eller situasjoner som nevnes, dersom individet ikke lenger kan formidle beslutninger om sin medisinske behandling, og det er usannsynlig at individet kan få tilbake evnen til å ta slike beslutninger. Dersom det er nødvendig med detaljerte betingelser, for eksempel om enkelte typer behandling kombinert med en gitt tilstand, kan dette dokumenteres ved å nøste CLUSTER-arketyper i SLOT'et \"Detaljerte behandlingsvalg\"."
-          },
-          "at0030.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Plassering",
-            "description" : "Informasjon om hvor det fremtidige behandlingsvalget er lagret, og hvordan man kan få tak i det.",
-            "comment" : "For eksempel \"I øverste skuff i nattbordet\"."
-          },
-          "at0061.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0060.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digital representasjon",
-            "description" : "Digitalt dokument, bilde eller video som representerer det fremtidige behandlingsvalget."
-          },
-          "at0055.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Sist oppdatert",
-            "description" : "*The date when this advance directive record was last updated. (en)",
-            "comment" : "*This may not be a formal review but e.g. a typo correction. (en)"
-          },
-          "at0056.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Dato for fornyelse",
-            "description" : "Datoen det fremtidige behandlingsvalget må fornyes.",
-            "comment" : "\"Dato for fornyelse\" vil ofte overlappe med \"Gyldighetsperiode slutt\". Det kan imidlertid være nødvendig å registrere disse separat i tilfelle et fremtidig behandlingsvalg har en forlenget gyldighetsperiode, men trenger en midlertidig gjennomgang. Dette kan skyldes endringer i personlige forhold/hendelser eller lokale retningslinjer."
-          },
-          "at0053.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Gyldighetsperiode start",
-            "description" : "Dato/Tid som markerer når gyldighetsperioden av det fremtidige behandlingsvalget starter."
-          },
-          "at0054.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Gyldighetsperiode slutt",
-            "description" : "Dato/Tid som markerer når gyldighetsperioden av det fremtidige behandlingsvalget slutter.",
-            "comment" : "\"Gyldighetsperiode slutt\" vil ofte overlappe med \"Dato for fornyelse\". Det kan imidlertid være nødvendig å registrere disse separat i tilfelle et fremtidig behandlingsvalg har en forlenget gyldighetsperiode, men trenger en midlertidig gjennomgang. Dette kan skyldes endringer i personlige forhold/hendelser eller lokale retningslinjer."
           }
         },
         "de" : {
@@ -2726,261 +889,10 @@
             "code" : "at0000",
             "text" : "Patientenverfügung (2)",
             "description" : "Ein Framework zur Kommunikation der Präferenzen einer Person für zukünftige medizinische Behandlung und Pflege."
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Patientenverfügung",
-            "description" : "Ein Framework zur Kommunikation der Präferenzen einer Person für zukünftige medizinische Behandlung und Pflege."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Status",
-            "description" : "Status der Patientenverfügung.",
-            "comment" : "Die Kodierung des Status der Patientenverfügung mit einer Terminologie wird, bevorzugt."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Art der Richtlinie",
-            "description" : "Die Art der Patientenverfügung.",
-            "comment" : "Eine kurze schriftliche Beschreibung der Art der Patientenverfügung. Eine Kodierung mit einer Terminologie wird, bevorzugt. Es wird erwartet, dass diese weitgehend lokalisiert ist, um die lokale Politik und Gesetzgebung widerzuspiegeln.\r\n\r\nIn den Niederlanden beispielsweise umfassen die Arten von Patientenverfügungen unter anderem \"Behandlungsverbot\", \" Behandlungsverbot mit Beendigung des abgeschlossenen Lebens\", \"Euthanasieantrag\" und \"Lebenserklärung\".\r\n\r\nIm Vereinigten Königreich gehören zu den Arten von Patientenverfügungen im Rahmen der medizinischen Versorgung die \"Vorabentscheidung\", die \"Patientenverfügung\" und die \" Voraberklärung\".\r\n \r\n"
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Beschreibung",
-            "description" : "Beschreibung der allgemeinen Patientenverfügung.",
-            "comment" : "Kann verwendet werden, um eine Übersicht über die gesamte Patientenverfügung zu erfassen, die durch strukturierte Daten unterstützt werden kann. Angaben zu bestimmten strukturierten Befunden können unter Verwendung von CLUSTER-Archetypen in den Slot \"Einzelheiten zur Richtlinie\" aufgenommen werden. Dieses Datenelement kann verwendet werden, um Altdaten zu erfassen, die nicht in einem strukturierten Format verfügbar sind.\r\n"
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Voraussetzung",
-            "description" : "Die Bedingungen oder Situationen, in denen die Person wünscht, dass die Patientenverfügung zur Anwendung kommt.",
-            "comment" : "Zum Beispiel: Demenz, Hirnverletzungen, Erkrankungen des Zentralnervensystems und unheilbare Krankheiten. Die Kodierung mit einer Terminologie wird, bevorzugt.\r\n\r\nDie Patientenverfügung gilt für alle genannten Erkrankungen, wenn die betroffene Person keine Entscheidungen über ihre medizinische Behandlung mehr treffen oder mitteilen kann und es unwahrscheinlich ist, dass sie die Fähigkeit, solche Entscheidungen zu treffen, wiedererlangen wird. Einzelheiten spezifischer Entscheidungen, die für unterschiedliche Bedingungen oder Situationen gelten, können unter Verwendung von CLUSTER-Archetypen in den Slot \"Einzelheiten der Richtlinie\" aufgenommen werden.\r\n"
-          },
-          "at0010" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0010",
-            "text" : "Item tree",
-            "description" : "@ internal @"
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Zeuge",
-            "description" : "Persönliche Angaben zu einer Person, die den Abschluss der Patientenverfügung bezeugt.",
-            "comment" : "Zum Beispiel 'John Smith, Rechtsanwalt'."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Auftrag",
-            "description" : "Beschreibung der anwendbaren Gesetzgebung oder anderer maßgeblicher Richtlinien.",
-            "comment" : "Zum Beispiel: \"In England und Wales fallen Vorabentscheidungen unter den Mental Capacity Act. Mandat: https://www.bma.org.uk/advice/employment/ethics/consent/consent-tool-kit/9-advance-decisions\". \r\n\r\nOder: \" Zeugen Jehovas glauben, dass die Bibel Christen verbietet, Bluttransfusionen zu akzeptieren. Mandat: https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses_and_blood_transfusions'."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Standort",
-            "description" : "Informationen darüber, wo die Patientenverfügung aufbewahrt wird und wie man Zugang zu ihr erhält.",
-            "comment" : "Zum Beispiel: \"In der obersten Schublade des Nachttisches\"."
-          },
-          "at0038" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Kommentar",
-            "description" : "Zusätzliche Informationen über die Patientenverfügung, die in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Vorhanden",
-            "description" : "Die Person hat eine Patientenverfügung."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Nicht Vorhanden",
-            "description" : "Die Person hat keine Patientenverfügung."
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Unbekannt",
-            "description" : "Es ist nicht bekannt, ob die Person eine Patientenverfügung hat."
-          },
-          "at0052" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0052",
-            "text" : "Einzelheiten zur Richtlinie",
-            "description" : "Strukturierte Angaben zu den Entscheidungen der Patientenverfügung.",
-            "comment" : "Dieser SLOT sollte auch dazu verwendet werden, Angaben für spezifische Bedingungen oder gemäß nationalen oder anderen lokalen Anforderungen zu notieren. Zum Beispiel kann es im Vereinigten Königreich eine spezifische Aussage darüber geben, ob das Leben aktiv verlängert werden soll. Dies gilt nur während der Schwangerschaft."
-          },
-          "at0053" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Beginn der Gültigkeitsdauer",
-            "description" : "Das Datum/die Uhrzeit, die den Beginn des gültigen Zeitraums für diese Patientenverfügung markiert."
-          },
-          "at0054" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Ende der Gültigkeitsdauer",
-            "description" : "Das Datum/Uhrzeit, das den Abschluss der Gültigkeitsdauer dieser Patientenverfügung markiert.",
-            "comment" : "Das \"Ende des Gültigkeitszeitraums\" überschneidet sich oft mit dem \"Fälligkeitsdatum der Überprüfung\". In Fällen, in denen ein Dokument eine längere Gültigkeitsdauer hat, aber eine Zwischenprüfung erforderlich ist, müssen sie jedoch unter Umständen getrennt erfasst werden. Dies kann auf geänderte persönliche Umstände/Ereignisse oder lokale Richtlinien zurückzuführen sein."
-          },
-          "at0055" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Letzte Aktualisierung",
-            "description" : "*The date when this advance directive record was last updated. (en)",
-            "comment" : "*This may not be a formal review but e.g. a typo correction. (en)"
-          },
-          "at0056" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Überprüfung des Fälligkeitsdatums",
-            "description" : "Das Datum, an dem die Patientenverfügung überprüft werden soll.",
-            "comment" : "Das \"Ende des Gültigkeitszeitraums\" überschneidet sich oft mit dem \"Fälligkeitsdatum der Überprüfung\". In Fällen, in denen ein Dokument eine längere Gültigkeitsdauer hat, aber eine Zwischenprüfung erforderlich ist, müssen sie jedoch unter Umständen getrennt erfasst werden. Dies kann auf geänderte persönliche Umstände/Ereignisse oder lokale Richtlinien zurückzuführen sein."
-          },
-          "at0058" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Standort der Richtlinie",
-            "description" : "Informationen darüber, wo die Patientenverfügung aufbewahrt wird und wer eine Kopie davon hat."
-          },
-          "at0059" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0059",
-            "text" : "Inhaber der Kopie",
-            "description" : "Angaben zu einer Person, die im Besitz einer Kopie der Patientenverfügung ist.",
-            "comment" : "Zum Beispiel 'John Smith, Rechtsanwalt'."
-          },
-          "at0060" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digitale Repräsentation",
-            "description" : "Digitales Dokument, Bild oder Video, dass die Patientenverfügung darstellt."
-          },
-          "at0061" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Status",
-            "description" : "Status der Patientenverfügung.",
-            "comment" : "Die Kodierung des Status der Patientenverfügung mit einer Terminologie wird, bevorzugt."
-          },
-          "at0038.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0038",
-            "text" : "Kommentar",
-            "description" : "Zusätzliche Informationen über die Patientenverfügung, die in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0027.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Auftrag",
-            "description" : "Beschreibung der anwendbaren Gesetzgebung oder anderer maßgeblicher Richtlinien.",
-            "comment" : "Zum Beispiel: \"In England und Wales fallen Vorabentscheidungen unter den Mental Capacity Act. Mandat: https://www.bma.org.uk/advice/employment/ethics/consent/consent-tool-kit/9-advance-decisions\". \r\n\r\nOder: \" Zeugen Jehovas glauben, dass die Bibel Christen verbietet, Bluttransfusionen zu akzeptieren. Mandat: https://en.wikipedia.org/wiki/Jehovah%27s_Witnesses_and_blood_transfusions'."
-          },
-          "at0005.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Art der Richtlinie",
-            "description" : "Die Art der Patientenverfügung.",
-            "comment" : "Eine kurze schriftliche Beschreibung der Art der Patientenverfügung. Eine Kodierung mit einer Terminologie wird, bevorzugt. Es wird erwartet, dass diese weitgehend lokalisiert ist, um die lokale Politik und Gesetzgebung widerzuspiegeln.\r\n\r\nIn den Niederlanden beispielsweise umfassen die Arten von Patientenverfügungen unter anderem \"Behandlungsverbot\", \" Behandlungsverbot mit Beendigung des abgeschlossenen Lebens\", \"Euthanasieantrag\" und \"Lebenserklärung\".\r\n\r\nIm Vereinigten Königreich gehören zu den Arten von Patientenverfügungen im Rahmen der medizinischen Versorgung die \"Vorabentscheidung\", die \"Patientenverfügung\" und die \" Voraberklärung\".\r\n \r\n"
-          },
-          "at0058.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0058",
-            "text" : "Standort der Richtlinie",
-            "description" : "Informationen darüber, wo die Patientenverfügung aufbewahrt wird und wer eine Kopie davon hat."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Beschreibung",
-            "description" : "Beschreibung der allgemeinen Patientenverfügung.",
-            "comment" : "Kann verwendet werden, um eine Übersicht über die gesamte Patientenverfügung zu erfassen, die durch strukturierte Daten unterstützt werden kann. Angaben zu bestimmten strukturierten Befunden können unter Verwendung von CLUSTER-Archetypen in den Slot \"Einzelheiten zur Richtlinie\" aufgenommen werden. Dieses Datenelement kann verwendet werden, um Altdaten zu erfassen, die nicht in einem strukturierten Format verfügbar sind.\r\n"
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Voraussetzung",
-            "description" : "Die Bedingungen oder Situationen, in denen die Person wünscht, dass die Patientenverfügung zur Anwendung kommt.",
-            "comment" : "Zum Beispiel: Demenz, Hirnverletzungen, Erkrankungen des Zentralnervensystems und unheilbare Krankheiten. Die Kodierung mit einer Terminologie wird, bevorzugt.\r\n\r\nDie Patientenverfügung gilt für alle genannten Erkrankungen, wenn die betroffene Person keine Entscheidungen über ihre medizinische Behandlung mehr treffen oder mitteilen kann und es unwahrscheinlich ist, dass sie die Fähigkeit, solche Entscheidungen zu treffen, wiedererlangen wird. Einzelheiten spezifischer Entscheidungen, die für unterschiedliche Bedingungen oder Situationen gelten, können unter Verwendung von CLUSTER-Archetypen in den Slot \"Einzelheiten der Richtlinie\" aufgenommen werden.\r\n"
-          },
-          "at0030.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Standort",
-            "description" : "Informationen darüber, wo die Patientenverfügung aufbewahrt wird und wie man Zugang zu ihr erhält.",
-            "comment" : "Zum Beispiel: \"In der obersten Schublade des Nachttisches\"."
-          },
-          "at0061.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0061",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen."
-          },
-          "at0060.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0060",
-            "text" : "Digitale Repräsentation",
-            "description" : "Digitales Dokument, Bild oder Video, dass die Patientenverfügung darstellt."
-          },
-          "at0055.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0055",
-            "text" : "Letzte Aktualisierung",
-            "description" : "*The date when this advance directive record was last updated. (en)",
-            "comment" : "*This may not be a formal review but e.g. a typo correction. (en)"
-          },
-          "at0056.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Überprüfung des Fälligkeitsdatums",
-            "description" : "Das Datum, an dem die Patientenverfügung überprüft werden soll.",
-            "comment" : "Das \"Ende des Gültigkeitszeitraums\" überschneidet sich oft mit dem \"Fälligkeitsdatum der Überprüfung\". In Fällen, in denen ein Dokument eine längere Gültigkeitsdauer hat, aber eine Zwischenprüfung erforderlich ist, müssen sie jedoch unter Umständen getrennt erfasst werden. Dies kann auf geänderte persönliche Umstände/Ereignisse oder lokale Richtlinien zurückzuführen sein."
-          },
-          "at0053.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0053",
-            "text" : "Beginn der Gültigkeitsdauer",
-            "description" : "Das Datum/die Uhrzeit, die den Beginn des gültigen Zeitraums für diese Patientenverfügung markiert."
-          },
-          "at0054.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0054",
-            "text" : "Ende der Gültigkeitsdauer",
-            "description" : "Das Datum/Uhrzeit, das den Abschluss der Gültigkeitsdauer dieser Patientenverfügung markiert.",
-            "comment" : "Das \"Ende des Gültigkeitszeitraums\" überschneidet sich oft mit dem \"Fälligkeitsdatum der Überprüfung\". In Fällen, in denen ein Dokument eine längere Gültigkeitsdauer hat, aber eine Zwischenprüfung erforderlich ist, müssen sie jedoch unter Umständen getrennt erfasst werden. Dies kann auf geänderte persönliche Umstände/Ereignisse oder lokale Richtlinien zurückzuführen sein."
           }
         }
       },
-      "termBindings" : {
-        "SNOMED-CT" : {
-          "at0044" : "term:SNOMED-CT::410515003",
-          "at0045" : "term:SNOMED-CT::410516002",
-          "at0047" : "term:SNOMED-CT::261665006"
-        }
-      },
+      "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : {
         "ac0.1" : {
@@ -3077,7 +989,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.care_journey_metadata.v0",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0"
@@ -3085,49 +997,20 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -3136,16 +1019,13 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0003.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -3159,50 +1039,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Care journey metadata",
-            "description" : "Tp capture Care plan metadata"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Care plan name",
-            "description" : "The name , preferably coded of the Care plan with which this journey is associated, and against which the composition was updated."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Care plan identifier",
-            "description" : "The identifier , preferably coded, of the Care plan with which this journey is associated, and against which the composition was updated."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Patient journey identifier",
-            "description" : "A patient-journey specific identifier i.e unique to a patient's journey along a specific care pathway."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Care plan identifier",
-            "description" : "The identifier , preferably coded, of the Care plan with which this journey is associated, and against which the composition was updated."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Patient journey identifier",
-            "description" : "A patient-journey specific identifier i.e unique to a patient's journey along a specific care pathway."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Care journey metadata",
-            "description" : "Tp capture Care plan metadata"
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3232,7 +1069,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "badcdfbb913a9ce48c458867e9fd01ec"
+        "PARENT:MD5-CAM-1.0.1" : "6ac92db1a37344acf0fa6e6f7b29ea28"
       },
       "details" : {
         "en" : {
@@ -3250,7 +1087,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.adrt_applicable_ol.v0",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-adrt_applicable_ol-001.v0"
@@ -3258,27 +1095,17 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
@@ -3322,32 +1149,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "ADRT applicable",
-            "description" : "adrt applicable ol"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Patient has applicable ADRT",
-            "description" : ""
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "ADRT applicable",
-            "description" : "adrt applicable ol"
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Patient has applicable ADRT",
-            "description" : ""
-          }
-        }
+        "en" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
