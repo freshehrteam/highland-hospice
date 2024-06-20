@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "05a7d50e51f42c8a93daf32c91b46b61",
+      "MD5-CAM-1.0.1" : "18c252b64512bc5fd2032f1905bcfd9d",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1298,7 +1298,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "C186DA445F8C45636F769D02CD5758DF"
+        "PARENT:MD5-CAM-1.0.1" : "6EFFAB5F512D4C7C4C9CCFCDC48670C9"
       },
       "details" : {
         "de" : {
@@ -1420,6 +1420,21 @@
           "keywords" : [ "empleo", "empleador", "trabajo", "ocupación", "tarea", "profesión", "desempleado", "empleado", "desempleo", "estudiando", "empleado", "estudiante", "sector", "profesión", "voluntario", "vocación", "comercio", "trabajador", "voluntario", "cargo" ],
           "use" : "Usar para registrar detalles sobre un trabajo o rol particular llevado a cabo por un individuo durante un periodo de tiempo especificado.\r\n\r\nEl alcance de este arquetipo incluye todos los empleos o actividades llevadas a cabo por el individuo. Por ejemplo: Un trabajo o empleo pagado; trabajo no remunerado de cualquier tipo como voluntario; o roles tales como estar jubilado o ser estudiante.\r\n\r\nMúltiples instancias de este arquetipo capturadas a lo largo del tiempo resultarán en una agregación de un histórico de trabajos y/o roles presentes o pasados.\r\n\r\nUn trabajo actual puede deducirse de la 'Fecha empezado' pero no de la 'Fecha finalizado'.\r\n\r\nUn individuo puede llevar a cabo muchas ocupaciones al mismo tiempo, las cuales pueden ser remuneradas o no remuneradas. Cada ocupación debería de ser registrada en una instancia separada de este arquetipo.\r\n\r\nSi los atributos de la ocupación cambian significativamente, tales como cambios en el título/rol o el número de horas, éstas se deberían de registrar en una instancia separada de este arquetipo.\r\n\r\nEste arquetipo ha sido específicamente diseñado para ser usado en el SLOT de 'Episodio de ocupación' dentro del arquetipo EVALUATION.occupation_summary, pero también puede ser usado dentro de cualquier otro arquetipo ENTRY o CLUSTER, cuando sea clínicamente apropiado.\r\n\r\nPuede haber una superposición aparente o real entre los elementos de datos en este arquetipo y detalles sobre la ocupación/empleo que puedan haber sido incluidos como detalles demográficos en sistemas clínicos o administrativos. Estos elementos de datos se han diseñado específicamente para dar soporte a propósitos clínicos como puede ser la generación de un certificado médico para el empleador actual.",
           "misuse" : "No debe ser usado para registrar cambios temporales o episodios dentro de un único registro ocupacional, tales como estar de baja. Esto está fuera del alcance de este arquetipo y debería ser parte de un sistema de recursos humanos del empleador.\r\n\r\nNo debe ser usado para una descripción detallada de los riesgos de salud o exposición a sustancias nocivas en el lugar de trabajo. Para este propósito use los arquetipos EVALUATION.health_risk o EVALUATION.exposure.\r\n\r\nNo debe ser usado para registrar información sobre fuentes o detalles de ingresos de un individuo. Para este propósito use el arquetipo EVALUATION.income_summary.\r\n\r\nNo debe ser usado para registrar información sobre la ocupación de un individuo en un punto concreto de tiempo (por ejemplo, el 16 de Junio de 2014) o durante un periodo de tiempo relativo (por ejemplo 'durante los últimos 30 días'). Para este propósito use un arquetipo OBSERVATION adecuado.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera detaljer om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.",
+          "keywords" : [ "sysselsättning", "arbetsgivare", "jobb", "ockupation", "arbete", "yrke", "arbetslös", "anställd", "arbetslöshet", "studerar", "anställda", "studerande", "sektor", "yrke", "volontär", "yrke", "handel", "arbetstagare", "volontär", "position" ],
+          "use" : "Används för att registrera information om ett enskilt jobb eller en roll som en person utför under en viss tidsperiod.\r\n\r\nOmfattningen av denna arketyp inkluderar alla yrken eller aktiviteter som utförs av en individ. Till exempel: ett betalt jobb eller anställning; obetalt arbete av vilken typ som helst som en volontärposition; eller roller som att gå i pension eller studera.\r\n\r\nFlera instanser av den här arketypen som skapats över tid kommer att resultera i en sammanställning av en historia av tidigare och nuvarande jobb och/eller roller.\r\n\r\nEn aktiv eller nuvarande ockupation kan antydas från ett 'Datum inleddes' men inget 'Datum upphört'.\r\n\r\nEn individ kan utföra många samtidiga yrken, var och en kan vara betald eller obetald. Varje yrke bör registreras i en separat instans av denna arketyp.\r\n\r\nOm yrkesattribut förändras väsentligt, till exempel roll / titel eller antal timmar, bör detta registreras som en separat instans av denna arketyp.\r\n\r\nDen här arketypen har utformats speciellt för att användas i 'Yrkesepisod' SLOT inom EVALUATION.occupation_summary arketyp, men kan också användas inom alla andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.\r\n\r\nDet kan finnas någon uppenbar eller verklig överlappning mellan dataelementen i denna arketyp och yrkes- / anställningsdetaljer som kan lagras som demografiska detaljer i kliniska eller administrativa system. Dessa dataelement har utformats specifikt för att stödja kliniska ändamål, inklusive generering av ett läkarintyg till en nuvarande arbetsgivare.",
+          "misuse" : "Inte utformad för att registrera tillfälliga ändringar eller avsnitt inom en enda yrkesregistrering, som att vara ledig. Detta är utom räckhåll för denna arketyp och bör ingå i en arbetsgivares HR-system.\r\n\r\nInte utformad för att användas till detaljerade beskrivningar av hälsorisker eller exponering för farliga ämnen på arbetsplatsen. Använd arketyperna EVALUATION.health_risk eller EVALUATION.exposure för detta ändamål.\r\n\r\nInte utformad för att registrera information om inkomstkällor eller inkomstuppgifter för individen. Använd arketypen EVALUATION.income_summary för detta ändamål.\r\n\r\nAnvänds inte för att registrera information om en persons ockupation vid en viss tidpunkt (till exempel den 16 juni 2014) eller under ett relativt tidsintervall (till exempel \"under de senaste 30 dagarna\". Använd en lämplig OBSERVATION arketyp för detta ändamål.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -1884,7 +1899,8 @@
         "de" : { },
         "fr" : { },
         "pt-br" : { },
-        "pt" : { }
+        "pt" : { },
+        "sv" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1998,6 +2014,20 @@
         "name" : "Diego Bosca",
         "organisation" : "VeraTech for Health",
         "email" : "diebosto@veratech.es"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Therese Lindberg",
+        "organisation" : "Cambio CDS",
+        "email" : "therese.lindberg@cambio.se"
       },
       "otherDetails" : { }
     } ]
