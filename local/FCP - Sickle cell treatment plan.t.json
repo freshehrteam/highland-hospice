@@ -24,7 +24,7 @@
       "custodian_namespace" : "org.onelondon.ucp",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "bd45fd6e-2d7a-4b26-924a-0932e2072727",
-      "MD5-CAM-1.0.1" : "0aaef913aa763e7cc81747760d64d15d",
+      "MD5-CAM-1.0.1" : "5da38188b96d674eda683730b8e6e5dd",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "3ae573d4758588a886d3ef8f8f7e3576"
     },
@@ -527,10 +527,10 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.11",
+          "nodeId" : "at0.13",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-001.v2",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -901,10 +901,10 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.18",
+          "nodeId" : "at0.22",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-005.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-005.v2",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -2343,10 +2343,10 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.12",
+          "nodeId" : "at0.14",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-006.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-004.v2",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -5872,10 +5872,10 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.11",
+          "nodeId" : "at0.14",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-003.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v2",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -7249,10 +7249,10 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.11",
+          "nodeId" : "at0.14",
           "attributes" : [ ],
           "attributeTuples" : [ ],
-          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-004.v1",
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-003.v2",
           "referenceType" : "archetypeOverlay"
         } ]
       } ],
@@ -7452,7 +7452,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "83187b07-d536-48ad-aedb-dd5deb0c76ee",
+    "uid" : "1749ad6d-ae3b-4dd6-8f7e-c4e432d65a4e",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7461,101 +7461,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "735B060CA735A6C3D8AB6D3F7E50A4AB"
+        "PARENT:MD5-CAM-1.0.1" : "659667CE8B718AF6A82889E1A17024A7"
       },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
-          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.\r\n\r\n\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
-          "keywords" : [ "råd", "förslag", "rekommendation" ],
-          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
-          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
-          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
-          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
-          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
-          "keywords" : [ "conselho", "proposta", "sugestão" ],
-          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
-          "keywords" : [ "advice", "proposal", "suggestion" ],
-          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v1",
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-001.v2"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -7591,6 +7505,36 @@
               "occurrences" : "0..0",
               "nodeId" : "at0003.1",
               "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -7616,14 +7560,15 @@
         "pt-br" : { },
         "nb" : { },
         "sv" : { },
-        "de" : { }
+        "de" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "6605fa66-e7d6-4eee-bf80-c8741543a9a5",
+    "buildUid" : "fbbdd0e1-380d-4fc9-b59e-a7c443629bff",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -7686,9 +7631,9 @@
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Bjørn Grøva",
-        "organisation" : "Direktoratet for e-helse",
-        "email" : "bjorn.grova@ehelse.no"
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
       },
       "otherDetails" : { }
     }, {
@@ -7705,10 +7650,25 @@
         "email" : "vladimir.pizzo@hsl.org.br"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "83187b07-d536-48ad-aedb-dd5deb0c76ee",
+    "uid" : "ac8dd024-1112-4bf5-91a7-a3fc8e07796e",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -7717,101 +7677,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "735B060CA735A6C3D8AB6D3F7E50A4AB"
+        "PARENT:MD5-CAM-1.0.1" : "659667CE8B718AF6A82889E1A17024A7"
       },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
-          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.\r\n\r\n\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
-          "keywords" : [ "råd", "förslag", "rekommendation" ],
-          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
-          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
-          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
-          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
-          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
-          "keywords" : [ "conselho", "proposta", "sugestão" ],
-          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
-          "keywords" : [ "advice", "proposal", "suggestion" ],
-          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v1",
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-003.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-002.v2"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -7852,6 +7726,36 @@
           } ],
           "attributeTuples" : [ ]
         } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
       } ],
       "attributeTuples" : [ ]
     },
@@ -7868,53 +7772,19 @@
             "comment" : "May be coded, using a terminology, if required."
           }
         },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Recomendación (2)",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Recomendação (2)",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Anbefaling (2)",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rekommendation (2)",
-            "description" : "Ett förslag eller råd om behandling."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Empfehlung (2)",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          }
-        }
+        "es-ar" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "sv" : { },
+        "de" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "6605fa66-e7d6-4eee-bf80-c8741543a9a5",
+    "buildUid" : "fbbdd0e1-380d-4fc9-b59e-a7c443629bff",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -7977,9 +7847,9 @@
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Bjørn Grøva",
-        "organisation" : "Direktoratet for e-helse",
-        "email" : "bjorn.grova@ehelse.no"
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
       },
       "otherDetails" : { }
     }, {
@@ -7996,10 +7866,25 @@
         "email" : "vladimir.pizzo@hsl.org.br"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "83187b07-d536-48ad-aedb-dd5deb0c76ee",
+    "uid" : "723e34b3-28d3-4f46-8e1b-9db24356fe68",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -8008,101 +7893,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "735B060CA735A6C3D8AB6D3F7E50A4AB"
+        "PARENT:MD5-CAM-1.0.1" : "659667CE8B718AF6A82889E1A17024A7"
       },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
-          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.\r\n\r\n\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
-          "keywords" : [ "råd", "förslag", "rekommendation" ],
-          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
-          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
-          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
-          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
-          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
-          "keywords" : [ "conselho", "proposta", "sugestão" ],
-          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
-          "keywords" : [ "advice", "proposal", "suggestion" ],
-          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v1",
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-004.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-003.v2"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -8137,6 +7936,27 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -8159,53 +7979,19 @@
             "comment" : "May be coded, using a terminology, if required."
           }
         },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Recomendación (3)",
-            "description" : "Una sugerencia, consejo o propuesta para el manejo clínico."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Recomendação (3)",
-            "description" : "Uma sugestão, conselho ou proposta para manejo clínico."
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Anbefaling (3)",
-            "description" : "Et forslag, råd eller anmodning om klinisk oppfølging."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rekommendation (3)",
-            "description" : "Ett förslag eller råd om behandling."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Empfehlung (3)",
-            "description" : "Eine Empfehlung, eine Beratung oder ein Vorschlag für die klinische Versorgung."
-          }
-        }
+        "es-ar" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "sv" : { },
+        "de" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "6605fa66-e7d6-4eee-bf80-c8741543a9a5",
+    "buildUid" : "fbbdd0e1-380d-4fc9-b59e-a7c443629bff",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -8268,9 +8054,9 @@
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Bjørn Grøva",
-        "organisation" : "Direktoratet for e-helse",
-        "email" : "bjorn.grova@ehelse.no"
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
       },
       "otherDetails" : { }
     }, {
@@ -8287,10 +8073,25 @@
         "email" : "vladimir.pizzo@hsl.org.br"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "83187b07-d536-48ad-aedb-dd5deb0c76ee",
+    "uid" : "2d32bab6-3318-4fe3-aa07-ffa6acd5457e",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -8299,101 +8100,15 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "735B060CA735A6C3D8AB6D3F7E50A4AB"
+        "PARENT:MD5-CAM-1.0.1" : "659667CE8B718AF6A82889E1A17024A7"
       },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
-          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.\r\n\r\n\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
-          "keywords" : [ "råd", "förslag", "rekommendation" ],
-          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
-          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
-          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
-          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
-          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
-          "keywords" : [ "conselho", "proposta", "sugestão" ],
-          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
-          "keywords" : [ "advice", "proposal", "suggestion" ],
-          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
+      "details" : { }
     },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v1",
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-005.v1"
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-004.v2"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -8434,226 +8149,13 @@
           } ],
           "attributeTuples" : [ ]
         } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "es-ar" : { },
-        "pt-br" : { },
-        "nb" : { },
-        "sv" : { },
-        "de" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "6605fa66-e7d6-4eee-bf80-c8741543a9a5",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Alina Rehberg, Natalia Strauch",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "rehberg.alina@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Åsa Skagerhult",
-        "organisation" : "Region Östergötland",
-        "email" : "asa.skagerhult@regionostergotland.se"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es-ar"
-      },
-      "author" : {
-        "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
-        "alandmarch@gmail.com" : "alandmarch@gmail.com",
-        "email" : "alandmarch@gmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Bjørn Grøva",
-        "organisation" : "Direktoratet for e-helse",
-        "email" : "bjorn.grova@ehelse.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Vladimir Pizzo",
-        "organisation" : "Hospital Sirio Libanes, Brazil",
-        "email" : "vladimir.pizzo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "39f65bde-0668-4d2f-ad41-ec17bccec6c6",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "735B060CA735A6C3D8AB6D3F7E50A4AB"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung einer Empfehlung, einer Beratung oder eines Vorschlags für die klinische Versorgung zu einem bestimmten Zeitpunkt.",
-          "keywords" : [ "Beratung", "Empfehlung", "Vorschlag" ],
-          "use" : "Verwenden Sie diesen Archetyp, um eine Empfehlung, eine Beratung oder einen Vorschlag für die klinische Versorgung zu einem bestimmten Zeitpunkt darzustellen.\r\n\r\nDer vorgesehene Anwendungsfall ist, um einen Kliniker bei der Aufzeichnung einer oder mehreren Empfehlung/en zu einem bestimmten Zeitpunkt zu unterstützen.\r\nZum Beispiel als Bestandteil der Schlussfolgerungen, die im Rahmen einer klinischen Beratung getroffen werden.\r\n\r\n\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.",
-          "keywords" : [ "råd", "förslag", "rekommendation" ],
-          "use" : "Att föreslå eller ge råd om behandlingsåtgärd vid ett specifikt tillfälle.\r\n\r\nÄr tänkt att ge stöd för att dokumentera en behandlingsrekommendation vid en specifik tidpunkt. Exempelvis som en del av slutsatsen vid en klinisk konsultation.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.",
-          "keywords" : [ "råd", "forslag", "anmodning", "tilråde", "tilrådning", "instruks" ],
-          "use" : "Anvendes for å registrere et forslag, et råd eller en anmodning om klinisk oppfølging på et spesifikt tidspunkt.\r\n\r\nArketypen er ment å understøtte klinikere som dokumenterer en eller flere anbefalinger på et spesifikt tidspunkt.\r\nAnbefalingen kan for eksempel benyttes som en del av dokumentasjonen av konklusjonene som trekkes i forbindelse med en klinisk konsultasjon.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es-ar" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es-ar"
-          },
-          "purpose" : "Para el registro de una sugerencia, consejo o propuesta para el manejo clínico en un momento determinado.",
-          "keywords" : [ "consejo", "propuesta", "sugerencia" ],
-          "use" : "Utilícese para registrar una sugerencia, consejo o propuesta para el manejo clínico en un momento específico.\r\n\r\nEl caso de uso previsto se vincula a permitir el registro por parte del clínico de una o mas recomendaciones, en un mento específico en el tiempo. Por ejemplo, como un componente de las conclusiones a las que se ha arribado como parte de una consutla clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.",
-          "keywords" : [ "conselho", "proposta", "sugestão" ],
-          "use" : "Utilizar para registrar uma sugestão, conselho ou proposta de manejo clínico num tempo específico.\r\n\r\nO caso de uso pretendido é apoiar o registro clínico de uma recomendação, ou recomendações, num ponto específico no tempo.\r\nPor exemplo, como um componente das conclusões tiradas como parte de uma consulta clínica.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record a suggestion, advice or proposal for clinical management at a specific time.",
-          "keywords" : [ "advice", "proposal", "suggestion" ],
-          "use" : "Use to record a suggestion, advice or proposal for clinical management at a specific time.\r\n\r\nThe intended use case is to support a clinician recording a recommendation, or recommendations, at a specific point-in-time. \r\nFor example, as a component of the conclusions drawn as part of a clinical consultation.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-006.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
+      }, {
         "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
+        "rmAttributeName" : "protocol",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
+          "nodeId" : "at0004",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
@@ -8661,21 +8163,7 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
-              "nodeId" : "at0006.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "1..1",
-              "nodeId" : "at0002.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0003.1",
+              "nodeId" : "at0007.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -8702,14 +8190,15 @@
         "pt-br" : { },
         "nb" : { },
         "sv" : { },
-        "de" : { }
+        "de" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "6605fa66-e7d6-4eee-bf80-c8741543a9a5",
+    "buildUid" : "fbbdd0e1-380d-4fc9-b59e-a7c443629bff",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -8772,9 +8261,9 @@
         "codeString" : "nb"
       },
       "author" : {
-        "name" : "Bjørn Grøva",
-        "organisation" : "Direktoratet for e-helse",
-        "email" : "bjorn.grova@ehelse.no"
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
       },
       "otherDetails" : { }
     }, {
@@ -8790,6 +8279,220 @@
         "organisation" : "Hospital Sirio Libanes, Brazil",
         "email" : "vladimir.pizzo@hsl.org.br"
       },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "5f05dc68-f164-438f-852d-f29efa774f0e",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "659667CE8B718AF6A82889E1A17024A7"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.recommendation.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-recommendation-005.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0006.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "1..1",
+              "nodeId" : "at0002.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0007.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "es-ar" : { },
+        "pt-br" : { },
+        "nb" : { },
+        "sv" : { },
+        "de" : { },
+        "nl" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "fbbdd0e1-380d-4fc9-b59e-a7c443629bff",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Alina Rehberg, Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "rehberg.alina@mh-hannover.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult",
+        "organisation" : "Region Östergötland",
+        "email" : "asa.skagerhult@regionostergotland.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-ar"
+      },
+      "author" : {
+        "name" : "Alan March",
+        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina",
+        "alandmarch@gmail.com" : "alandmarch@gmail.com",
+        "email" : "alandmarch@gmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Bjørn Grøva, John Tore Valand",
+        "organisation" : "Direktoratet for e-helse, Helse Bergen",
+        "email" : "bjorn.grova@ehelse.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Vladimir Pizzo",
+        "organisation" : "Hospital Sirio Libanes, Brazil",
+        "email" : "vladimir.pizzo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
       "otherDetails" : { }
     } ]
   } ],
