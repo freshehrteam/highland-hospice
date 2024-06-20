@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.2",
-      "MD5-CAM-1.0.1" : "e1478ae00ddad70b3e4e946ce3d52897",
+      "MD5-CAM-1.0.1" : "e02aff9fb3bd4453ca8084d017a15240",
       "build_uid" : "f53b9464-1a30-4e66-ab86-fc836f1abdae",
       "PARENT:MD5-CAM-1.0.1" : "3ae573d4758588a886d3ef8f8f7e3576"
     },
@@ -402,7 +402,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "86372236E61A02A1C3905BA9033C255F"
+        "PARENT:MD5-CAM-1.0.1" : "78D1421288E4ED0C46F353927AC1B525"
       },
       "details" : {
         "de" : {
@@ -605,6 +605,21 @@
           "otherDetails" : {
             "notes" : "Generated automatically by Adl Designer"
           }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Per registrar detalls sobre un únic problema de salut o diagnòstic identificat.\r\n\r\n",
+          "keywords" : [ "*issue(en)", "*condition(en)", "*problem(en)", "*diagnosis(en)", "*concern(en)", "*injury(en)", "*clinical impression(en)" ],
+          "use" : "Ús per registrar detalls sobre un problema de salut o diagnòstic únic identificat.",
+          "misuse" : "*Not to be used to record symptoms as described by the individual - use the CLUSTER.symptom archetype, usually within the OBSERVATION.story archetype.\r\n\r\nNot to be used to record examination findings - use the family of examination-related CLUSTER archetypes, usually nested within the OBSERVATION.exam archetype.\r\n\r\nNot to be used to record laboratory test results or related diagnoses, for example pathological diagnoses - use an appropriate archetype from the laboratory family of OBSERVATION archetypes.\r\n\r\nNot to be used to record imaging examination results or imaging diagnoses - use an appropriate archetype from the imaging family of OBSERVATION archetypes.\r\n\r\nNot to be used to record 'Differential Diagnoses' - use the EVALUATION.differential_diagnosis archetype.\r\n\r\nNot to be used to record 'Reason for Encounter' or 'Presenting Complaint' - use the EVALUATION.reason_for_encounter archetype.\r\n\r\nNot to be used to record procedures - use the ACTION.procedure archetype.\r\n\r\nNot to be used to record details about pregnancy - use the EVALUATION.pregnancy_bf_status and EVALUATION.pregnancy and related archetypes.\r\n\r\nNot to be used to record statements about health risk or potential problems - use the EVALUATION.health_risk archetype.\r\n\r\nNot to be used to record statements about adverse reactions, allergies or intolerances - use the EVALUATION.adverse_reaction archetype.\r\n\r\nNot to be used for the explicit recording of an absence (or negative presence) of a problem or diagnosis, for example ‘No known problem or diagnoses’ or ‘No known diabetes’. Use the EVALUATION.exclusion-problem_diagnosis archetype to express a positive statement about exclusion of a problem or diagnosis.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -738,6 +753,13 @@
                   "attributeTuples" : [ ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0079.1",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -911,7 +933,8 @@
         "fi" : { },
         "it" : { },
         "nl" : { },
-        "zh" : { }
+        "zh" : { },
+        "ca" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1091,6 +1114,19 @@
         "name" : "Yexuan Cheng",
         "organisation" : "浙江大学",
         "email" : "3160100913@zju.edu.cn"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Elisa Asensio",
+        "email" : "easensiob@clinic.cat"
       },
       "otherDetails" : { }
     } ]
@@ -2105,7 +2141,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "86372236E61A02A1C3905BA9033C255F"
+        "PARENT:MD5-CAM-1.0.1" : "78D1421288E4ED0C46F353927AC1B525"
       },
       "details" : {
         "de" : {
@@ -2308,6 +2344,21 @@
           "otherDetails" : {
             "notes" : "Generated automatically by Adl Designer"
           }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Per registrar detalls sobre un únic problema de salut o diagnòstic identificat.\r\n\r\n",
+          "keywords" : [ "*issue(en)", "*condition(en)", "*problem(en)", "*diagnosis(en)", "*concern(en)", "*injury(en)", "*clinical impression(en)" ],
+          "use" : "Ús per registrar detalls sobre un problema de salut o diagnòstic únic identificat.",
+          "misuse" : "*Not to be used to record symptoms as described by the individual - use the CLUSTER.symptom archetype, usually within the OBSERVATION.story archetype.\r\n\r\nNot to be used to record examination findings - use the family of examination-related CLUSTER archetypes, usually nested within the OBSERVATION.exam archetype.\r\n\r\nNot to be used to record laboratory test results or related diagnoses, for example pathological diagnoses - use an appropriate archetype from the laboratory family of OBSERVATION archetypes.\r\n\r\nNot to be used to record imaging examination results or imaging diagnoses - use an appropriate archetype from the imaging family of OBSERVATION archetypes.\r\n\r\nNot to be used to record 'Differential Diagnoses' - use the EVALUATION.differential_diagnosis archetype.\r\n\r\nNot to be used to record 'Reason for Encounter' or 'Presenting Complaint' - use the EVALUATION.reason_for_encounter archetype.\r\n\r\nNot to be used to record procedures - use the ACTION.procedure archetype.\r\n\r\nNot to be used to record details about pregnancy - use the EVALUATION.pregnancy_bf_status and EVALUATION.pregnancy and related archetypes.\r\n\r\nNot to be used to record statements about health risk or potential problems - use the EVALUATION.health_risk archetype.\r\n\r\nNot to be used to record statements about adverse reactions, allergies or intolerances - use the EVALUATION.adverse_reaction archetype.\r\n\r\nNot to be used for the explicit recording of an absence (or negative presence) of a problem or diagnosis, for example ‘No known problem or diagnoses’ or ‘No known diabetes’. Use the EVALUATION.exclusion-problem_diagnosis archetype to express a positive statement about exclusion of a problem or diagnosis.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -2510,7 +2561,8 @@
         "fi" : { },
         "it" : { },
         "nl" : { },
-        "zh" : { }
+        "zh" : { },
+        "ca" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -2692,6 +2744,19 @@
         "email" : "3160100913@zju.edu.cn"
       },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Elisa Asensio",
+        "email" : "easensiob@clinic.cat"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -2704,7 +2769,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "1C27320A9B0499317426B81E69A5862D"
+        "PARENT:MD5-CAM-1.0.1" : "0A06AC36BF82029DCD53C8C128EE29DD"
       },
       "details" : {
         "de" : {
@@ -6775,7 +6840,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "9bd9e827e54feabf97600cd109e046e6"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.surprise_question.v0",
     "differential" : true,
