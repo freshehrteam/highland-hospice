@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0-alpha.1",
+      "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "d6661714cc7ec8ead809b35f230515bd",
+      "MD5-CAM-1.0.1" : "458154fa86a33633cfc7dd58738b1492",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
     "details" : {
@@ -135,10 +135,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "ACTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.8",
+        "nodeId" : "at0.10",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-ACTION.ovl-service-001.v0",
+        "archetypeRef" : "openEHR-EHR-ACTION.ovl-service-001.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -1377,7 +1377,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "d65b665b-388a-46b3-bde9-2ea3b6a75b2b",
+    "uid" : "ca70cc42-1460-4c9d-8cb3-7ba0efeb6b97",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -1386,7 +1386,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "7E061EECABAC057F17CABCB1FDBAA7C1"
+        "PARENT:MD5-CAM-1.0.1" : "10166B307F40817B5B3E2D3720F6AC03"
       },
       "details" : {
         "de" : {
@@ -1397,25 +1397,40 @@
             },
             "codeString" : "de"
           },
-          "purpose" : "Um Informationen über die Ausführung einer angeforderten Gesundheitsleistung aufzuzeichnen.",
-          "keywords" : [ "Überweisung", "Besuch", "Kontakt" ],
-          "use" : "Zur Darstellung von Informationen über die Durchführung einer angeforderten Gesundheitsleistung. Dafür werden relevante Informationen in den definierten Kategorien \"geplant\", \"angesetzt\", \"erbracht\", \"ausgesetzt\", \"storniert\", \"verschoben\" oder \"eingestellt\" aufgezeichnet.\r\n\r\nDer Aufgabenbereich dieses Archetyps umfasst absichtlich ein umfassendes Spektrum an klinischen Leistungen. Folgende Beispiele können dabei erfasst werden, sind aber nicht nur auf diese beschränkt:\r\n- den eigenständigen Besuch eines Patienten zu einem vorsorglichen Check-Up bei einem Zahnarzt oder eine Reihe von Besuchen bei einem Physiotherapeuten aufgrund einer muskulären Verspannung; und\r\n- die Überweisung eines anfordernden Gesundheitsversorgers, wie zum Beispiel eines Hausarztes, an einen aufnehmenden Gesundheitsversorger, wie zum Beispiel einem Facharzt damit der Patient bestimmte Leistung, einen Rat oder Pflege erhält.\r\n\r\nZusätzliche strukturierte und ausführliche Informationen über diese Leistung können, unter Verwendung eines spezifischen Archetyps der in den \"Leistungsdetails\" SLOT integriert wird, dokumentiert werden.\r\n\r\nDie zeitliche Regulierung einer Maßnahme kann auf eine von zwei Arten erreicht werden:\r\n- durch die Verwendung des Referenzmodells - durch Verwendung des Zeitattributs für jeden angesetzten Schritt; und \r\n- durch die Verwendung von Archetypdaten - das Element \"geplantes Datum/geplante Uhrzeit\" ist dafür gedacht einen präzisen Zeitpunkt aufzuzeichnen, an dem eine Leistung geplant ist.\r\n\r\nTatsächlich werden einige Leistungen (zum Beispiel in der ambulanten Versorgung) einmalig und ohne vorherige Anmeldung durchgeführt. Details dieser Leistung werden in der Kategorie \"Leistung vollständig erbracht\" aufgenommen. In einigen Fällen kann eine wiederkehrende Leistung angeordnet werden. In diesem Fall werden Detail in jedem Fall in der Kategorie \"Leistung erbracht\" aufgezeichnet und die Anweisungen im Status \"aktiv\" belassen. Für die letzte Ausführung dieser Leistung wird die Kategorie \"Leistung vollständig erbracht\" verwendet und die Anforderung in den Status \"abgeschlossen\" versetzt.\r\n\r\nIn anderen Situationen, wie der sekundären Versorgung, gibt es möglicherweise eine formelle Anforderung für eine Leistung die dem \"INSTRUCTION.request\" Archetyp entspricht. Dieser ACTION-Archetyp kann dann verwendet werden um den Arbeitsablauf und die Durchführung der Anforderung zu beschreiben.\r\n\r\nDieser Archetyp kann auf zwei Arten verwendet werden:\r\n- als vollständige Aufzeichnung der erbrachten Leistung, oder\r\n- als Rahmen um vorrangig den Status der angeforderten Leistung und separaten OBSERVATION-Archetypen um die eigentlichen Testergebnisse für die erbrachte Leistung aufzuzeichnen. Zum Beispiel mit dem Archetyp \"OBSERVATION.hearing_screening_result\".\r\n\r\nDie Dokumentation von Informationen mit Hilfe dieses ACTION Archetyps weist darauf hin, dass eine Leistung tatsächlich stattgefunden hat. In der Regel handelt es sich dabei um eine erbrachte Leistung, es kann sich jedoch auch um einen Fehlversuch oder eine andere Maßnahme wie das Aussetzen einer Leistungserbringung handeln. Im Falle einer formellen Anforderung wird der Status der Leistung mithilfe der definierten Kategorien aufgezeichnet. Zum Beispiel kann mit Hilfe dieses Archetyps der Fortschritt einer Überweisungsanfrage durch separate Einträge in die elektronische Patientenakte aufgezeichnet werden:\r\n- Aufzeichnung eines geplanten Datum/geplante Uhrzeit der Überweisung (Leistung angesetzt); oder\r\n- Aufzeichnung über eine vollständig erbrachte Leistung, möglicherweise mit zusätzlichen Informationen zur erbrachten Leistung (Leistung vollständig erbracht).\r\n\r\nBitte beachten Sie, dass es im openEHR-Referenzmodell ein Attribut \"Zeit\" gibt, das dazu dient, das Datum und die Uhrzeit zu erfassen, zu der jeder Verlaufsschritt der Aktion ausgeführt wurde. Dies ist das Attribut, mit dem der Beginn der Leistung (mit dem Schritt \"Leistung erbracht\") oder die Zeit, zu der die Leistung abgebrochen wurde (mit dem Schritt \"Leistung eingestellt\"), erfasst wird.",
-          "misuse" : "Nicht zur Darstellung von Informationen über durchgeführte Vorgänge die spezielle Archetypen benötigen, weil sie eine sehr spezifische Datenerfassung oder Anforderungen an Schritte des Pfades haben. Zum Beispiel: ACTION.procedure oder ACTION.health_education.",
+          "purpose" : "Zur Darstellung von Informationen zu einer Person, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Anbieter, Dienstleister, Betreuer, Personal, medizinisches Fachpersonal, Verwandter, Angehöriger, Hausarzt, Zeuge, Freund, Nachbar, Kind, Familie, Geschwister, Elternteil, Einzelperson" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Person darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\r\nBeispiele beinhalten:\r\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive;\r\n- die Rolle und Kontaktdaten eines benannten Ansprechpartners in einer Organisation, unter Verwendung des SLOT „Kontaktperson“ innerhalb des Archetyps CLUSTER.organisation;\r\n- Angaben zu einem Verwandten in einer Familienanamnese unter Verwendung des SLOT „Angaben zum Familienmitglied“ innerhalb des Archetyps openEHR-EHR-EVALUATION.family_history;\r\n- der Name der Person, die eine Laborprobe von einem Patienten entnommen hat, unter Verwendung der „Angaben zum Probennehmer“ innerhalb des Archetyps CLUSTER.specimen oder\r\n- ein Zeuge eines Sturzes oder Unfalls, unter Verwendung des SLOT \"Zeuge\" innerhalb des Archetyps CLUSTER.health_event.\r\n\r\nIn den meisten einfachen Anwendungsfällen reicht das unstrukturierte Element „Name“ innerhalb des Archetyps CLUSTER.person aus, um den Namen einer Person als Teil einer Gesundheitsakte darzustellen. In Fällen, in denen ein strukturierter Name für klinische Aufzeichnungszwecke erforderlich oder wünschenswert ist, verschachteln Sie diesen Archetyp jedoch im SLOT „Name strukturiert“ im Archetyp CLUSTER.person. Wenn der Archetyp CLUSTER.structured_name in den SLOT „Name strukturiert“ eingebettet ist, können beliebige oder alle Datenelemente als Textzeichenfolge kombiniert und im Element „Name“ dargestellt werden, solange sie konsistent sind.\r\n\r\nDieser Archetyp könnte auch stellvertretend für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise eine Bewertung, bei der Prüfer erwarten würden, dass die Details einer Person oben im Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um den Patienten, die Teilnehmer oder den Verfasser der Akte und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Referenzmodellattribute dargestellt werden sollten.\r\n\r\nDarf nicht verwendet werden, um das Geburtsdatum einer Person darzustellen – verwenden Sie zu diesem Zweck das Datenelement „Geburtsdatum“ im Archetyp EVALUATION.birth_summary.\r\n\r\nDarf nicht verwendet werden, um biometrische Details oder Biomarker über eine Person darzustellen – verwenden Sie zu diesem Zweck einen speziellen ENTRY-Archetyp.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         },
-        "pt-br" : {
+        "sv" : {
           "@type" : "RESOURCE_DESCRIPTION_ITEM",
           "language" : {
             "terminologyId" : {
               "value" : "ISO_639-1"
             },
-            "codeString" : "pt-br"
+            "codeString" : "sv"
           },
-          "purpose" : "Registrar informações sobre a execução de uma solicitação de um serviço relacionado à saúde.",
-          "keywords" : [ "referência", "visita", "encontro" ],
-          "use" : "Use para registrar informações sobre a execução de uma solicitação para um serviço relacionado à saúde. Isso é feito registrando dados relevantes contra qualquer uma ou todas as atividades especificadas nas etapas do caminho: 'Planejada', 'Programada', 'Ativa', 'Suspensa', 'Cancelada', 'Adiada', 'Cancelada'.\r\n\r\nO escopo deste arquétipo engloba deliberadamente atividades para uma ampla gama de serviços clínicos. Exemplos incluem, mas não estão limitados a:\r\n- auto-referência por um paciente para uma visita de check-up a um dentista para cuidados preventivos ou uma série de visitas a um fisioterapeuta para o tratamento de uma tensão musculoesquelética; e\r\n- um encaminhamento de um prestador de serviços de saúde solicitante, como um médico de cuidados primários, para um profissional de saúde que o recebe, como um especialista, para que o paciente receba um serviço, aconselhamento ou atendimento específico.\r\n\r\nInformações adicionais estruturadas e detalhadas sobre o serviço podem ser capturadas usando arquétipos com finalidades específicas, inseridos no slot \"Detalhes do serviço\", onde necessário.\r\n\r\nOs tempos relacionados a um procedimento podem ser gerenciados de duas maneiras:\r\n- usando o modelo de referência - o tempo para a realização de qualquer etapa do caminho usará o atributo tempo do ACTION para cada etapa; e\r\n- usando os dados dos arquétipos - o elemento de dados 'Data/hora programada' destina-se a registrar a hora exata em que o serviço é planejado. Observação: o atributo tempo do ACTION, correspondente para a etapa de caminho agendado, registrará a hora em que o serviço foi agendado em um sistema, não a data/hora em que o serviço deve ser realizado.\r\n\r\nNa prática, alguns serviços (por exemplo, em atendimento ambulatorial) ocorrerão sem que sejam solicitados com antecedência. Os detalhes sobre o serviço serão adicionados fora das etapa do caminho em \"Serviço concluído\". Em alguns casos, um serviço recorrente será solicitado e, nessa situação, os dados em relação à etapa \"Serviço entregue\" serão registrados em cada ocasião, deixando a instrução no estado ativo. Quando a última entrega do serviço é registrada, a ação 'Serviço concluído' é registrada, mostrando que este pedido está agora no estado concluído.\r\n\r\nEm outras situações, como para a atenção secundária, pode haver uma ordem formal para um procedimento usando um arquétipo INSTRUCTION.request correspondente. Esse arquétipo do tipo ACTION pode ser usado para registrar o fluxo de trabalho de quando e como o pedido foi executado.\r\n\r\nEsse arquétipo só pode ser usado de duas maneiras:\r\n- como registro completo do serviço que foi entregue; ou\r\n- como uma estrutura para registrar principalmente o estado do serviço solicitado, com arquétipos de OBSERVAÇÃO separados usados ​​para registrar os resultados reais do teste para o serviço entregue - por exemplo, OBSERVATION.hearing_screening_result.\r\n\r\nA gravação de informações usando arquétipo do tipo ACTION indica que algum tipo de atividade realmente ocorreu; isso geralmente será a entrega do serviço em si, mas pode ser uma tentativa fracassada ou outra atividade, como o adiamento da entrega do serviço. Se houver uma ordem formal para o procedimento, o estado dessa ordem é representado pela etapa do caminho na qual os dados são registrados. Por exemplo, usando esse arquétipo, o estado progressivo de uma solicitação de referência pode ser registrado em entradas separadas nas notas de progresso do registro eletrônico de saúde, para cada etapa do caminho:\r\n- registrar a data/hora de início agendada para o encaminhamento (serviço agendado); e\r\n- registrar que o encaminhamento foi concluído, potencialmente incluindo informações sobre o serviço entregue (serviço concluído).\r\n\r\nObserve que no modelo de referência openEHR existe um atributo 'Tempo' que se destina a registrar a data e a hora em que cada etapa do caminho da Ação foi realizada. Esse é o atributo a ser usado para registrar o início do procedimento (usando a etapa do caminho 'Serviço entregue') ou o horário em que o serviço foi cancelado (usando a etapa do caminho 'Serviço abandonado').",
-          "misuse" : "Não deve ser usado para registrar dados sobre atividades realizadas para atividades que exigem um arquétipo ACTION construído para esse fim, pois elas possuem requisitos muito específicos de registro de dados ou de etapas do caminho. Por exemplo: ACTION.procedure ou ACTION.health_education.",
+          "purpose" : "Används för att registrera information om en person som behöver representeras i patientjournalen.",
+          "keywords" : [ "Leverantör, vårdare, vårdgivare, personal, vårdpersonal, släkting, anhöriga, läkare, vittne, vän, granne, barn, familj, syskon, förälder, individ" ],
+          "use" : "Används för att registrera uppgifter om en person i den elektroniska journalen, när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. Exempelvis:\r\n- Namn och kontaktuppgifter för en person som innehar en fysisk kopia av ett dokument om framtida behandlingsval eller behandlingsreservationer; exempelvis 'Copyholder'-attributet i arketypen EVALUATION.advance_care_directive;\r\n- Namn och kontaktuppgifter för en vårdgivare i en remiss;\r\n- Namn, roll och kontaktuppgifter för en medlem av ett vårdgivarteam;\r\n- Rollen och kontaktuppgifterna för en namngiven kontaktperson inom en organisation;\r\n- uppgifter om en släkting i en släkthistoria; eller\r\n- ett vittne till ett epileptisk anfall.\r\n\r\nI de flesta vanliga användningsfallen där ett namn måste inkluderas i en journal räcker det med fritextinmatning inom elementet 'Ostrukturerat namn'. I situationer när det krävs mer detaljerade detaljer om en eller flera namnkomponenter, använd de ytterligare strukturerade dataelementen i arketypen CLUSTER.structured_name. I denna arketyp finns en SLOT kapslade i \"Structured name\" . Om arketypen CLUSTER.structured name är kapslad i 'Structured name' SLOT, kan något eller alla av de strukturerade namnelementen sammanfogas och representeras i elementet 'Ostrukturerat namn'.\r\n\r\nDenna arketyp kan också användas som en proxy för formella demografiska data när man granskar en mall med domänexperter – till exempel en bedömning där granskare förväntar sig att se patientens uppgifter högst upp i bedömningsformuläret.",
+          "misuse" : "Får inte användas för att representera eller ersätta formell identifieringshantering eller i syfte att upprätthålla ett officiellt demografiskt register eller index. Använd ett formellt Master Patient Index eller Vårdgivare Index för detta ändamål, eller arketyper baserade på openEHR Demographic Information Model.\r\n\r\nFår inte användas för att representera patienten, deltagare eller författare till journalen och liknande dataelement som bör representeras formellt i journalen med hjälp av Referensmodellens attribut.\r\n\r\nFår inte användas för att registrera en individs födelsedatum - använd istället dataelementet \"Födelsedatum\" i EVALUATION.birth_summary för detta ändamål\r\n\r\nFår inte användas för att registrera biometriska detaljer eller biomarkörer om en individ - använd en specifik ENTRY-arketyp för detta ändamål.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en person i en pasientjournal.",
+          "keywords" : [ "tjenesteyter, omsorgsperson, helsepersonell, slektning, pårørende, vitne, venn, nabo, barn, familie, søsken, forelder, arbeidsgiver, rekvirent, henviser, ektefelle, verge, samboer, kjæreste" ],
+          "use" : "Brukes for å registrere detaljer om en person i en pasientjournal, når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\r\n\r\nFor eksempel:\r\n- navn og kontaktdetaljer til en person som har en kopi av et fremtidig behandlingsvalg, i SLOTet \"Kopiholder\" i arketypen EVALUATION.advance_care_directive (Fremtidig behandlingsvalg).\r\n- navn og kontaktdetaljer til en omsorgsperson eller helsepersonell i en organisasjon, i SLOTet \"Kontaktperson\" i arketypen CLUSTER.organisation (Organisasjon).\r\n- detaljer om en slektning i en familieanamnese, I SLOTet \"Detaljer om familiemedlem\" i arketypen EVALUATION.family_history (Familieanamnese).\r\n- navnet på en person som gjennomførte prøvetakning på en pasient, i SLOTet \"Detaljer om prøvetaker\" i arketypen CLUSTER.specimen (Prøvemateriale).\r\n- et vitne til et fall eller en ulykke, i SLOTet \"Witness\" i arketypen CLUSTER.health_event.\r\n\r\nI de mest vanlige brukscasene der navn skal registreres i pasientjournalen, vil dataelementet \"Navn\" i denne arketypen være tilstrekkelig. I tilfeller der det er nødvendig eller ønskelig med detaljer om en eller flere navnekomponenter, bruk arketypen CLUSTER.structured_name i SLOTet \"Strukturert navn\" i denne arketypen. \r\nOm det er gjort, kan noen eller alle de strukturerte navnelementene slås sammen av programvaren man benytter, og lagres i dataelementet \"Navn\".\r\n\r\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en person på toppen av vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å representere pasient, deltakere eller forfatter av skjema eller lignende, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.\r\n\r\nBrukes ikke for å registrere fødselsdato for individet - bruk dataelementet \"Fødselsdato\" i arketypen EVALUATION.birth_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om biometri eller biomarkører for personen - bruk en spesifikk ENTRY-arketype for dette formålet.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         },
@@ -1427,21 +1442,211 @@
             },
             "codeString" : "en"
           },
-          "purpose" : "To record information about the execution of a request for a health-related service.",
-          "keywords" : [ "referral", "visit", "encounter" ],
-          "use" : "Use to record information about the execution of a request for a health-related service. This is done by recording relevant data against any or all of activities specified in the 'Planned', 'Scheduled', 'Active', 'Suspended', 'Cancelled', 'Postponed', 'Aborted' pathway steps.\r\n\r\nThe scope of this archetype deliberately encompasses activities for a broad range of clinical services. Examples include, but are not limited to:\r\n- self-referral by a patient for a check-up visit to a dentist for preventive care or a series of visits to a physiotherapist for management of a musculoskeletal strain; and\r\n- a referral from a requesting healthcare provider, such as a primary care clinician, to a receiving healthcare provider, such as a specialist, for the patient to receive a specific service, advice or care.\r\n\r\nAdditional structured and detailed information about the service can be captured using purpose-specific archetypes inserted into the 'Service detail' slot, where required.\r\n\r\nTimings related to a procedure can be managed in one of two ways:\r\n- using the reference model - the time for performance of any pathway step will use the ACTION time attribute for each step; and\r\n- using the archetyped data - the 'Scheduled date/time' data element is intended to record the precise time when the service is planned. Note: the corresponding ACTION time attribute for the Scheduled pathway step will record the time that the service was scheduled into a system, not the intended date/time on which the service is intended to be carried out.\r\n\r\nIn practice, some services (for example, in ambulatory care) will occur once and not be ordered in advance. The details about the service will be added against the pathway step, 'Service completed'. In some cases a recurring service will be ordered, and in this situation data against the 'Service delivered' step will be recorded on each occasion, leaving the instruction in the active state. When the last delivery of the service is recorded, the 'Service completed' action is recorded showing that this order is now in the completed state.\r\n\r\nIn other situations, such as secondary care, there may be a formal order for a procedure using a corresponding INSTRUCTION.request archetype. This ACTION archetype can then be used to record the workflow of when and how the order has been carried out.\r\n\r\nThis archetype may only be used in two ways:\r\n- as a full record of the service that was delivered; or\r\n- as a framework to record primarily the state of the requested service, with separate OBSERVATION archetypes used to record the actual test results for the delivered service - for example OBSERVATION.hearing_screening_result.\r\n\r\nRecording information using this ACTION archetype indicates that some sort of activity has actually occurred; this will usually be the service delivery itself but may be a failed attempt or another activity such as postponement of the service delivery. If there is a formal order for the procedure, the state of this order is represented by the Pathway step against which the data is recorded. For example, using this archetype the progressing state of a referral request may be recorded through separate entries in the EHR progress notes at each 'Pathway' step:\r\n- record the scheduled Start date/time for the referral (Service scheduled); and\r\n- record that the referral has been completed, potentially including information about the service delivered (Service completed).\r\n\r\nPlease note that in the openEHR Reference Model there is a 'Time' attribute, which is intended to record the date and time at which each pathway step of the Action was performed. This is the attribute to use to record the start of the procedure (using the 'Service delivered' pathway step) or the time that the service was aborted (using the 'Service abandoned' pathway step).",
-          "misuse" : "Not to be used to record data about activities carried out for activities that require a purpose built ACTION archetype because they have very specific data recording or pathway step requirements. For example: ACTION.procedure or ACTION.health_education.",
-          "copyright" : "© openEHR Foundation, Northern Territory Department of Health (Australia)",
+          "purpose" : "To record details about a person as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual" ],
+          "use" : "Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form.",
+          "misuse" : "Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Para registrar detalles sobre una persona tal y como se conocen o entienden en el curso de la documentación clínica.",
+          "keywords" : [ "proveedor, cuidador, personal, profesional sanitario, familiar, pariente cercano, profesional, testigo, amigo, vecino, niño, familia, hermano, padre, individuo" ],
+          "use" : "Utilizar para registrar los detalles de una persona tal y como se conocen o entienden en el curso de la documentación clínica, a menudo ad hoc o cuando no es apropiado o posible utilizar un registro o índice demográfico formal. Algunos ejemplos son:\r\n- El nombre y los datos de contacto de una persona que posee una copia física de un documento de voluntades anticipadas, usando el slot 'Encargado de la copia' en el arquetipo EVALUATION.advance_care_directive;\r\n- La función y los datos de una persona de contacto nombrada dentro de una organización, utilizando el SLOT \"Persona de contacto\" dentro del arquetipo CLUSTER.organisation;\r\n- Los datos de un pariente en un registro de historia familiar, utilizando el SLOT 'Family member details' dentro del arquetipo openEHR-EHR-EVALUATION.family_history;\r\n- El nombre de la persona que recogió una muestra de laboratorio de un paciente, utilizando los \"detalles del recolector de muestras\" dentro del arquetipo CLUSTER.specimen; o\r\n- Un testigo de una caída o accidente, utilizando el SLOT \"Testigo\" dentro del arquetipo CLUSTER.health_event.\r\n\r\nEn la mayoría de los casos de uso de registros clínicos sencillos, el elemento no estructurado \"Nombre\" dentro del arquetipo CLUSTER.person será suficiente para registrar el nombre de una persona como parte de un registro sanitario. Sin embargo, en circunstancias en las que sea necesario o deseable un nombre estructurado para fines de registro clínico, incluya este arquetipo dentro del SLOT 'Nombre estructurado' en el arquetipo CLUSTER.person. Si el arquetipo CLUSTER.structured_name se incluye dentro del SLOT 'Structured name', cualquiera de los elementos de datos, o todos ellos, pueden combinarse juntos como una cadena de texto y representarse en el elemento 'Nombre' siempre que sean coherentes.\r\n\r\nEste arquetipo también puede utilizarse como sustituto de los datos demográficos formales cuando se revise una plantilla con expertos del dominio - por ejemplo, una evaluación en la que los revisores esperarían ver los datos del paciente en la parte superior del formulario.",
+          "misuse" : "No debe utilizarse para representar o sustituir la gestión de la identificación formal ni para mantener un registro o índice demográfico oficial. Utilice para ello un Índice Maestro de Pacientes o un Índice de Proveedores de Salud formales o arquetipos basados en el Modelo de Información Demográfico de openEHR.\r\n\r\nNo debe utilizarse para representar el sujeto de la atención, los participantes o el autor del registro y elementos de datos similares que deberían representarse formalmente en el registro sanitario utilizando los atributos del Modelo de Referencia.\r\n\r\nNo debe utilizarse para registrar la fecha de nacimiento de un individuo: utilice el elemento de datos \"Fecha de nacimiento\" dentro de EVALUATION.birth_summary para este fin\r\n\r\nNo debe utilizarse para registrar detalles biométricos o biomarcadores sobre un individuo - utilice un arquetipo de ENTRY específico para este fin.\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh"
+          },
+          "purpose" : "*To record details about a person as they are known or understood in the course of clinical documentation. (en)",
+          "keywords" : [ "*provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual (en)" ],
+          "use" : "*Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form. (en)",
+          "misuse" : "*Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Para registar detalhes sobre uma pessoa tal como são conhecidos ou compreendidos aquando da documentação clínica.",
+          "keywords" : [ "prestador de cuidados, cuidador, funcionário, profissional de saúde, familiar, familiar mais próximo, testemunha, amigo, vizinho, criança, família, irmão, pai, indivíduo" ],
+          "use" : "Utilizado para registar detalhes de uma pessoa conforme são conhecidos ou compreendidos aquando da documentação clínica, frequentemente ad hoc ou quando não é apropriado ou possível usar um registo demográfico ou índice formal. Exemplos incluem:\r\n- o detentor da cópia de um registo de cuidados avançados, utilizando o SLOT 'Copyholder' dentro do arquétipo EVALUATION.advance_care_directive;\r\n- o papel e detalhes de contacto de uma pessoa designada dentro de uma organização, utilizando o SLOT 'Contact person' dentro do arquétipo CLUSTER.organisation;\r\n- detalhes sobre um familiar num registo de histórico familiar, utilizando o SLOT 'Family member details' dentro do arquétipo openEHR-EHR-EVALUATION.family_history;\r\n- o nome da pessoa que recolheu uma amostra laboratorial de um paciente, utilizando os 'Specimen collector details' dentro do arquétipo CLUSTER.specimen; ou\r\n- uma testemunha de uma queda ou acidente, utilizando o SLOT 'Witness' dentro do arquétipo CLUSTER.health_event.\r\n\r\nNa maioria dos casos simples de registo clínico, o elemento não estruturado 'Name' dentro do arquétipo CLUSTER.person será suficiente para registar o nome de uma pessoa como parte de um registo de saúde. No entanto, em circunstâncias em que um nome estruturado é necessário ou desejável para fins de registo clínico, incorpore este arquétipo dentro do SLOT 'Structured name' no arquétipo CLUSTER.person. Se o arquétipo CLUSTER.structured_name estiver incorporado dentro do SLOT 'Structured name', todos ou alguns dos elementos de dados podem ser combinados como uma string de texto e representados no elemento 'Name', desde que sejam consistentes.\r\n\r\nEste arquétipo também poderia ser utilizado como um proxy para dados demográficos formais ao rever um template com especialistas do domínio - por exemplo, uma avaliação onde os revisores esperariam ver os detalhes de uma pessoa no topo do formulário de avaliação.",
+          "misuse" : "Não deve ser utilizado para representar ou substituir a gestão formal de identificação ou para efeitos de manutenção de um registo ou índice demográfico oficial. Utilize um Master Patient Index formal ou Health Provider Index para este fim, ou arquétipos baseados no Demographic Information Model do openEHR.\r\n\r\nNão deve ser utilizado para representar o sujeito do cuidado, participantes ou autor do registo e elementos de dados semelhantes que devem ser representados formalmente no registo de saúde utilizando os atributos do Reference Model.\r\n\r\nNão deve ser utilizado para registar a data de nascimento de um indivíduo - utilize o elemento de dados 'Date of birth' dentro do EVALUATION.birth_summary para este fim.\r\n\r\nNão deve ser utilizado para registar detalhes biométricos ou biomarcadores sobre um indivíduo - utilize um arquétipo ENTRY específico para este fim.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
       }
     },
-    "parentArchetypeId" : "openEHR-EHR-ACTION.service.v0",
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.person.v1",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-ACTION.ovl-service-001.v0"
+      "value" : "openEHR-EHR-CLUSTER.ovl-person-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { },
+        "zh" : { },
+        "sv" : { },
+        "es" : { },
+        "pt-pt" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "53d23a6f-115f-4af6-8c0f-a4b901963aab",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch, Alina Rehberg",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Elham Gholami, Erik Sundvall",
+        "organisation" : "Region Stockholm",
+        "email" : "erik.sundvall@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Liv Laugen, John Tore Valand, Vebjørn Arntzen, Kanika Kuwelker",
+        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen, Helse Vest IKT",
+        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, varntzen@ous-hf.no, kanika.kuwelker@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh"
+      },
+      "author" : {
+        "name" : "Yexuan Cheng",
+        "organisation" : "浙江大学",
+        "email" : "3160100913@zju.edu.cn"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Diego Bosca",
+        "organisation" : "VeraTech for Health",
+        "email" : "yampeku@veratech.es"
+      },
+      "accreditation" : "Native speaker. First Certificate in English",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-pt"
+      },
+      "author" : {
+        "name" : "Beatriz Soares",
+        "organisation" : "Promptly Health",
+        "email" : "beatriz.soares@promptlyhealth.com"
+      },
+      "accreditation" : "Beatriz Soares, Promptly Health, Portugal",
+      "otherDetails" : {
+        "other_contributors" : "Alex Anguelov, Promptly Health, Portugal\r\nDiogo Neto, Promptly Health, Portugal"
+      }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "6ad4f55d-2b9e-498f-adf0-df8e2796781a",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "AD593E18455631079CCA895C6A3612C5"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-ACTION.service.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-ACTION.ovl-service-001.v1"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -1451,54 +1656,6 @@
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "ism_transition",
         "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ISM_TRANSITION",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "current_state",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "526" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          }, {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "careflow_step",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "at0002" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ISM_TRANSITION",
           "occurrences" : "0..0",
@@ -1541,6 +1698,55 @@
                     "value" : "local"
                   },
                   "constraint" : [ "at0026" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ISM_TRANSITION",
+          "occurrences" : "0..0",
+          "nodeId" : "at0035.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "current_state",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "openehr"
+                  },
+                  "constraint" : [ "526" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          }, {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "careflow_step",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "CODE_PHRASE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "at0035" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -1697,54 +1903,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ISM_TRANSITION",
-          "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "current_state",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "openehr"
-                  },
-                  "constraint" : [ "245" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          }, {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "careflow_step",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
-                "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "CODE_PHRASE",
-                  "occurrences" : "1..1",
-                  "terminologyId" : {
-                    "value" : "local"
-                  },
-                  "constraint" : [ "at0004" ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ISM_TRANSITION",
           "occurrences" : "0..0",
           "nodeId" : "at0010.1",
           "attributes" : [ {
@@ -1861,7 +2019,7 @@
                   "terminologyId" : {
                     "value" : "openehr"
                   },
-                  "constraint" : [ "531" ]
+                  "constraint" : [ "533" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -1986,8 +2144,53 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
+              "nodeId" : "at0032.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0025.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -2008,7 +2211,7 @@
                       "rmTypeName" : "INTEGER",
                       "occurrences" : "1..1",
                       "constraint" : [ {
-                        "lower" : 0,
+                        "lower" : 1,
                         "lowerIncluded" : true,
                         "upperIncluded" : false,
                         "lowerUnbounded" : false,
@@ -2049,6 +2252,48 @@
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "items",
             "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0016.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0018.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_IDENTIFIER",
+                  "defaultValue" : {
+                    "@type" : "DV_IDENTIFIER"
+                  },
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
@@ -2073,18 +2318,20 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Plan endorsement",
-            "description" : "A general clinical activity carried out for the patient to receive a specified service, advice or care from an expert healthcare provider."
+            "description" : "A simple health-related service or activity delivered by a clinician, organisation or agency."
           }
         },
         "pt-br" : { },
-        "de" : { }
+        "de" : { },
+        "nb" : { },
+        "nl" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "36468cbb-24f3-49f5-9248-a4cd1b623e44",
+    "buildUid" : "f596dd3a-2cba-4dec-9d40-ecfefe33b142",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -2104,9 +2351,23 @@
         "codeString" : "de"
       },
       "author" : {
-        "name" : "Eva-Maria Rieß",
-        "organisation" : "Universitätsmedizin Göttingen",
-        "email" : "eva-maria.riess@med.uni-goettingen.de"
+        "name" : "Eva-Maria Rieß, Natalia Strauch",
+        "organisation" : "Universitätsmedizin Göttingen, Medizinische Hochschule Hannover",
+        "email" : "eva-maria.riess@med.uni-goettingen.de, Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke, John Tore Valand, Terje Sagmyr",
+        "organisation" : "Helse Vest IKT AS",
+        "email" : "silje.ljosland.bakke@helse-vest-ikt.no, john.tore.valand@helse-vest-ikt.no, terje.sagmyr@helse-vest-ikt.no"
       },
       "otherDetails" : { }
     }, {
@@ -2123,224 +2384,19 @@
         "email" : "ana.andrade@coreconsulting.com.br"
       },
       "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "ca70cc42-1460-4c9d-8cb3-7ba0efeb6b97",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "A6A3C08A7E900DDBFCB472CF2105BE83"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Darstellung von Informationen zu einer Person, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
-          "keywords" : [ "Anbieter, Dienstleister, Betreuer, Personal, medizinisches Fachpersonal, Verwandter, Angehöriger, Hausarzt, Zeuge, Freund, Nachbar, Kind, Familie, Geschwister, Elternteil, Einzelperson" ],
-          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Person darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\r\nBeispiele beinhalten:\r\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive;\r\n- die Rolle und Kontaktdaten eines benannten Ansprechpartners in einer Organisation, unter Verwendung des SLOT „Kontaktperson“ innerhalb des Archetyps CLUSTER.organisation;\r\n- Angaben zu einem Verwandten in einer Familienanamnese unter Verwendung des SLOT „Angaben zum Familienmitglied“ innerhalb des Archetyps openEHR-EHR-EVALUATION.family_history;\r\n- der Name der Person, die eine Laborprobe von einem Patienten entnommen hat, unter Verwendung der „Angaben zum Probennehmer“ innerhalb des Archetyps CLUSTER.specimen oder\r\n- ein Zeuge eines Sturzes oder Unfalls, unter Verwendung des SLOT \"Zeuge\" innerhalb des Archetyps CLUSTER.health_event.\r\n\r\nIn den meisten einfachen Anwendungsfällen reicht das unstrukturierte Element „Name“ innerhalb des Archetyps CLUSTER.person aus, um den Namen einer Person als Teil einer Gesundheitsakte darzustellen. In Fällen, in denen ein strukturierter Name für klinische Aufzeichnungszwecke erforderlich oder wünschenswert ist, verschachteln Sie diesen Archetyp jedoch im SLOT „Name strukturiert“ im Archetyp CLUSTER.person. Wenn der Archetyp CLUSTER.structured_name in den SLOT „Name strukturiert“ eingebettet ist, können beliebige oder alle Datenelemente als Textzeichenfolge kombiniert und im Element „Name“ dargestellt werden, solange sie konsistent sind.\r\n\r\nDieser Archetyp könnte auch stellvertretend für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise eine Bewertung, bei der Prüfer erwarten würden, dass die Details einer Person oben im Bewertungsformular angezeigt werden.",
-          "misuse" : "Der Archetyp darf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.\r\n\r\nDarf nicht verwendet werden, um den Patienten, die Teilnehmer oder den Verfasser der Akte und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Referenzmodellattribute dargestellt werden sollten.\r\n\r\nDarf nicht verwendet werden, um das Geburtsdatum einer Person darzustellen – verwenden Sie zu diesem Zweck das Datenelement „Geburtsdatum“ im Archetyp EVALUATION.birth_summary.\r\n\r\nDarf nicht verwendet werden, um biometrische Details oder Biomarker über eine Person darzustellen – verwenden Sie zu diesem Zweck einen speziellen ENTRY-Archetyp.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "sv" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "sv"
-          },
-          "purpose" : "Används för att registrera information om en person som behöver representeras i patientjournalen.",
-          "keywords" : [ "Leverantör, vårdare, vårdgivare, personal, vårdpersonal, släkting, anhöriga, läkare, vittne, vän, granne, barn, familj, syskon, förälder, individ" ],
-          "use" : "Används för att registrera uppgifter om en person i den elektroniska journalen, när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. Exempelvis:\r\n- Namn och kontaktuppgifter för en person som innehar en fysisk kopia av ett dokument om framtida behandlingsval eller behandlingsreservationer; exempelvis 'Copyholder'-attributet i arketypen EVALUATION.advance_care_directive;\r\n- Namn och kontaktuppgifter för en vårdgivare i en remiss;\r\n- Namn, roll och kontaktuppgifter för en medlem av ett vårdgivarteam;\r\n- Rollen och kontaktuppgifterna för en namngiven kontaktperson inom en organisation;\r\n- uppgifter om en släkting i en släkthistoria; eller\r\n- ett vittne till ett epileptisk anfall.\r\n\r\nI de flesta vanliga användningsfallen där ett namn måste inkluderas i en journal räcker det med fritextinmatning inom elementet 'Ostrukturerat namn'. I situationer när det krävs mer detaljerade detaljer om en eller flera namnkomponenter, använd de ytterligare strukturerade dataelementen i arketypen CLUSTER.structured_name. I denna arketyp finns en SLOT kapslade i \"Structured name\" . Om arketypen CLUSTER.structured name är kapslad i 'Structured name' SLOT, kan något eller alla av de strukturerade namnelementen sammanfogas och representeras i elementet 'Ostrukturerat namn'.\r\n\r\nDenna arketyp kan också användas som en proxy för formella demografiska data när man granskar en mall med domänexperter – till exempel en bedömning där granskare förväntar sig att se patientens uppgifter högst upp i bedömningsformuläret.",
-          "misuse" : "Får inte användas för att representera eller ersätta formell identifieringshantering eller i syfte att upprätthålla ett officiellt demografiskt register eller index. Använd ett formellt Master Patient Index eller Vårdgivare Index för detta ändamål, eller arketyper baserade på openEHR Demographic Information Model.\r\n\r\nFår inte användas för att representera patienten, deltagare eller författare till journalen och liknande dataelement som bör representeras formellt i journalen med hjälp av Referensmodellens attribut.\r\n\r\nFår inte användas för att registrera en individs födelsedatum - använd istället dataelementet \"Födelsedatum\" i EVALUATION.birth_summary för detta ändamål\r\n\r\nFår inte användas för att registrera biometriska detaljer eller biomarkörer om en individ - använd en specifik ENTRY-arketyp för detta ändamål.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere detaljer om en person i en pasientjournal.",
-          "keywords" : [ "tjenesteyter, omsorgsperson, helsepersonell, slektning, pårørende, vitne, venn, nabo, barn, familie, søsken, forelder, arbeidsgiver, rekvirent, henviser, ektefelle, verge, samboer, kjæreste" ],
-          "use" : "Brukes for å registrere detaljer om en person i en pasientjournal, når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\r\n\r\nFor eksempel:\r\n- navn og kontaktdetaljer til en person som har en kopi av et fremtidig behandlingsvalg, i SLOTet \"Kopiholder\" i arketypen EVALUATION.advance_care_directive (Fremtidig behandlingsvalg).\r\n- navn og kontaktdetaljer til en omsorgsperson eller helsepersonell i en organisasjon, i SLOTet \"Kontaktperson\" i arketypen CLUSTER.organisation (Organisasjon).\r\n- detaljer om en slektning i en familieanamnese, I SLOTet \"Detaljer om familiemedlem\" i arketypen EVALUATION.family_history (Familieanamnese).\r\n- navnet på en person som gjennomførte prøvetakning på en pasient, i SLOTet \"Detaljer om prøvetaker\" i arketypen CLUSTER.specimen (Prøvemateriale).\r\n- et vitne til et fall eller en ulykke, i SLOTet \"Witness\" i arketypen CLUSTER.health_event.\r\n\r\nI de mest vanlige brukscasene der navn skal registreres i pasientjournalen, vil dataelementet \"Navn\" i denne arketypen være tilstrekkelig. I tilfeller der det er nødvendig eller ønskelig med detaljer om en eller flere navnekomponenter, bruk arketypen CLUSTER.structured_name i SLOTet \"Strukturert navn\" i denne arketypen. \r\nOm det er gjort, kan noen eller alle de strukturerte navnelementene slås sammen av programvaren man benytter, og lagres i dataelementet \"Navn\".\r\n\r\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en person på toppen av vurderingsskjema.",
-          "misuse" : "Brukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å representere pasient, deltakere eller forfatter av skjema eller lignende, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.\r\n\r\nBrukes ikke for å registrere fødselsdato for individet - bruk dataelementet \"Fødselsdato\" i arketypen EVALUATION.birth_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om biometri eller biomarkører for personen - bruk en spesifikk ENTRY-arketype for dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about a person as they are known or understood in the course of clinical documentation.",
-          "keywords" : [ "provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual" ],
-          "use" : "Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form.",
-          "misuse" : "Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "es" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "es"
-          },
-          "purpose" : "Para registrar detalles sobre una persona tal y como se conocen o entienden en el curso de la documentación clínica.",
-          "keywords" : [ "proveedor, cuidador, personal, profesional sanitario, familiar, pariente cercano, profesional, testigo, amigo, vecino, niño, familia, hermano, padre, individuo" ],
-          "use" : "Utilizar para registrar los detalles de una persona tal y como se conocen o entienden en el curso de la documentación clínica, a menudo ad hoc o cuando no es apropiado o posible utilizar un registro o índice demográfico formal. Algunos ejemplos son:\r\n- El nombre y los datos de contacto de una persona que posee una copia física de un documento de voluntades anticipadas, usando el slot 'Encargado de la copia' en el arquetipo EVALUATION.advance_care_directive;\r\n- La función y los datos de una persona de contacto nombrada dentro de una organización, utilizando el SLOT \"Persona de contacto\" dentro del arquetipo CLUSTER.organisation;\r\n- Los datos de un pariente en un registro de historia familiar, utilizando el SLOT 'Family member details' dentro del arquetipo openEHR-EHR-EVALUATION.family_history;\r\n- El nombre de la persona que recogió una muestra de laboratorio de un paciente, utilizando los \"detalles del recolector de muestras\" dentro del arquetipo CLUSTER.specimen; o\r\n- Un testigo de una caída o accidente, utilizando el SLOT \"Testigo\" dentro del arquetipo CLUSTER.health_event.\r\n\r\nEn la mayoría de los casos de uso de registros clínicos sencillos, el elemento no estructurado \"Nombre\" dentro del arquetipo CLUSTER.person será suficiente para registrar el nombre de una persona como parte de un registro sanitario. Sin embargo, en circunstancias en las que sea necesario o deseable un nombre estructurado para fines de registro clínico, incluya este arquetipo dentro del SLOT 'Nombre estructurado' en el arquetipo CLUSTER.person. Si el arquetipo CLUSTER.structured_name se incluye dentro del SLOT 'Structured name', cualquiera de los elementos de datos, o todos ellos, pueden combinarse juntos como una cadena de texto y representarse en el elemento 'Nombre' siempre que sean coherentes.\r\n\r\nEste arquetipo también puede utilizarse como sustituto de los datos demográficos formales cuando se revise una plantilla con expertos del dominio - por ejemplo, una evaluación en la que los revisores esperarían ver los datos del paciente en la parte superior del formulario.",
-          "misuse" : "No debe utilizarse para representar o sustituir la gestión de la identificación formal ni para mantener un registro o índice demográfico oficial. Utilice para ello un Índice Maestro de Pacientes o un Índice de Proveedores de Salud formales o arquetipos basados en el Modelo de Información Demográfico de openEHR.\r\n\r\nNo debe utilizarse para representar el sujeto de la atención, los participantes o el autor del registro y elementos de datos similares que deberían representarse formalmente en el registro sanitario utilizando los atributos del Modelo de Referencia.\r\n\r\nNo debe utilizarse para registrar la fecha de nacimiento de un individuo: utilice el elemento de datos \"Fecha de nacimiento\" dentro de EVALUATION.birth_summary para este fin\r\n\r\nNo debe utilizarse para registrar detalles biométricos o biomarcadores sobre un individuo - utilice un arquetipo de ENTRY específico para este fin.\r\n",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "zh" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "zh"
-          },
-          "purpose" : "*To record details about a person as they are known or understood in the course of clinical documentation. (en)",
-          "keywords" : [ "*provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual (en)" ],
-          "use" : "*Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form. (en)",
-          "misuse" : "*Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.person.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-person-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : { },
-        "nb" : { },
-        "de" : { },
-        "zh" : { },
-        "sv" : { },
-        "es" : { }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "53d23a6f-115f-4af6-8c0f-a4b901963aab",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Natalia Strauch, Alina Rehberg",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "Strauch.Natalia@mh-hannover.de, rehberg.alina@mh-hannover.de"
-      },
-      "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
       "language" : {
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "sv"
+        "codeString" : "nl"
       },
       "author" : {
-        "name" : "Elham Gholami, Erik Sundvall",
-        "organisation" : "Region Stockholm",
-        "email" : "erik.sundvall@regionstockholm.se"
+        "name" : "Mattijs Kuhlmann",
+        "organisation" : "Nedap",
+        "email" : "mattijs.kuhlmann@nedap.com"
       },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Liv Laugen, John Tore Valand, Vebjørn Arntzen, Kanika Kuwelker",
-        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen, Helse Vest IKT",
-        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, varntzen@ous-hf.no, kanika.kuwelker@helse-vest-ikt.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "zh"
-      },
-      "author" : {
-        "name" : "Yexuan Cheng",
-        "organisation" : "浙江大学",
-        "email" : "3160100913@zju.edu.cn"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es"
-      },
-      "author" : {
-        "name" : "Diego Bosca",
-        "organisation" : "VeraTech for Health",
-        "email" : "yampeku@veratech.es"
-      },
-      "accreditation" : "Native speaker. First Certificate in English",
       "otherDetails" : { }
     } ]
   } ],
