@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "a9ca77f3f10e45af1a16ef9166f058e3",
+      "MD5-CAM-1.0.1" : "f7700c51c3954b1d8fd62203ec1a5726",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1264,7 +1264,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "A6A3C08A7E900DDBFCB472CF2105BE83"
+        "PARENT:MD5-CAM-1.0.1" : "10166B307F40817B5B3E2D3720F6AC03"
       },
       "details" : {
         "de" : {
@@ -1355,6 +1355,21 @@
           "keywords" : [ "*provider, carer, staff, healthcare professional, relative, next-of-kin, practitioner, witness, friend, neighbour, child, family, sibling, parent, individual (en)" ],
           "use" : "*Use to record details of a person as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\r\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype;\r\n- the role and contact details of a named contact person within an organisation, using the 'Contact person' SLOT within the CLUSTER.organisation archetype;\r\n- details about a relative in a family history record, using the 'Family member details' SLOT within the openEHR-EHR-EVALUATION.family_history archetype; \r\n- the name of the person who collected a laboratory specimen from a patient, using the 'Specimen collector details' within the CLUSTER.specimen archetype; or\r\n- a witness to a fall or accident, using the 'Witness' SLOT within the CLUSTER.health_event archetype.\r\n\r\nIn most simple clinical recording use cases, the unstructured 'Name' element within the CLUSTER.person archetype will be sufficient to record the name of a person as part of a health record. However, in circumstances where a structured name is necessary or desirable for clinical recording purposes, nest this archetype within the 'Structured name' SLOT in CLUSTER.person archetype. If the CLUSTER.structured_name archetype is nested within the 'Structured name' SLOT, any or all of the data elements can be combined together as a text string and represented in the 'Name' element, as long as they are consistent.\r\n\r\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see a person's details at the top of the assessment form. (en)",
           "misuse" : "*Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.\r\n\r\nNot to be used to record the date of birth of an individual - use the 'Date of birth' data element within the EVALUATION.birth_summary for this purpose\r\n\r\nNot to be used to record biometric detail or biomarkers about an individual - use a specific ENTRY archetype for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Para registar detalhes sobre uma pessoa tal como são conhecidos ou compreendidos aquando da documentação clínica.",
+          "keywords" : [ "prestador de cuidados, cuidador, funcionário, profissional de saúde, familiar, familiar mais próximo, testemunha, amigo, vizinho, criança, família, irmão, pai, indivíduo" ],
+          "use" : "Utilizado para registar detalhes de uma pessoa conforme são conhecidos ou compreendidos aquando da documentação clínica, frequentemente ad hoc ou quando não é apropriado ou possível usar um registo demográfico ou índice formal. Exemplos incluem:\r\n- o detentor da cópia de um registo de cuidados avançados, utilizando o SLOT 'Copyholder' dentro do arquétipo EVALUATION.advance_care_directive;\r\n- o papel e detalhes de contacto de uma pessoa designada dentro de uma organização, utilizando o SLOT 'Contact person' dentro do arquétipo CLUSTER.organisation;\r\n- detalhes sobre um familiar num registo de histórico familiar, utilizando o SLOT 'Family member details' dentro do arquétipo openEHR-EHR-EVALUATION.family_history;\r\n- o nome da pessoa que recolheu uma amostra laboratorial de um paciente, utilizando os 'Specimen collector details' dentro do arquétipo CLUSTER.specimen; ou\r\n- uma testemunha de uma queda ou acidente, utilizando o SLOT 'Witness' dentro do arquétipo CLUSTER.health_event.\r\n\r\nNa maioria dos casos simples de registo clínico, o elemento não estruturado 'Name' dentro do arquétipo CLUSTER.person será suficiente para registar o nome de uma pessoa como parte de um registo de saúde. No entanto, em circunstâncias em que um nome estruturado é necessário ou desejável para fins de registo clínico, incorpore este arquétipo dentro do SLOT 'Structured name' no arquétipo CLUSTER.person. Se o arquétipo CLUSTER.structured_name estiver incorporado dentro do SLOT 'Structured name', todos ou alguns dos elementos de dados podem ser combinados como uma string de texto e representados no elemento 'Name', desde que sejam consistentes.\r\n\r\nEste arquétipo também poderia ser utilizado como um proxy para dados demográficos formais ao rever um template com especialistas do domínio - por exemplo, uma avaliação onde os revisores esperariam ver os detalhes de uma pessoa no topo do formulário de avaliação.",
+          "misuse" : "Não deve ser utilizado para representar ou substituir a gestão formal de identificação ou para efeitos de manutenção de um registo ou índice demográfico oficial. Utilize um Master Patient Index formal ou Health Provider Index para este fim, ou arquétipos baseados no Demographic Information Model do openEHR.\r\n\r\nNão deve ser utilizado para representar o sujeito do cuidado, participantes ou autor do registo e elementos de dados semelhantes que devem ser representados formalmente no registo de saúde utilizando os atributos do Reference Model.\r\n\r\nNão deve ser utilizado para registar a data de nascimento de um indivíduo - utilize o elemento de dados 'Date of birth' dentro do EVALUATION.birth_summary para este fim.\r\n\r\nNão deve ser utilizado para registar detalhes biométricos ou biomarcadores sobre um indivíduo - utilize um arquétipo ENTRY específico para este fim.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -1509,7 +1524,8 @@
         "de" : { },
         "zh" : { },
         "sv" : { },
-        "es" : { }
+        "es" : { },
+        "pt-pt" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -1598,6 +1614,23 @@
       },
       "accreditation" : "Native speaker. First Certificate in English",
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-pt"
+      },
+      "author" : {
+        "name" : "Beatriz Soares",
+        "organisation" : "Promptly Health",
+        "email" : "beatriz.soares@promptlyhealth.com"
+      },
+      "accreditation" : "Beatriz Soares, Promptly Health, Portugal",
+      "otherDetails" : {
+        "other_contributors" : "Alex Anguelov, Promptly Health, Portugal\r\nDiogo Neto, Promptly Health, Portugal"
+      }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
