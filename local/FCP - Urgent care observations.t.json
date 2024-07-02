@@ -24,7 +24,7 @@
       "custodian_namespace" : "org.onelondon.ucp",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "c4f4c0490a7a1067f48a8215e0ad0c82",
+      "MD5-CAM-1.0.1" : "8002914a4689478e269b687307ec1699",
       "is_singleton" : "ehr-tag-carePlanId",
       "PARENT:MD5-CAM-1.0.1" : "327A8885F97587660404644C3C6053B6"
     },
@@ -289,6 +289,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-gross_motor_function_classification_system-001.v0",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.8",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-modified_karnofsky_performance_status_scale-001.v0",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -981,6 +990,57 @@
     },
     "adlVersion" : "1.4",
     "buildUid" : "67d49edf-707c-3b93-b0e7-6b5a6de410b0",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2b277563-a8ae-460f-80ab-2094bb8a287c",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "c62425a915cf02587304afd78f7745cd"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.modified_karnofsky_performance_status_scale.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-modified_karnofsky_performance_status_scale-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "605167c8-671c-3691-960c-563eff49bb85",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
