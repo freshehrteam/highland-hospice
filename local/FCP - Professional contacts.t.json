@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "0f64e9deed18367de36ddad14c9a374e",
+      "MD5-CAM-1.0.1" : "0659d9a01f4fe13223f6506e7b6b7589",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -112,15 +112,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-ADMIN_ENTRY.ovl-care_team-001.v0",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "EVALUATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.10",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-social_network-002.v1",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -1643,271 +1634,6 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "d9c637c3-d077-4e61-86dd-2919a0224c23",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "DB7D4B698449B0D99CB352CDB935B693"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Erfassung von Informationen über die Schlüsselpersonen, die mit der Person durch soziale Interaktionen und persönliche Beziehungen vernetzt sind.",
-          "keywords" : [ "Partner, Partnerschaft, Beziehung, Familie, Unterstützung, ehelich, verheiratet, defacto, Ehe, ledig, verwitwet, Witwe, Witwer, geschieden, unverheiratet, Freund, Nachbar" ],
-          "use" : "Der Archetyp wird verwendet, um Informationen über die Schlüsselpersonen aufzuzeichnen, die mit der Person durch soziale Interaktionen und persönliche Beziehungen vernetzt sind, indem sie persönliche Unterstützung oder Pflege leisten.\r\n\r\nDieser Archetyp wurde so konzipiert, dass er als Teil einer einzigen, dauerhaften Vorlage in der Gesundheitsakte aufgezeichnet wird, so dass alle Netzwerkänderungen als neue oder aktualisierte Version der Vorlage aufgezeichnet werden.\r\n\r\nDer Anwendungsbereich dieses Archetyps umfasst alle Arten von Interaktionen, z. B. von Angesicht zu Angesicht oder über soziale Medien, mit einem breiten Spektrum von Personen, darunter Familienmitglieder, Freunde, Mitglieder der Gemeinschaft oder Organisationen. Das soziale Netzwerk kann selbst identifiziert oder von einer Pflegeperson oder einem Gesundheitsdienstleister dokumentiert werden.\r\n\r\nEinzelheiten zu jeder Person oder Organisation innerhalb des sozialen Netzwerks der Person werden unter Verwendung der Archetypen CLUSTER.person oder CLUSTER.organisation aufgezeichnet, die im SLOT \"Netzwerk\" verschachtelt sind, einschließlich ihrer Rolle oder Beziehung.\r\n\r\nIn den meisten Rechtsordnungen gibt es Beschränkungen für die legale Erfassung von Daten über andere Personen in der Gesundheitsakte. Alle Implementierungen müssen die für die Verwendung dieses Archetyps relevanten rechtlichen Beschränkungen berücksichtigen.",
-          "misuse" : "Nicht zur Aufzeichnung von Details über Gesundheitsdienstleister oder Pflegeteams zu verwenden.\r\n\r\nNicht zur Aufzeichnung von Einzelheiten über rechtliche Beschränkungen oder Anordnungen wie Sorgerechtsregelungen oder Vormundschaft - verwenden Sie zu diesem Zweck EVALUATION.legal_directive.\r\n\r\nNicht zur Darstellung eines formalen Identifikationsmanagements oder zum Ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formalen demografischen Index oder Archetypen, die auf dem openEHR Demographic Information Model basieren.\r\n\r\nNicht zur Darstellung des Behandlungsgegenstandes, der Teilnehmer oder des Autors des Datensatzes und ähnlicher Datenelemente, die formal in der Gesundheitsakte unter Verwendung der Attribute des Referenzmodells dargestellt werden sollten.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere informasjon om nøkkelpersoner som hører sammen med individet gjennom sosial interaksjon og personlige forbindelser.",
-          "keywords" : [ "slektning", "pårørende", "venn", "venninne", "nabo", "barn", "familie", "søsken", "forelder", "ektefelle", "gift", "ugift", "enslig", "enke", "enkemann", "ekteskap", "singel", "skilt", "samboer", "kjæreste", "partner", "særbo", "forhold" ],
-          "use" : "Brukes for å registrere informasjon om nøkkelpersoner som hører sammen med individet gjennom sosial interaksjon og personlige forbindelser, både som sosial støtte eller omsorg (ikke helsetjenester) for individet.\r\n\r\nDenne arketypen er designet slik at den brukes som en del av et enkelt persistent templat/dokument i pasientjournalen slik at endringer eller oppdateringer av individets nettverk blir registrert som en ny eller oppdatert versjon av templatet/dokumentet. \r\n\r\nArketypen inkluderer alle typer interaksjoner, som kontakt ansikt til ansikt eller via sosiale media, og med et bredt spekter av individer, inkludert familiemedlemmer, venner, personer i lokalsamfunnet eller organisasjoner. Det sosiale nettverket kan være identifisert av individet selv, eller dokumentert av en omsorgsperson eller helsepersonell.\r\n\r\nDetaljer om hver enkelt person eller organisasjon i et individs sosiale nettverk, registreres ved å benytte arketypen CLUSTER.person (Person) eller CLUSTER.organisation (Organisasjon) nøstet i SLOTet \"Nettverk\".\r\n\r\nI de fleste jurisdiksjoner vil det være begrensinger på hva som er tillatt å registrere om andre personer i en pasientjournal. Alle implementasjoner av denne arketypen må vurdere eventuelle juridiske begrensninger rundt dette.",
-          "misuse" : "Brukes ikke brukes for å registrere detaljer om helsepersonell eller omsorgsteam.\r\n\r\nBrukes ikke for å registrere detaljer om juridiske begrensninger eller direktiver, som for eksempel foreldrerett eller vergemål. Bruk arketypen EVALUATION.legal_directive for dette formålet.\r\n\r\nBrukes ikke til å representere eller erstatte demografiske opplysninger i en formelle identitetsforvaltning eller for å opprette eller forvalte et demografisk register eller indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\r\n\r\nBrukes ikke for å registrere pasienten, deltakende helsepersonell, forfatter av journaldokumenter eller lignende dataelementer som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen til dette formålet.",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record information about the key people who are connected to the individual through social interactions and personal relationships.",
-          "keywords" : [ "partner, partnership, relationship, family, support, marital, married, defacto, marriage, single, widowed, widow, widower, divorced, unmarried, friend, neighbour" ],
-          "use" : "Use to record information about the key people who are connected to the individual through social interactions and personal relationships, by the provision of personal support or care.\r\n\r\nThis archetype has been designed to be recorded as part of a single, persistent template within the health record, such that any network changes are recorded as a new or updated version of the template.\r\n\r\nThe scope of this archetype includes all types of interactions, such as face-to-face or using social media, with a broad range of people including family members, friends, community members or organisations. The social network can be self-identified or documented by a carer or healthcare provider.\r\n\r\nDetails about each person or organisation within the individual's social network is recorded using the CLUSTER.person or CLUSTER.organisation archetypes nested within the 'Network' SLOT, including their role or relationship.\r\n\r\nIn most jurisdictions, there will be limitations on what is legal to record about other people within the health record. All implementations will need to consider the legal constraints relevant to using this archetype.",
-          "misuse" : "Not to be used to record details about healthcare providers or care teams.\r\n\r\nNot to be used to record details about legal constraints or directives such as custody arrangements or guardianship - use EVALUATION.legal_directive for this purpose.\r\n\r\nNot to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Demographic index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "fr" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "fr"
-          },
-          "purpose" : "*To record information about the key people who are connected to the individual through social interactions and personal relationships. (en)",
-          "keywords" : [ "*partner, partnership, relationship, family, support, marital, married, defacto, marriage, single, widowed, widow, widower, divorced, unmarried, friend, neighbour (en)" ],
-          "use" : "*Use to record information about the key people who are connected to the individual through social interactions and personal relationships, by the provision of personal support or delivery of health care.\r\n\r\nThis archetype has been designed to be recorded as part of a single, persistent template within the health record, such that any network changes are recorded as a new or updated version of the template.\r\n\r\nThe scope of this archetype includes all types of interactions, such as face-to-face or using social media, with a broad range of people including family members, friends, community members or organisations. The social network can be self-identified or documented by a carer or healthcare provider.\r\n\r\nDetails about each person or organisation within the individual's social network is recorded using the CLUSTER.person or CLUSTER.organisation archetypes nested within the 'Network' SLOT, including their role or relationship.\r\n\r\nIn most jurisdictions, there will be limitations on what is legal to record about other people within the health record. All implementations will need to consider the legal constraints relevant to using this archetype. (en)",
-          "misuse" : "*Not to be used to record details about healthcare providers or care teams.\r\n\r\nNot to be used to record details about legal constraints or directives such as custody arrangements or guardianship - use EVALUATION.legal_directive for this purpose.\r\n\r\nNot to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Demographic index for this purpose, or archetypes based on the openEHR Demographic Information Model.\r\n\r\nNot to be used to represent the subject of care, participants or author of the record and similar data elements that should be represented formally in the health record using the Reference Model attributes. (en)",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-EVALUATION.social_network.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-EVALUATION.ovl-social_network-002.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "EVALUATION",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "data",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0001",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "nodeId" : "at0015.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_STRING",
-                      "rmTypeName" : "STRING",
-                      "constraint" : [ "Highland Hospice Professional Emergency contacts" ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0002.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0018.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "nodeId" : "at0010",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
-              "nodeId" : "at0011.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Professional contacts",
-            "description" : "Group of individuals connected by social interactions and personal relationships."
-          },
-          "at0015.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015.1",
-            "text" : "Name",
-            "description" : "Narrative description about the social network and connections for the individual."
-          }
-        },
-        "fr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "*Social network (en) (2)",
-            "description" : "*Group of individuals connected by social interactions and personal relationships. (en)"
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Sosialt nettverk (2)",
-            "description" : "Gruppe av individer som er knyttet sammen ved sosial interaksjon og personlige forbindelser."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Soziales Netzwerk (2)",
-            "description" : "Gruppe von Personen, die durch soziale Interaktionen und persönliche Beziehungen miteinander vernetzt sind."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "3c8f2ace-cc4d-4429-aaef-b98662e8d218",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Darin Leonhardt",
-        "organisation" : "PLRI",
-        "email" : "leonhardt.darin@mh-hannover.de"
-      },
-      "accreditation" : "-",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "Vebjørn Arntzen, John Tore Valand, Liv Laugen",
-        "organisation" : "Oslo University Hospital, Helse Vest IKT AS, Helse Bergen, ​Oslo University Hospital, Norway",
-        "email" : "varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better - Pathfinder",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "7f043824-6534-4e0e-bf81-3ba00e984c85",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -2198,7 +1924,14 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : { }
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Professional contacts",
+            "description" : "Care team details aligned with FHIR resource. This is an ADMIN ENTRY wrapper archetype to contain the Care team CLUSTER archetype where it has no natural ENTRY level parent."
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
