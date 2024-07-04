@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.v1",
-      "MD5-CAM-1.0.1" : "97edc5ebfa10bf76c76791028223d36c",
+      "MD5-CAM-1.0.1" : "9bdb60454247f5f572c95d32dc377e7a",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
     },
@@ -1254,7 +1254,7 @@
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
-            "text" : "Lasting power of attorney Health and Welfare",
+            "text" : "Lasting Power of Attorney Health and Welfare",
             "description" : "A framework to communicate information about legal directives or orders that apply to the individual, for example, a power of attorney or guardianship order."
           },
           "ac0.3" : {
@@ -1982,277 +1982,6 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "2edfac99-3a5c-480a-84f8-9085ee8c3271",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "ABF903EB2B9DCF13CA09FB2E463A9642"
-      },
-      "details" : {
-        "de" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "de"
-          },
-          "purpose" : "Zur Dokumentation von Metadaten zu multimedialen klinischen Daten, die nicht im Multimedia-Datentyp erfasst werden.",
-          "keywords" : [ "Bild", "Audio", "Ton", "Text", "Video", "Videosequenz", "Anwendung", "Fotografie", "Animation", "Grafik" ],
-          "use" : "Zur Dokumentation von Metadaten zu multimedialen klinischen Daten, die nicht im Multimedia-Datentyp erfasst werden.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "For å registrere metadata om en multimediarepresentasjon av kliniske data som ikke er dekket av kun datatypen Multimedia.",
-          "keywords" : [ "bilde", "lyd", "tekst", "video", "applikasjon" ],
-          "use" : "Brukes for å registrere ytterligere metadata om en multimediarepresentasjon av kliniske data som ikke er dekket av kun datatypen Mulitmedia.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "pt-br" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "pt-br"
-          },
-          "purpose" : "Para gravar detalhes de metadados sobre uma representação multimídia dos dados clínicos não capturados usando o tipo de dado de multimídia sozinho.",
-          "keywords" : [ "imagem", "áudio", "texto", "vídeo", "aplicação" ],
-          "use" : "Usado para gravar metadados adicionais sobre uma representação multimídia do dado clínico que não é capturado usando o tipo de dado multimídia sozinho.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        },
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "purpose" : "To record details about text, audio, images, animations, video and interactive content generated or acquired during the provision of healthcare.",
-          "keywords" : [ "image", "audio", "text", "video", "application", "file" ],
-          "use" : "Use to record details about text, audio, images, animations, video and interactive content generated or acquired during the provision of healthcare.\r\n\r\nExamples include but are not limited to:\r\n- A photo of an injury;\r\n- A diagram of the location of a specific clinical finding;\r\n- A digital Xray or CT scan result;\r\n- An audio or video recording of an interview;\r\n- Data output from a clinical device, such as an ECG machine; or\r\n- A scanned image of hand-written clinical notes.\r\n\r\nThe 'Content' data element allows for the multimedia content to be captured and stored within the health record using the Multimedia data type, or to be referenced elsewhere using the URI data type.\r\n\r\nIf more than one resource is acquired or used as part of a single activity, use one instance of this archetype to represent each resource.\r\n\r\nThe context of each resource should be contained within the parent archetype. For example: details about the modality, view or aspect of a radiographic image will be captured within the OBSERVATION.imaging_test_result archetype.",
-          "misuse" : "Not to be used to represent multimedia content that is supplied to an individual or carer during the provision of healthcare - use CLUSTER.multimedia_supply for this purpose.",
-          "copyright" : "© openEHR Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.multimedia_source.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-multimedia_source-002.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0010.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "defaultValue" : {
-                "@type" : "DV_IDENTIFIER"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0001.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_MULTIMEDIA",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0007.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "LPA attachment",
-            "description" : "A multimedia resource that is generated or acquired during the provision of healthcare."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Attachment name",
-            "description" : "Name or title of the multimedia resource."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en) (2)",
-            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en) (2)",
-            "description" : "Details zur multimedialen Darstellung der klinischen Daten."
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "*Media capture (en) (2)",
-            "description" : "Detaljer om en multimediarepresentasjon av kliniske data."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "392cc6e3-0289-46b5-a2fa-65196e68c04a",
-    "rmName" : "openehr",
-    "rmRelease" : "1.0.3",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Ramona Wellmann",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "wellmann.ramona@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "nb"
-      },
-      "author" : {
-        "name" : "John Tore Valand",
-        "organisation" : "Helse Bergen HF, Norway",
-        "email" : "john.tore.valand@helse-bergen.no"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Fernanda Maia Ewerton",
-        "organisation" : "Core Consulting",
-        "email" : "fernanda.maiaewerton@gmail.com"
-      },
-      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
-      "otherDetails" : { }
-    } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
     "uid" : "40a849d3-0c1f-4fff-879d-0dff0fa85715",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
@@ -2429,7 +2158,7 @@
                   "nodeId" : "at0037.1",
                   "attributes" : [ ],
                   "attributeTuples" : [ ],
-                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-multimedia_source-002.v0",
+                  "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-media_file-002.v1",
                   "referenceType" : "archetypeOverlay"
                 } ]
               } ],
@@ -2805,6 +2534,243 @@
         "nb" : { },
         "nl" : { },
         "sk" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "a5332c85-dd4d-4b75-915b-c7c65e990200",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Natalia Strauch",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "Strauch.Natalia@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Erik Sundvall, Manna Vosta",
+        "organisation" : "Region Östergötland, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, erik.sundvall@regionostergotland.se, manna.vosta@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Liv Laugen, John Tore Valand",
+        "organisation" : "​Oslo University Hospital, Norway, Helse Bergen",
+        "email" : "liv.laugen@ous-hf.no, john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sk"
+      },
+      "author" : {
+        "name" : "Maritn Kapinos",
+        "organisation" : "PROSOFT Košice, a.s.",
+        "email" : "kapinos.martin@prosoftke.sk"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Jelte Zeilstra",
+        "organisation" : "Nedap"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "287ce14d-ce7a-4174-a5da-3b0f741ee0b2",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "E1C0201AED51855810B4D9FD7633573E"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.media_file.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-media_file-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0005.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0004.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "LPA attachment",
+            "description" : "A media file that is acquired or used as part of the healthcare process, and associated metadata."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Attachment name",
+            "description" : "Descriptive name or title for the media file.",
+            "comment" : "A description of the content of the media file. Use an agreed standardised naming convention, if available. For example: \"Right hand burn #1\" or \"Cardiology video consultation on May 2\"."
+          }
+        },
+        "sv" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mediefil (2)",
+            "description" : "En mediefil och dess metadata som förvärvats eller använts som del av en vårdprocess."
+          }
+        },
+        "de" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mediendatei (2)",
+            "description" : "Eine Mediendatei mit zugehörigen Metadaten, die im Rahmen des Gesundheitsprozesses erworben oder verwendet wird."
+          }
+        },
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mediafil (2)",
+            "description" : "En mediafil, samt tilknyttede metadata, som er ervervet eller brukt forbindelse med en helsetjeneste."
+          }
+        },
+        "nl" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mediabestand (2)",
+            "description" : "Een mediabestand dat wordt verkregen of gebruikt als onderdeel van het zorgproces, en bijbehorende metadata."
+          }
+        },
+        "sk" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Mediálny súbor (2)",
+            "description" : "Mediálny súbor, ktorý sa získava alebo používa ako súčasť procesu zdravotnej starostlivosti, a súvisiace metadáta"
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
