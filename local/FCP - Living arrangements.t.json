@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.2",
-      "MD5-CAM-1.0.1" : "7929c60034352b5a597478f373cf2a16",
+      "MD5-CAM-1.0.1" : "19687fd1aaea44d3aa1d71ea234df6f6",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -643,7 +643,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0CF829B1550506D6159055059134E169"
+        "PARENT:MD5-CAM-1.0.1" : "C022D02286D85B17E5EB317A9656C2CB"
       },
       "details" : {
         "nb" : {
@@ -674,6 +674,36 @@
           "use" : "Use to record summary or persistent information about an individual's current and past housing or accommodation situation.\r\n\r\nMultiple instances of the CLUSTER.housing_record used within the Housing record SLOT will allow aggregation of a history of both past and present housing, including the flexibility to record situations where individuals live in more than one place during the same period of time, for main residences and holiday houses, etc.\r\n\r\nThe 'Last updated' data element will record the last time that the Housing summary as a whole, including individual housing records, was updated.\r\n\r\nUse to incorporate the narrative descriptions of housing history within existing or legacy clinical systems into an archetyped format, using the 'Description' data element.",
           "misuse" : "Not to be used to record specific details about the setting in which an individual usually resides - use CLUSTER.housing_record nested within the Housing record SLOT in this archetype.\r\n\r\nNot to be used to record specific details about the people with which an individual lives - use CLUSTER.living_arrangement nested within the Additional details SLOT in the CLUSTER.housing_record, or similar archetypes which are clinically appropriate.\r\n\r\nNot to be used to record specific details about the housing structure in which an individual lives - use CLUSTER.dwelling nested within the Additional details SLOT in the CLUSTER.housing_record, or similar archetypes which are clinically appropriate.\r\n\r\nNot to be used to record the physical address where an individual lives - use demographic archetypes for this purpose, or CLUSTER.address within the CLUSTER.housing_record, or similar, if the individual's address needs to be recorded within the health record.",
           "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Aufzeichnung zusammenfassender oder dauerhafter Informationen über die aktuelle und frühere Wohn- oder Unterkunftssituation einer Person.",
+          "keywords" : [ "Gehäuse", "Unterkunft", "Wohnen", "wohnung", "Haus", "Wohnen", "Vereinbarung", "Wohngemeinschaft", "Altersheim", "Pflegeheim" ],
+          "use" : "Zur Erfassung zusammenfassender oder dauerhafter Informationen über die aktuelle und frühere Wohn- oder Unterkunftssituation einer Person.\r\n\r\nMehrere Instanzen des CLUSTER.housing_record, die innerhalb des Datensatzes SLOT \"Wohnen\" verwendet werden, ermöglichen die Aggregation eines Verlaufs sowohl der früheren als auch der gegenwärtigen Wohnsituation, einschließlich der Flexibilität, Situationen zu erfassen, in denen Personen während desselben Zeitraums an mehr als einem Ort leben, z. B. Hauptwohnsitze und Ferienhäuser usw.\r\n\r\nDas Datenelement \"Letzte Aktualisierung\" erfasst das letzte Mal, dass die Wohnungsübersicht als Ganzes, einschließlich der einzelnen Wohnungsdatensätze, aktualisiert wurde.\r\n\r\nVerwenden Sie das Datenelement \"Beschreibung\", um die narrativen Beschreibungen der Wohngeschichte in bestehenden oder älteren klinischen Systemen in ein archetypisches Format einzubinden.",
+          "misuse" : "Nicht zur Aufzeichnung spezifischer Details über die Umgebung, in der eine Person gewöhnlich wohnt - verwenden Sie CLUSTER.housing_record, verschachtelt im SLOT Housing record in diesem Archetyp.\r\n\r\nNicht zur Erfassung spezifischer Details über die Personen, mit denen eine Person zusammenlebt - verwenden Sie CLUSTER.living_arrangement, das im SLOT Additional details im CLUSTER.housing_record verschachtelt ist, oder ähnliche Archetypen, die klinisch geeignet sind.\r\n\r\nNicht zur Aufzeichnung spezifischer Details über die Wohnstruktur, in der eine Person lebt, zu verwenden - verwenden Sie CLUSTER.dwelling verschachtelt innerhalb des Additional details SLOT im CLUSTER.housing_record oder ähnliche Archetypen, die klinisch angemessen sind.\r\n\r\nNicht zur Erfassung der physischen Adresse, an der eine Person wohnt, zu verwenden - verwenden Sie zu diesem Zweck demografische Archetypen oder CLUSTER.address innerhalb des CLUSTER.housing_record o. ä., wenn die Adresse der Person in der Gesundheitsakte erfasst werden muss.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Enregistrer des informations sommaires ou persistantes sur la situation actuelle et passée d'une personne en matière de logement ou d'hébergement.",
+          "keywords" : [ "maison", "logement", "arrangement", "maison commune", "maison de retraite" ],
+          "use" : "À utiliser pour enregistrer des informations sommaires ou persistantes sur la situation actuelle et passée d'une personne en matière de logement ou d'hébergement.\r\n\r\nPlusieurs instances du CLUSTER.housing_record utilisées dans le SLOT de l'enregistrement relatif au logement permettront d'agréger un historique du logement passé et présent, y compris la possibilité d'enregistrer des situations dans lesquelles les personnes vivent dans plusieurs endroits au cours de la même période, pour les résidences principales et les maisons de vacances, etc.\r\n\r\nL'élément de données \"Dernière mise à jour\" enregistre la dernière mise à jour de la synthèse du logement dans son ensemble, y compris les fiches de logement individuelles.\r\n\r\nL'élément de données \"Description\" permet d'incorporer les descriptions narratives de l'historique du logement dans les systèmes cliniques existants ou hérités dans un format archétypique.",
+          "misuse" : "Ne pas utiliser pour enregistrer des détails spécifiques sur le cadre dans lequel une personne réside habituellement - utiliser CLUSTER.housing_record imbriqué dans le SLOT de l'enregistrement de logement dans cet archétype.\r\n\r\nNe pas utiliser pour enregistrer des détails spécifiques sur les personnes avec lesquelles un individu vit - utiliser CLUSTER.living_arrangement imbriqué dans le SLOT Additional details du CLUSTER.housing_record, ou des archétypes similaires cliniquement appropriés.\r\n\r\nNe pas utiliser pour enregistrer des détails spécifiques sur la structure du logement dans lequel vit un individu - utiliser CLUSTER.dwelling imbriqué dans le SLOT Additional details de CLUSTER.housing_record, ou des archétypes similaires cliniquement appropriés.\r\n\r\nNe pas utiliser pour enregistrer l'adresse physique où vit un individu - utiliser les archétypes démographiques à cette fin, ou CLUSTER.address dans le CLUSTER.housing_record, ou un archétype similaire, si l'adresse de l'individu doit être enregistrée dans le dossier médical.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -762,7 +792,9 @@
             "description" : "Summary or persistent information about an individual's current and past housing or accommodation situation."
           }
         },
-        "nb" : { }
+        "nb" : { },
+        "fr" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -792,6 +824,34 @@
         "name" : "John Tore Valand, Vebjørn Arntzen",
         "organisation" : "Helse Bergen, Oslo universitetssykehus",
         "email" : "john.tore.valand@helse-bergen.no, varntzen@ous-hf.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
       },
       "otherDetails" : { }
     } ]
