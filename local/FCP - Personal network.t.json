@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "efbc2af2af47df0775d51b3e6d8d761b",
+      "MD5-CAM-1.0.1" : "44f9ff21c0711aa75493d045a1a26cfd",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -824,14 +824,105 @@
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
+                "rmAttributeName" : "defining_code",
                 "children" : [ {
-                  "@type" : "C_STRING",
-                  "rmTypeName" : "STRING",
-                  "constraint" : [ "Primary emergency contact", "Legal power of attorney / parental authority", "Next of kin", "Family", "Partner", "Parent", "Friend", "Relative", "Sibling", "Child", "Carer", "Neighbour" ]
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "1187334000",
+                    "value" : "Emergency contact"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "186063005",
+                    "value" : "Power of attorney"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "9306000",
+                    "value" : "Legal parent"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "184142008",
+                    "value" : "Patient's next of kin"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "303071001",
+                    "value" : "Family member"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "262043009",
+                    "value" : "Partner"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "127850001",
+                    "value" : "Wife"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "127849001",
+                    "value" : "Husband"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "40683002",
+                    "value" : "Parent"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "72705000",
+                    "value" : "Mother"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "66839005",
+                    "value" : "Father"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "113163005",
+                    "value" : "Friend"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "125677006",
+                    "value" : "Relative"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "375005",
+                    "value" : "Sibling"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "27733009",
+                    "value" : "Sister"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "70924004",
+                    "value" : "Brother"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "67822003",
+                    "value" : "Child"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "66089001",
+                    "value" : "Daughter"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "65616008",
+                    "value" : "Son"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "133932002",
+                    "value" : "Carer"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "427568008",
+                    "value" : "Neighbour"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
