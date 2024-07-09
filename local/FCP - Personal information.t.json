@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "8dbe223be4f46c272a18f49b728a6548",
+      "MD5-CAM-1.0.1" : "4675d4d792e7ae9f145e33a23b5b5943",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -4283,27 +4283,39 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "UCP-Gender-identity"
+                        "value" : "UKCensus-GenderIdentity"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "UCP-Gender-identity" ],
+                      "selectedTerminologies" : [ "UKCensus-GenderIdentity" ],
                       "limitToList" : false,
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "UCP-Gender-identity",
+                        "terminologyId" : "UKCensus-GenderIdentity",
                         "code" : "1",
-                        "value" : "Male (including trans man)"
+                        "value" : "Gender identity the same as sex registered at birth"
                       }, {
-                        "terminologyId" : "UCP-Gender-identity",
+                        "terminologyId" : "UKCensus-GenderIdentity",
                         "code" : "2",
-                        "value" : "Female (including transwoman)"
+                        "value" : "Gender identity different from sex registered at birth but no specific identity given"
                       }, {
-                        "terminologyId" : "UCP-Gender-identity",
+                        "terminologyId" : "UKCensus-GenderIdentity",
                         "code" : "3",
+                        "value" : "Trans woman"
+                      }, {
+                        "terminologyId" : "UKCensus-GenderIdentity",
+                        "code" : "4",
+                        "value" : "Trans man"
+                      }, {
+                        "terminologyId" : "UKCensus-GenderIdentity",
+                        "code" : "5",
                         "value" : "Non-binary"
                       }, {
-                        "terminologyId" : "UCP-Gender-identity",
-                        "code" : "4",
-                        "value" : "Not stated (person asked but declined to provide a response)"
+                        "terminologyId" : "UKCensus-GenderIdentity",
+                        "code" : "6",
+                        "value" : "All other gender identities"
+                      }, {
+                        "terminologyId" : "UKCensus-GenderIdentity",
+                        "code" : "7",
+                        "value" : "Not answered"
                       } ]
                     } ]
                   } ],
