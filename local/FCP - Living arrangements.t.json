@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.2",
-      "MD5-CAM-1.0.1" : "19687fd1aaea44d3aa1d71ea234df6f6",
+      "MD5-CAM-1.0.1" : "6f4c7a72c07f69ac82a8f01b0136893b",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1002,7 +1002,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -1065,9 +1064,72 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0013.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "Scotland_Census-Tenure"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "Scotland_Census-Tenure" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "0",
+                    "value" : "Owned: Owned outright"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "1",
+                    "value" : "Owned: Owned with a mortgage or loan"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "2",
+                    "value" : "Shared ownership (part owned and part rented)"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "3",
+                    "value" : "Social rented: Rented from council (local authority)"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "4",
+                    "value" : "Social rented: Other social rented"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "5",
+                    "value" : "Private rented: Private landlord or letting agency"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "6",
+                    "value" : "Private rented: Employer of a household member"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "7",
+                    "value" : "Private rented: Relative or friend of household member"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "8",
+                    "value" : "Private rented: Other"
+                  }, {
+                    "terminologyId" : "Scotland_Census-Tenure",
+                    "code" : "9",
+                    "value" : "Living rent free"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -1716,34 +1778,6 @@
                     "terminologyId" : "CMC-DwellingType",
                     "code" : "8",
                     "value" : "Caravan Or Other Mobile Or Temporary Structure"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "9",
-                    "value" : "Care Home (Without Nursing On Premises)"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "10",
-                    "value" : "Care Home (With Nursing On Premises)"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "11",
-                    "value" : "Sheltered Housing"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "14",
-                    "value" : "Supported living"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "12",
-                    "value" : "Sheltered Housing (Extra Care)"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "15",
-                    "value" : "Mental health/LD/autism hospital"
-                  }, {
-                    "terminologyId" : "CMC-DwellingType",
-                    "code" : "13",
-                    "value" : "Other"
                   } ]
                 } ]
               } ],
