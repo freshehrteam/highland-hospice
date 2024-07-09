@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "18c252b64512bc5fd2032f1905bcfd9d",
+      "MD5-CAM-1.0.1" : "0f6b56016f5e8ec7d540323b515d3611",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -4367,36 +4367,48 @@
                       "selectedTerminologies" : [ "CMC-MaritalStatus" ],
                       "includedExternalTerminologyCodes" : [ {
                         "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "C",
-                        "value" : "Civil Partnership"
+                        "code" : "A",
+                        "value" : "Never married nor registered civil partnership"
                       }, {
                         "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "D",
-                        "value" : "Divorced"
-                      }, {
-                        "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "E",
-                        "value" : "Engaged"
-                      }, {
-                        "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "L",
-                        "value" : "Living With Partner"
-                      }, {
-                        "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "M",
+                        "code" : "B",
                         "value" : "Married"
                       }, {
                         "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "X",
-                        "value" : "Separated"
+                        "code" : "C",
+                        "value" : "Registered civil partnership"
                       }, {
                         "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "S",
-                        "value" : "Single"
+                        "code" : "D",
+                        "value" : "Separated, but still married"
                       }, {
                         "terminologyId" : "CMC-MaritalStatus",
-                        "code" : "W",
+                        "code" : "E",
+                        "value" : "Separated, but still in civil partnership"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "F",
+                        "value" : "Divorced"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "G",
+                        "value" : "Dissolved civil partnership"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "H",
                         "value" : "Widowed"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "J",
+                        "value" : "Surviving civil partner"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "Y",
+                        "value" : "Other"
+                      }, {
+                        "terminologyId" : "CMC-MaritalStatus",
+                        "code" : "Z",
+                        "value" : "Not known"
                       } ]
                     } ]
                   } ],
