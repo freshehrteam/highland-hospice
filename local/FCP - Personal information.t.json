@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "25ea5e0fe42c8e39dfe9d96e6fbda11b",
+      "MD5-CAM-1.0.1" : "3e795b9c5a11abd67c62acd55dd1f283",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -646,717 +646,717 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "CMC-Religion"
+                    "value" : "PHS-Religion"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "CMC-Religion" ],
+                  "selectedTerminologies" : [ "PHS-Religion" ],
                   "limitToList" : false,
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R001",
                     "value" : "African Methodist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R002",
                     "value" : "Agape"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R003",
                     "value" : "Agnostic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R004",
                     "value" : "Amish"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R005",
                     "value" : "Ancestor Worship"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R006",
                     "value" : "Anglican"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R007",
                     "value" : "Animism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R008",
                     "value" : "Apostolic Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R009",
                     "value" : "Asatru"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R010",
                     "value" : "Assemblies of God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R011",
                     "value" : "Associate Synod"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R012",
                     "value" : "Atheist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R013",
                     "value" : "Baha'I"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R014",
                     "value" : "Baptist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R015",
                     "value" : "Belfast Chinese Christian Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R016",
                     "value" : "Believe in God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R017",
                     "value" : "Bible Pattern Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R018",
                     "value" : "Brahma Kumari"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R019",
                     "value" : "Brethren"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R020",
                     "value" : "Brethren in Christ"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R021",
                     "value" : "British Israelite"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R022",
                     "value" : "Buddhist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R023",
                     "value" : "Bulgarian Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R024",
                     "value" : "Catholic Apostolic Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R025",
                     "value" : "Celtic Christian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R026",
                     "value" : "Celtic Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R027",
                     "value" : "Celtic Pagan"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R028",
                     "value" : "Chapel"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R029",
                     "value" : "Charismatic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R030",
                     "value" : "Child of God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R031",
                     "value" : "Chinese Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R032",
                     "value" : "Chinese Religions"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R033",
                     "value" : "Christadelphian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R034",
                     "value" : "Christian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R035",
                     "value" : "Christian Fellowship"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R036",
                     "value" : "Christian    Fellowship Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R037",
                     "value" : "Christian Scientist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R038",
                     "value" : "Christian    Spiritualist Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R039",
                     "value" : "Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R040",
                     "value" : "Church in Wales"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R041",
                     "value" : "Church of All Religion"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R042",
                     "value" : "Church of Christ"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R043",
                     "value" : "Church of England"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R044",
                     "value" : "Church of God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R045",
                     "value" : "Church of God of Prophecy"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R046",
                     "value" : "Church of Harmony"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R047",
                     "value" : "Church of Ireland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R048",
                     "value" : "Church of Jesus Christ of Latter Day Saints   (Mormons)"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R049",
                     "value" : "Church of Prophecy"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R050",
                     "value" : "Church of Scotland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R051",
                     "value" : "Church of the Living"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R052",
                     "value" : "Church of the Living God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R053",
                     "value" : "Church of the Nazarene"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R054",
                     "value" : "Church on the Way"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R055",
                     "value" : "City Mission"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R056",
                     "value" : "Coleraine Christian Centre"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R057",
                     "value" : "Combined Methodist/Presbyterian Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R058",
                     "value" : "Confucianist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R059",
                     "value" : "Congregational Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R060",
                     "value" : "Cooneyite"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R061",
                     "value" : "Coptic Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R062",
                     "value" : "Day Church of God"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R063",
                     "value" : "Deist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R064",
                     "value" : "Disciples of Christ"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R065",
                     "value" : "Divine Lightmission"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R066",
                     "value" : "Druidism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R067",
                     "value" : "Druze"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R068",
                     "value" : "Dutch Reformed Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R069",
                     "value" : "Eastern Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R070",
                     "value" : "Eckankar"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R071",
                     "value" : "Ecumenical"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R072",
                     "value" : "Elim Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R073",
                     "value" : "Emmanuel Mission"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R074",
                     "value" : "Episcopalian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R075",
                     "value" : "Evangelical"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R076",
                     "value" : "Evangelical Alliance"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R077",
                     "value" : "Evangelical Presbyterian Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R078",
                     "value" : "Evangelical Union"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R079",
                     "value" : "Faith Mission"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R080",
                     "value" : "Fellowship of Independent Evangelical Churches"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R081",
                     "value" : "Four Square Gospel"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R082",
                     "value" : "Free Church of Love"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R083",
                     "value" : "Free Church of Scotland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R084",
                     "value" : "Free Evangelical Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R085",
                     "value" : "Free Methodist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R086",
                     "value" : "Free Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R087",
                     "value" : "Free Presbyterian Church of Scotland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R088",
                     "value" : "Free Presbyterian Church of Ulster"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R089",
                     "value" : "Free Thinker"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R090",
                     "value" : "Full Gospel Assembly"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R091",
                     "value" : "Greek Catholic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R092",
                     "value" : "Greek Orthodox"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R093",
                     "value" : "Hare Krishna"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R094",
                     "value" : "Heathen"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R095",
                     "value" : "Hindu"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R096",
                     "value" : "House Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R097",
                     "value" : "Humanist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R098",
                     "value" : "Independent"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R099",
                     "value" : "Independent Evangelist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R100",
                     "value" : "Independent Methodist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R101",
                     "value" : "Interdenominational"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R102",
                     "value" : "Internationalist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R103",
                     "value" : "Jain"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R104",
                     "value" : "Jedi Knight"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R105",
                     "value" : "Jehovah's Witness"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R106",
                     "value" : "Jewish"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R107",
                     "value" : "Lutheran"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R108",
                     "value" : "Mennonite"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R109",
                     "value" : "Methodist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R110",
                     "value" : "Methodist Church in Ireland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R111",
                     "value" : "Methodist Church in Wales"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R112",
                     "value" : "Metropolitan Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R113",
                     "value" : "Monk"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R114",
                     "value" : "Moravian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R115",
                     "value" : "Muslim (Islam)"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R116",
                     "value" : "Mysticism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R117",
                     "value" : "Native American    Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R118",
                     "value" : "New Age"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R119",
                     "value" : "Non Denominational"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R120",
                     "value" : "Nonconformist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R121",
                     "value" : "None"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R122",
                     "value" : "Non-subscribing Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R123",
                     "value" : "Occult"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R124",
                     "value" : "Orthodox Catholic Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R125",
                     "value" : "Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R126",
                     "value" : "Orthodox Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R127",
                     "value" : "Other Religions"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R128",
                     "value" : "Own Belief System"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R129",
                     "value" : "Pagan"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R130",
                     "value" : "Pantheism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R131",
                     "value" : "Pentecostal"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R132",
                     "value" : "Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R133",
                     "value" : "Presbyterian Apostolic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R134",
                     "value" : "Presbyterian Church in Ireland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R135",
                     "value" : "Presbyterian Church in Wales"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R136",
                     "value" : "Presbyterian    Secession Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R137",
                     "value" : "Protestant"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R138",
                     "value" : "Protestant (Mixed)"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R139",
                     "value" : "Raja Yoga"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R140",
                     "value" : "Rastafarian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R141",
                     "value" : "Rationalist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R142",
                     "value" : "Realist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R143",
                     "value" : "Reformed"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R144",
                     "value" : "Reformed Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R145",
                     "value" : "Religious Society of Friends (Quakers)"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R146",
                     "value" : "Roman Catholic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R147",
                     "value" : "Russian Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R148",
                     "value" : "Salvation Army"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R149",
                     "value" : "Sant Mat"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R150",
                     "value" : "Santeri"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R151",
                     "value" : "Satanism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R152",
                     "value" : "Scientology"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R153",
                     "value" : "Scottish Episcopal Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R154",
                     "value" : "Scottish Presbyterian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R155",
                     "value" : "Secularist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R156",
                     "value" : "Serbian Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R157",
                     "value" : "Seventh Day Adventist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R158",
                     "value" : "Sikh"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R159",
                     "value" : "Spiritualist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R160",
                     "value" : "Taoist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R161",
                     "value" : "Theism"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R162",
                     "value" : "Tin Tao"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R163",
                     "value" : "Ukrainian Orthodox Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R164",
                     "value" : "Ukrainian Catholic"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R165",
                     "value" : "Unification Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R166",
                     "value" : "Unitarian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R167",
                     "value" : "Unitarian-Universalist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R168",
                     "value" : "United Brethren"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R169",
                     "value" : "United Church of Canada"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R170",
                     "value" : "United Free Church of Scotland"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R171",
                     "value" : "United Reformed Church"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R172",
                     "value" : "Universalist"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R173",
                     "value" : "Unsectarian"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R174",
                     "value" : "Vodun"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R175",
                     "value" : "Whitewell Metropolitan Tabernacle"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R176",
                     "value" : "Wicca"
                   }, {
-                    "terminologyId" : "CMC-Religion",
+                    "terminologyId" : "PHS-Religion",
                     "code" : "R177",
                     "value" : "Zoroastrian"
                   } ]
@@ -3798,95 +3798,107 @@
                       "rmTypeName" : "TERMINOLOGY_CODE",
                       "occurrences" : "0..1",
                       "terminologyId" : {
-                        "value" : "CMC-Ethnicity"
+                        "value" : "PHS-EthnicGroup"
                       },
                       "constraint" : [ ],
-                      "selectedTerminologies" : [ "CMC-Ethnicity" ],
+                      "selectedTerminologies" : [ "PHS-EthnicGroup" ],
                       "limitToList" : false,
                       "includedExternalTerminologyCodes" : [ {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "P",
-                        "value" : "Any other black background"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1",
+                        "value" : "White"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "K",
-                        "value" : "Asian or Asian British Bangladeshi"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1A",
+                        "value" : "White: Scottish"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "H",
-                        "value" : "Asian or Asian British Indian"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1B",
+                        "value" : "White: Other British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "J",
-                        "value" : "Asian or Asian British Pakistani"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1C",
+                        "value" : "White: Irish"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "N",
-                        "value" : "Black or Black British African"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1K",
+                        "value" : "White: Gypsy/Traveller"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "M",
-                        "value" : "Black or Black British Caribbean"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1L",
+                        "value" : "White: Polish"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "R",
-                        "value" : "Chinese"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "1Z",
+                        "value" : "White: Other White ethnic group"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "G",
-                        "value" : "Mixed Other"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "2A",
+                        "value" : "Any mixed or multiple ethnic groups"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "F",
-                        "value" : "Mixed White & Asian"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "3F",
+                        "value" : "Asian, Asian Scottish or Pakistani British: Pakistani, Pakistani Scottish or Pakistani British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "E",
-                        "value" : "Mixed White & Black African"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "3G",
+                        "value" : "Asian, Asian Scottish or Pakistani British: Indian, Indian Scottish or Indian British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "D",
-                        "value" : "Mixed White & Black Caribbean"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "3H",
+                        "value" : "Asian, Asian Scottish or Pakistani British: Bangladeshi, Bangladeshi Scottish or Bangladeshi British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "Z2",
-                        "value" : "Not Divulged"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "3J",
+                        "value" : "Asian, Asian Scottish or Pakistani British: Chinese, Chinese Scottish or Chinese British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "Z3",
-                        "value" : "Not Known"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "3Z",
+                        "value" : "Asian, Asian Scottish or Pakistani British: Other Asian, Asian Scottish or Asian British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "Z",
-                        "value" : "Not Stated"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "4",
+                        "value" : "African"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "L",
-                        "value" : "Other Asian"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "4D",
+                        "value" : "African: African, African Scottish or African British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "E2",
-                        "value" : "Other Ethnic Groups"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "4Y",
+                        "value" : "African: Other African"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "C5",
-                        "value" : "Sikh"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "5",
+                        "value" : "Caribbean or Black"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "A",
-                        "value" : "White British"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "5C",
+                        "value" : "Caribbean or Black: Caribbean, Caribbean Scottish or Caribbean British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "Y",
-                        "value" : "White European"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "5D",
+                        "value" : "Caribbean or Black: Black, Black Scottish or Black British"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "B",
-                        "value" : "White Irish"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "5Y",
+                        "value" : "Caribbean or Black: Other Caribbean or Black"
                       }, {
-                        "terminologyId" : "CMC-Ethnicity",
-                        "code" : "C",
-                        "value" : "White Other"
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "6A",
+                        "value" : "Other ethnic group: Arab, Arab Scottish or Arab British"
+                      }, {
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "6Z",
+                        "value" : "Other ethnic group"
+                      }, {
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "98",
+                        "value" : "Refused/Not provided by patient"
+                      }, {
+                        "terminologyId" : "PHS-EthnicGroup",
+                        "code" : "99",
+                        "value" : "Not known"
                       } ]
                     } ]
                   } ],
