@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "0659d9a01f4fe13223f6506e7b6b7589",
+      "MD5-CAM-1.0.1" : "cee04bc393e35d3b870d30c243079fca",
       "sem_ver" : "1.0.0-alpha.1",
       "build_uid" : "",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1434,14 +1434,57 @@
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
+                "rmAttributeName" : "defining_code",
                 "children" : [ {
-                  "@type" : "C_STRING",
-                  "rmTypeName" : "STRING",
-                  "constraint" : [ "Primary emergency contact", "GP", "Lead consultant", "Key worker", "Paid carer", "Support worker", "Social worker", "Community Nurse", "Practice Nurse", "Specialist Nurse", "Health care professional", "Volunteer", "Consultant" ]
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "1187334000",
+                    "value" : "Emergency contact"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "62247001",
+                    "value" : "General practitioner"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "768839008",
+                    "value" : "Consultant"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "229774002",
+                    "value" : "Caregiver"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "106328005",
+                    "value" : "Social worker"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "224540001",
+                    "value" : "Community nurse"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "159002008",
+                    "value" : "Practice nurse"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "224570006",
+                    "value" : "Clinical nurse specialist"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "276037005",
+                    "value" : "Volunteer helper"
+                  } ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -1963,7 +2006,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "86D95E88A12580A647DAE690595D0685"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "For the recording of care team details aligned with corresponding FHIR resource.",
+          "keywords" : [ ],
+          "use" : "Use to record care team details aligned with the corresponding FHIR resources.\r\n\r\nThe slots for member, on behalf of and managing organisation should be filled with the appropriate FHIR resource-aligned clusters, i.e. practitioner, contact or organisation.\r\n\r\nThis admin archetype is intended to be the main container for any patient contact related information.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.care_team.v0",
     "differential" : true,
@@ -2041,32 +2100,14 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0019.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0020.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_DATE_TIME",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -2087,32 +2128,14 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0025.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0026.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
