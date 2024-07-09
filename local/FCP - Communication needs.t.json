@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "6d67842ed4924e5d4ce8e8fe6b08a09c",
+      "MD5-CAM-1.0.1" : "f470ffe5ea5db57378b80c806a428af1",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1441,901 +1441,845 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "CMC-Language"
+                    "value" : "SNOMED-CT"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "CMC-Language" ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AB",
-                    "value" : "Abkhazian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AA",
-                    "value" : "Afar"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AG",
-                    "value" : "Afghan"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AF",
-                    "value" : "Afrikaans"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AK",
-                    "value" : "Akan"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "1",
-                    "value" : "Akan (Ashanti)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SQ",
-                    "value" : "Albanian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "Q2",
-                    "value" : "American Sign Language"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AM",
-                    "value" : "Amharic"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AR",
-                    "value" : "Arabic"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AN",
-                    "value" : "Aragonese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HY",
-                    "value" : "Armenian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AS",
-                    "value" : "Assamese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "Q3",
-                    "value" : "Australian Sign Language"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AV",
-                    "value" : "Avaric"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AE",
-                    "value" : "Avestan"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AY",
-                    "value" : "Aymara"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "AZ",
-                    "value" : "Azerbaijani"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BA",
-                    "value" : "Baluch"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BM",
-                    "value" : "Bambara"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "EU",
-                    "value" : "Basque"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BS",
-                    "value" : "Basuto"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BE",
-                    "value" : "Belarusian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BN",
-                    "value" : "Bengali"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "5",
-                    "value" : "Bengali & Sylheti"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BH",
-                    "value" : "Bihari"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BI",
-                    "value" : "Bislama"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "Q1",
-                    "value" : "Braille"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "6",
-                    "value" : "Brawa & Somali"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BR",
-                    "value" : "Breton"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "7",
-                    "value" : "British Signing Language"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BG",
-                    "value" : "Bulgarian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MY",
-                    "value" : "Burmese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CN",
-                    "value" : "Cantonese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CA",
-                    "value" : "Catalan, Valencian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CH",
-                    "value" : "Chamorro"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CE",
-                    "value" : "Chechen"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ZH",
-                    "value" : "Chinese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CV",
-                    "value" : "Chuvash"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KW",
-                    "value" : "Cornish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CO",
-                    "value" : "Corsican"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CR",
-                    "value" : "Cree"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "10",
-                    "value" : "Creole"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HR",
-                    "value" : "Croatian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CS",
-                    "value" : "Czech"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "DA",
-                    "value" : "Danish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "DR",
-                    "value" : "Dari"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "DV",
-                    "value" : "Divehi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "11",
-                    "value" : "Dutch"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NL",
-                    "value" : "Dutch, Flemish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "DZ",
-                    "value" : "Dzongkha"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "EN",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315570003",
                     "value" : "English"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ER",
-                    "value" : "Erse"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "EO",
-                    "value" : "Esperanto"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ET",
-                    "value" : "Estonian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "13",
-                    "value" : "Ethiopian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "EE",
-                    "value" : "Ewe"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FO",
-                    "value" : "Faroese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FA",
-                    "value" : "Farsi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "14",
-                    "value" : "Farsi (Persian)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FJ",
-                    "value" : "Fijian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FI",
-                    "value" : "Finnish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "16",
-                    "value" : "Flemish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FR",
-                    "value" : "French"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "18",
-                    "value" : "French Creole"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FY",
-                    "value" : "Frisian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "FF",
-                    "value" : "Fulah"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "19",
-                    "value" : "Gaelic"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "GL",
-                    "value" : "Gallegan"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LG",
-                    "value" : "Ganda"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KA",
-                    "value" : "Georgian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "DE",
-                    "value" : "German"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "21",
-                    "value" : "Greek"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "EL",
-                    "value" : "Greek, Modern (1453-)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KL",
-                    "value" : "Greenlandic, Kalaallisut"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "GN",
-                    "value" : "Guarani"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "GU",
-                    "value" : "Gujarati"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HT",
-                    "value" : "Haitian, Haitian Creole"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "23",
-                    "value" : "Hakka"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HA",
-                    "value" : "Hausa"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HE",
-                    "value" : "Hebrew"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HZ",
-                    "value" : "Herero"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HI",
-                    "value" : "Hindi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HO",
-                    "value" : "Hiri Motu"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "HU",
-                    "value" : "Hungarian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IS",
-                    "value" : "Icelandic"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IO",
-                    "value" : "Ido"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "27",
-                    "value" : "Igbo (Ibo)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ID",
-                    "value" : "Indonesian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IA",
-                    "value" : "Interlingua"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IE",
-                    "value" : "Interlingue"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IU",
-                    "value" : "Inuktitut"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IK",
-                    "value" : "Inupiaq"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "GA",
-                    "value" : "Irish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "IT",
-                    "value" : "Italian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "JA",
-                    "value" : "Japanese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "JV",
-                    "value" : "Javanese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KN",
-                    "value" : "Kannada"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KR",
-                    "value" : "Kanuri"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KS",
-                    "value" : "Kashmiri"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KK",
-                    "value" : "Kazakh"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KM",
-                    "value" : "Khmer"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KI",
-                    "value" : "Kikuyu, Gikuyu"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "RW",
-                    "value" : "Kinyarwanda"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KY",
-                    "value" : "Kirghiz"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KV",
-                    "value" : "Komi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KG",
-                    "value" : "Kongo"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KO",
-                    "value" : "Korean"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KJ",
-                    "value" : "Kuanyama, Kwanyama"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "KU",
-                    "value" : "Kurdish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LO",
-                    "value" : "Lao"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LA",
-                    "value" : "Latin"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LV",
-                    "value" : "Latvian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LI",
-                    "value" : "Limburgan, Limburger, Limburgish"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LN",
-                    "value" : "Lingala"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LT",
-                    "value" : "Lithuanian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LU",
-                    "value" : "Luba-Katanga"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "33",
-                    "value" : "Luganda"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "LB",
-                    "value" : "Luxembourgish, Letzeburgesch"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MK",
-                    "value" : "Macedonian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "Q5",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "415805003",
                     "value" : "Makaton"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "34",
-                    "value" : "Makaton (sign language)"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "415803005",
+                    "value" : "British sign language (BSL)"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MG",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698651000",
+                    "value" : "Abkhaz"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698652007",
+                    "value" : "Afar"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698653002",
+                    "value" : "Afrikaans"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408525000",
+                    "value" : "Akan"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407648002",
+                    "value" : "Albanian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408507007",
+                    "value" : "Amharic"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315566006",
+                    "value" : "Arabic"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "809341000000106",
+                    "value" : "Aragonese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698885002",
+                    "value" : "Armenian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698886001",
+                    "value" : "Assamese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970441000000105",
+                    "value" : "Avaric"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970451000000108",
+                    "value" : "Avestan"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698887005",
+                    "value" : "Aymara"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698888000",
+                    "value" : "Azerbaijani"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970461000000106",
+                    "value" : "Bambara"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "609092003",
+                    "value" : "Bamun"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698889008",
+                    "value" : "Bashkir"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698654008",
+                    "value" : "Basque"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698655009",
+                    "value" : "Belarusian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315567002",
+                    "value" : "Bengali"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698656005",
+                    "value" : "Bihari"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698890004",
+                    "value" : "Bislama"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970471000000104",
+                    "value" : "Bosnian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408513003",
+                    "value" : "Brawa"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698657001",
+                    "value" : "Breton"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "699945003",
+                    "value" : "Bulgarian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698891000",
+                    "value" : "Burmese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315568007",
+                    "value" : "Cantonese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698892007",
+                    "value" : "Catalan"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698893002",
+                    "value" : "Central Khmer"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970481000000102",
+                    "value" : "Chamorro"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970491000000100",
+                    "value" : "Chechen"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970501000000106",
+                    "value" : "Chinese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970511000000108",
+                    "value" : "Church Slavic"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970521000000102",
+                    "value" : "Chuvash"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970531000000100",
+                    "value" : "Cornish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698658006",
+                    "value" : "Corsican"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970541000000109",
+                    "value" : "Cree"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407650005",
+                    "value" : "Croatian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315569004",
+                    "value" : "Czech"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698894008",
+                    "value" : "Danish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "609093008",
+                    "value" : "Dari"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970551000000107",
+                    "value" : "Dhivehi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408528003",
+                    "value" : "Dutch"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698895009",
+                    "value" : "Dzongkha"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698896005",
+                    "value" : "Esperanto"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698659003",
+                    "value" : "Estonian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408515005",
+                    "value" : "Ethiopian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970561000000105",
+                    "value" : "Ewe"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698660008",
+                    "value" : "Faroese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "395108007",
+                    "value" : "Farsi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698897001",
+                    "value" : "Fijian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "503511000000100",
+                    "value" : "Filipino"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "414640006",
+                    "value" : "Finnish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408520005",
+                    "value" : "Flemish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315571004",
+                    "value" : "French"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408521009",
+                    "value" : "French Créole"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698661007",
+                    "value" : "Frisian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "729051000000103",
+                    "value" : "Fulani"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408522002",
+                    "value" : "Gaelic"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698662000",
+                    "value" : "Galician"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698898006",
+                    "value" : "Georgian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407643006",
+                    "value" : "German"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407652002",
+                    "value" : "Greek"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698899003",
+                    "value" : "Guarani"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315572006",
+                    "value" : "Gujarati"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970601000000105",
+                    "value" : "Haitian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408523007",
+                    "value" : "Hakka"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315574007",
+                    "value" : "Hausa"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408524001",
+                    "value" : "Hebrew"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970611000000107",
+                    "value" : "Herero"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315575008",
+                    "value" : "Hindi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "511841000000102",
+                    "value" : "Hindko"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970621000000101",
+                    "value" : "Hiri Motu"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698900008",
+                    "value" : "Hungarian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315576009",
+                    "value" : "Iba"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698663005",
+                    "value" : "Icelandic"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970631000000104",
+                    "value" : "Ido"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408514009",
+                    "value" : "Igbo"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698901007",
+                    "value" : "Indonesian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698664004",
+                    "value" : "Interlingua"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698902000",
+                    "value" : "Interlingue"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698665003",
+                    "value" : "Inuktitut"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698666002",
+                    "value" : "Inupiaq"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698667006",
+                    "value" : "Irish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407642001",
+                    "value" : "Italian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407654001",
+                    "value" : "Japanese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698903005",
+                    "value" : "Javanese"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698904004",
+                    "value" : "Kalaallisut"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698905003",
+                    "value" : "Kannada"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970641000000108",
+                    "value" : "Kanuri"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698906002",
+                    "value" : "Kashmiri"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698668001",
+                    "value" : "Kazakh"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "729061000000100",
+                    "value" : "Kikuyu"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698907006",
+                    "value" : "Kinyarwanda"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698908001",
+                    "value" : "Kirghiz"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970651000000106",
+                    "value" : "Komi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970661000000109",
+                    "value" : "Kongo"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "609094002",
+                    "value" : "Konkani"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407655000",
+                    "value" : "Korean"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970681000000100",
+                    "value" : "Kuanyama"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "395109004",
+                    "value" : "Kurdish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315577000",
+                    "value" : "Kutchi"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698669009",
+                    "value" : "Lao"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970691000000103",
+                    "value" : "Latin"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698909009",
+                    "value" : "Latvian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970701000000103",
+                    "value" : "Limburgan"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408526004",
+                    "value" : "Lingala"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407656004",
+                    "value" : "Lithuanian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970711000000101",
+                    "value" : "Luba-Katanga"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408527008",
+                    "value" : "Luganda"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970721000000107",
+                    "value" : "Luxembourgish"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698670005",
+                    "value" : "Macedonian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698671009",
                     "value" : "Malagasy"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MS",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698672002",
                     "value" : "Malay"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ML",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408529006",
                     "value" : "Malayalam"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MT",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698910004",
                     "value" : "Maltese"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MD",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315578005",
                     "value" : "Mandarin"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "GV",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970741000000100",
                     "value" : "Manx"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MI",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698673007",
                     "value" : "Maori"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698674001",
                     "value" : "Marathi"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MH",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970751000000102",
                     "value" : "Marshallese"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ME",
-                    "value" : "Melanesian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698911000",
                     "value" : "Moldavian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "MN",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698675000",
                     "value" : "Mongolian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NA",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698912007",
                     "value" : "Nauru"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NV",
-                    "value" : "Navajo, Navaho"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970771000000106",
+                    "value" : "Navajo"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NG",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698913002",
+                    "value" : "Ndebele"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970781000000108",
                     "value" : "Ndonga"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NE",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698676004",
                     "value" : "Nepali"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ND",
-                    "value" : "North Ndebele"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970801000000109",
+                    "value" : "Northern Ndebele"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SE",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970811000000106",
                     "value" : "Northern Sami"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408530001",
                     "value" : "Norwegian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NB",
-                    "value" : "Norwegian Bokmal, Bokmal, Norwegian"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970821000000100",
+                    "value" : "Norwegian Bokmal"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NY",
-                    "value" : "Nyanja, Chichewa, Chewa"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970831000000103",
+                    "value" : "Norwegian Nynorsk"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NN",
-                    "value" : "Nynorsk, Norwegian, Norwegian Nynorsk"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970961000000102",
+                    "value" : "Nuosu"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "OC",
-                    "value" : "Occitan (post 1500), Provencal"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "729041000000101",
+                    "value" : "Nyanja"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "OJ",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698914008",
+                    "value" : "Occitan"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970851000000105",
                     "value" : "Ojibwa"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CU",
-                    "value" : "Old Church Slavonic (and derivations)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "OR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698915009",
                     "value" : "Oriya"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "OM",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698916005",
                     "value" : "Oromo"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "OSTIC",
-                    "value" : "Ossetian, Ossetic"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970871000000101",
+                    "value" : "Ossetian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "O",
-                    "value" : "Other"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PI",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970881000000104",
                     "value" : "Pali"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PABI",
-                    "value" : "Panjabi, Punjabi"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408531002",
+                    "value" : "Pashto"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "38",
-                    "value" : "Pashto (Pushtoo)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "39",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408534005",
                     "value" : "Patois"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PH",
-                    "value" : "Pehlevi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PE",
-                    "value" : "Pekinese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PL",
-                    "value" : "Philipino"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315579002",
                     "value" : "Polish"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PT",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315580004",
                     "value" : "Portuguese"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "42",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315581000",
                     "value" : "Punjabi"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "PS",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970911000000104",
                     "value" : "Pushto"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "QU",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698677008",
                     "value" : "Quechua"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "RM",
-                    "value" : "Raeto-Romance"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "RO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698678003",
                     "value" : "Romanian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "RN",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698917001",
+                    "value" : "Romansh"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "718512007",
+                    "value" : "Romany"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698679006",
                     "value" : "Rundi"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "RU",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315582007",
                     "value" : "Russian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SM",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698680009",
                     "value" : "Samoan"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SG",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698918006",
                     "value" : "Sango"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SA",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970921000000105",
                     "value" : "Sanskrit"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SD",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970931000000107",
                     "value" : "Sardinian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SC",
-                    "value" : "Serb-Croat"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970941000000103",
+                    "value" : "Scottish Gaelic"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408535006",
                     "value" : "Serbian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "44",
-                    "value" : "Serbian / Croatian"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SN",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "395110009",
                     "value" : "Shona"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SI",
-                    "value" : "Siamese"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698919003",
+                    "value" : "Sindhi"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "II",
-                    "value" : "Sichuan Yi"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "45",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408518007",
                     "value" : "Sinhala"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SILESE",
-                    "value" : "Sinhalese"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SLA",
-                    "value" : "Slavonic"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SK",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698920009",
                     "value" : "Slovak"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SL",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698921008",
                     "value" : "Slovenian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315583002",
                     "value" : "Somali"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "STN",
-                    "value" : "Sotho, Southern"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "NR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970971000000109",
                     "value" : "South Ndebele"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "47",
-                    "value" : "Spanish (South Spain)"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698922001",
+                    "value" : "Southern Sotho"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ESLIAN",
-                    "value" : "Spanish, Castilian"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315584008",
+                    "value" : "Spanish"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SU",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698681008",
                     "value" : "Sundanese"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SW",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315585009",
                     "value" : "Swahili"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SS",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698923006",
                     "value" : "Swati"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "SV",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408516006",
                     "value" : "Swedish"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "50",
-                    "value" : "Sylhethi"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315586005",
+                    "value" : "Sylheti"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TL",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408517002",
                     "value" : "Tagalog"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "51",
-                    "value" : "Tagalog (Filipino)"
-                  }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TY",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "970991000000108",
                     "value" : "Tahitian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TG",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698682001",
                     "value" : "Tajik"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TA",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315587001",
                     "value" : "Tamil"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TT",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698924000",
                     "value" : "Tatar"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TE",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698925004",
                     "value" : "Telugu"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TH",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "609095001",
+                    "value" : "Tetum"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408519004",
                     "value" : "Thai"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "BO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698926003",
                     "value" : "Tibetan"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TI",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408533004",
                     "value" : "Tigrinya"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TO",
-                    "value" : "Tonga (Tonga Islands)"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698927007",
+                    "value" : "Tongan"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TS",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698683006",
                     "value" : "Tsonga"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TN",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698684000",
                     "value" : "Tswana"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407657008",
                     "value" : "Turkish"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TK",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698928002",
                     "value" : "Turkmen"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "TW",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698685004",
                     "value" : "Twi"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "UG",
-                    "value" : "Uighur, Uyghur"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698929005",
+                    "value" : "Uighur"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "UK",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407659006",
                     "value" : "Ukrainian"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "UR",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315588006",
                     "value" : "Urdu"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "UZ",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698930000",
                     "value" : "Uzbek"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "VE",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "971011000000109",
                     "value" : "Venda"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "VI",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "407661002",
                     "value" : "Vietnamese"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "VO",
-                    "value" : "Volapuk"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "971021000000103",
+                    "value" : "Volapük"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "WA",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "971031000000101",
                     "value" : "Walloon"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "CY",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "408532009",
                     "value" : "Welsh"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "WO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "971041000000105",
+                    "value" : "Western Frisian"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698932008",
                     "value" : "Wolof"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "XH",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698933003",
                     "value" : "Xhosa"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "YI",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698934009",
                     "value" : "Yiddish"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "YO",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "315589003",
                     "value" : "Yoruba"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ZA",
-                    "value" : "Zhuang, Chuang"
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698935005",
+                    "value" : "Zhuang"
                   }, {
-                    "terminologyId" : "CMC-Language",
-                    "code" : "ZU",
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "698936006",
                     "value" : "Zulu"
                   } ]
                 } ]
