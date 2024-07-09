@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.2",
-      "MD5-CAM-1.0.1" : "6f4c7a72c07f69ac82a8f01b0136893b",
+      "MD5-CAM-1.0.1" : "757da88e5dfe96eb9c3a9adc726f99b4",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -1080,48 +1080,48 @@
                   "rmTypeName" : "TERMINOLOGY_CODE",
                   "occurrences" : "0..1",
                   "terminologyId" : {
-                    "value" : "Scotland_Census-Tenure"
+                    "value" : "ScotlandCensus-Tenure"
                   },
                   "constraint" : [ ],
-                  "selectedTerminologies" : [ "Scotland_Census-Tenure" ],
+                  "selectedTerminologies" : [ "ScotlandCensus-Tenure" ],
                   "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "0",
                     "value" : "Owned: Owned outright"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "1",
                     "value" : "Owned: Owned with a mortgage or loan"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "2",
                     "value" : "Shared ownership (part owned and part rented)"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "3",
                     "value" : "Social rented: Rented from council (local authority)"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "4",
                     "value" : "Social rented: Other social rented"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "5",
                     "value" : "Private rented: Private landlord or letting agency"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "6",
                     "value" : "Private rented: Employer of a household member"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "7",
                     "value" : "Private rented: Relative or friend of household member"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "8",
                     "value" : "Private rented: Other"
                   }, {
-                    "terminologyId" : "Scotland_Census-Tenure",
+                    "terminologyId" : "ScotlandCensus-Tenure",
                     "code" : "9",
                     "value" : "Living rent free"
                   } ]
