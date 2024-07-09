@@ -23,7 +23,7 @@
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.1",
-      "MD5-CAM-1.0.1" : "3e795b9c5a11abd67c62acd55dd1f283",
+      "MD5-CAM-1.0.1" : "d48240fa979a8490793b82d3b8c54feb",
       "build_uid" : "",
       "is_singleton" : "ehr",
       "PARENT:MD5-CAM-1.0.1" : "774f2b613d27f7301a5d91c00bdfab26"
@@ -4161,9 +4161,48 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
-              "occurrences" : "0..0",
               "nodeId" : "at0022.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "occurrences" : "1..1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "0..1",
+                      "terminologyId" : {
+                        "value" : "PHS-Sex"
+                      },
+                      "constraint" : [ ],
+                      "selectedTerminologies" : [ "PHS-Sex" ],
+                      "includedExternalTerminologyCodes" : [ {
+                        "terminologyId" : "PHS-Sex",
+                        "code" : "0",
+                        "value" : "Not known (i.e. indeterminate sex, includes ‘Intersex’)"
+                      }, {
+                        "terminologyId" : "PHS-Sex",
+                        "code" : "1",
+                        "value" : "Male"
+                      }, {
+                        "terminologyId" : "PHS-Sex",
+                        "code" : "2",
+                        "value" : "Female"
+                      }, {
+                        "terminologyId" : "PHS-Sex",
+                        "code" : "9",
+                        "value" : "Not specified (includes not stated by patient, or not recorded)"
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
