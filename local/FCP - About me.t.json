@@ -19,7 +19,7 @@
     "otherDetails" : {
       "licence" : "",
       "custodian_organisation" : "",
-      "original_namespace" : "",
+      "original_namespace" : "fcp.dehr",
       "original_publisher" : "",
       "custodian_namespace" : "",
       "sem_ver" : "1.2.0-alpha.2",
