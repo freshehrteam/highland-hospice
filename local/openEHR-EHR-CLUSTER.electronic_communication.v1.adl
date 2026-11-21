@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=92cf3ce0-8de6-47bf-b479-e229e5aab7da)
+﻿archetype (adl_version=1.4; uid=92cf3ce0-8de6-47bf-b479-e229e5aab7da)
 	openEHR-EHR-CLUSTER.electronic_communication.v1
 
 concept
-	[at0000]
-
+	[at0000]	-- Electronic communication
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -15,6 +14,14 @@ language
 				["email"] = <"Strauch.Natalia@mh-hannover.de">
 			>
 		>
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			author = <
+				["name"] = <"Hugo Silva">
+				["organisation"] = <"University of Minho">
+				["email"] = <"pg50416@uminho.pt">
+			>
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
@@ -23,32 +30,46 @@ language
 				["email"] = <"kanika.kuwelker@helse-vest-ikt.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no">
 			>
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			author = <
+				["name"] = <"Jonas Bucher">
+				["organisation"] = <"Cistec AG">
+				["email"] = <"jonas.bucher@cistec.com">
+			>
+		>
 	>
-
 description
 	original_author = <
-		["date"] = <"2022-03-09">
 		["name"] = <"Heather Leslie">
 		["organisation"] = <"Atomica Informatics">
 		["email"] = <"heather.leslie@atomicainformatics.com">
+		["date"] = <"2022-03-09">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","Keisha Barwise, MOHW/IDB HSSP Project, Jamaica","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Randi Brendberg, Helse Nord RHF, Norway","Candice de Lisser, Ministry of Health and Wellness, Jamaica","Ludvig Eek Hofmann, Cambio Healthcare Systems AB, Sweden","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)","Rebecka Hansson, Cambio Healthcare Systems AB, Sweden","Evelyn Hovenga, EJSH Consulting, Australia","Gunnar Jårvik, Helse Vest IKT AS, Norway","Gunn-Lisbeth Kleiven, Oslo universitetssykehus HF, Norway","Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Norwegian Review Summary, Norwegian Public Hospitals, Norway","Anders Thurin, VGR, Sweden","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird.">
-			keywords = <"Telefon, Mobiltelefon, E-Mail, Fax, Pager, Chat, Soziale Medien, asynchron, Kommunikation, SoMe", ...>
 			use = <"Zur Darstellung von Informationen über eine bestimmte Art der elektronischen Kommunikation für eine Person oder Organisation, wie sie bekannt ist oder im Rahmen der klinischen Dokumentation verstanden wird. Dies geschieht üblicherweise ad hoc oder wenn es nicht angemessen oder möglich ist, ein formelles Register oder einen Index zu verwenden.">
+			keywords = <"Telefon, Mobiltelefon, E-Mail, Fax, Pager, Chat, Soziale Medien, asynchron, Kommunikation, SoMe", ...>
 			misuse = <"Nicht für komplexe Kommunikationsdarstellung oder -verwaltung zu verwenden, wie z. B. bevorzugte Telefonnummern oder Gültigkeit der Nutzung. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem demografischen Informationsmodell von openEHR basieren.
 
 Darf nicht verwendet werden, um das formelle Identifikationsmanagement darzustellen oder zu ersetzen oder um ein offizielles demografisches Register oder einen Index zu führen. Verwenden Sie zu diesem Zweck einen formellen Master Patient Index oder Health Provider Index oder Archetypen, die auf dem openEHR Demographic Information Model basieren.">
 		>
+		["pt-pt"] = <
+			language = <[ISO_639-1::pt-pt]>
+			purpose = <"Registar detalhes sobre um tipo específico de comunicação eletrónica tal como é conhecido ou compreendido no decurso da documentação clínica.">
+			use = <"Utilize para registar detalhes sobre um tipo específico de comunicação eletrónica de um indivíduo ou organização, tal como é conhecido ou compreendido no decurso da documentação clínica. Isto é normalmente ad hoc ou quando não é apropriado ou possível utilizar um registo ou índice formal.">
+			keywords = <"telefone, telemóvel, e-mail, fax, pager, chat, redes sociais, assíncrono, comunicação", ...>
+			misuse = <"Não deve ser utilizado para representação ou gestão de comunicações complexas, tais como números de telefone preferenciais ou datas válidas de utilização. Utilize um Índice Mestre de Doentes ou um Índice de Prestadores de Cuidados de Saúde formal para esta finalidade, ou arquétipos baseados no Modelo de Informação Demográfica openEHR.
+
+Não deve ser utilizado para representar ou substituir a gestão formal de identificação ou para efeitos de manutenção de um registo ou índice demográfico oficial. Utilize um Índice Mestre de Doentes ou um Índice de Prestadores de Cuidados de Saúde formal para esta finalidade, ou arquétipos baseados no Modelo de Informação Demográfica openEHR.">
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om en spesifikk type elektronisk kommunikasjon som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.">
-			keywords = <"telefon, mobil, e-post, faks, personsøker, chat, asynkron dialog, sosiale media, kommunikasjon, SoMe,", ...>
 			use = <"Brukes for å registrere detaljer om en spesifikk type elektronisk kommunikasjon for en person eller en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet. Brukes ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.">
+			keywords = <"telefon, mobil, e-post, faks, personsøker, chat, asynkron dialog, sosiale media, kommunikasjon, SoMe,", ...>
 			misuse = <"Brukes ikke til kompleks kommunikasjonsadministrasjon, for eksempel foretrukne telefonnummer eller gyldige bruksdatoer. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.
 	
 Brukes ikke til å representere eller erstatte de formelle demografiske opplysninger for formell identitetsforvaltning eller for å opprettholde et demografisk register eller en indeks. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.">
@@ -56,22 +77,33 @@ Brukes ikke til å representere eller erstatte de formelle demografiske opplysni
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details about a specified type of electronic communication as it is known or understood in the course of clinical documentation.">
-			keywords = <"telephone, phone, mobile, email, fax, pager, chat, social media, asynchronous, communication, SoMe", ...>
 			use = <"Use to record details about a specified type of electronic communication for an individual or an organisation as it is known or understood in the course of clinical documentation. This is commonly ad hoc or when it is not appropriate or possible to use a formal register or index.">
+			keywords = <"telephone, phone, mobile, email, fax, pager, chat, social media, asynchronous, communication, SoMe", ...>
 			misuse = <"Not to be used for complex communication representation or management, such as preferred phone numbers or valid dates of usage. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.
 
 Not to be used to represent or replace formal identification management or for the purposes of maintaining an official demographic register or index. Use a formal Master Patient Index or Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.">
 		>
+		["fr"] = <
+			language = <[ISO_639-1::fr]>
+			purpose = <"Pour enregistrer les détails relatifs à un type spécifique de communication électronique, tel qu'il est connu ou entendu dans le cadre de la documentation clinique.">
+			use = <"À utiliser pour enregistrer les détails relatifs à un type spécifique de communication électronique concernant une personne ou une organisation, tels qu’ils sont connus ou entendu dans le cadre de la documentation clinique. Cette pratique est généralement ponctuelle ou intervient lorsqu’il n’est pas approprié ou possible d’utiliser un registre ou un index officiel.">
+			keywords = <"téléphone, portable, e-mail, courriel, fax, pager, chat, réseaux sociaux, asynchrone, communication, médias sociaux", ...>
+			misuse = <"À ne pas utiliser pour enregister la représentation ou la gestion de communications complexes, telles que les numéros de téléphone préférés ou les dates d’utilisation valides. Utilisez un index principal des patients (Master Patient Index) ou un index des prestataires de soins (Health Provider Index) formel, ou encore des archétypes basés sur le modèle d’informations démographiques openEHR à cette fin.
+
+À ne pas utiliser pour enregister une gestion formelle de l’identification, ni à des fins de tenue d’un registre ou d’un index démographique officiel. Utilisez un index principal des patients ou un index des prestataires de soins de santé officiel, ou encore des archétypes basés sur le modèle d’informations démographiques openEHR à cette fin.">
+		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Keisha Barwise, MOHW/IDB HSSP Project, Jamaica", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Randi Brendberg, Helse Nord RHF, Norway", "Candice de Lisser, Ministry of Health and Wellness, Jamaica", "Ludvig Eek Hofmann, Cambio Healthcare Systems AB, Sweden", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Regional forvaltning EPJ, Helse Nord, Norway (openEHR Editor)", "Rebecka Hansson, Cambio Healthcare Systems AB, Sweden", "Evelyn Hovenga, EJSH Consulting, Australia", "Gunnar Jårvik, Helse Vest IKT AS, Norway", "Gunn-Lisbeth Kleiven, Oslo universitetssykehus HF, Norway", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"631B12227B6F857367CA40D256DD814A">
-		["build_uid"] = <"ae57162c-7e2f-4096-a08f-8f03574e4a72">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"115BE3902B9D840E56B6ACDD0C104711">
+		["build_uid"] = <"b7115967-bdb4-4f38-aa3f-880ee53559ef">
+		["revision"] = <"1.0.4">
 	>
 
 definition
@@ -122,6 +154,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -308,6 +341,130 @@ ontology
 				["at0013"] = <
 					text = <"Ytterligere detaljer">
 					description = <"Ytterligere detaljer om den elektroniske kommunikasjonen.">
+				>
+			>
+		>
+		["pt-pt"] = <
+			items = <
+				["at0000"] = <
+					text = <"Comunicação eletrónica">
+					description = <"Detalhes sobre um tipo específico de comunicação eletrónica.">
+				>
+				["at0001"] = <
+					text = <"Tipo">
+					description = <"O tipo ou forma de comunicação eletrónica.">
+					comment = <"O conjunto de valores DV_CODED_TEXT suporta a gravação das comunicações electrónicas mais comuns utilizadas na saúde. Se forem necessárias outras alternativas, o tipo de dados DV_TEXT pode ser utilizado para registar outros tipos de comunicação eletrónica, como redes sociais ou URLs de videoconferência dentro de um template.">
+				>
+				["at0002"] = <
+					text = <"Valor">
+					description = <"A combinação única de caracteres alfanuméricos, relevante para a representação do 'Tipo'.">
+					comment = <"Por exemplo: indicativo + número de telefone fixo/pager, indicativo do país + número de telemóvel; ou endereço de e-mail.">
+				>
+				["at0003"] = <
+					text = <"Propósito">
+					description = <"O propósito ou utilização do tipo identificado de comunicação eletrónica.">
+				>
+				["at0004"] = <
+					text = <"Comentário">
+					description = <"Narrativa adicional sobre a comunicação eletrónica não captada noutros campos.">
+				>
+				["at0005"] = <
+					text = <"Telemóvel">
+					description = <"Para SMS ou chamadas de voz.">
+				>
+				["at0006"] = <
+					text = <"Telefone">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Email">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Pager">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Fax">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Uso comercial">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Uso pessoal">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Uso comercial e pessoal">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Detalhes adicionais">
+					description = <"Detalhes adicionais sobre a comunicação eletrónica.">
+				>
+			>
+		>
+		["fr"] = <
+			items = <
+				["at0000"] = <
+					text = <"Communication électronique">
+					description = <"Détails relatifs à un type spécifique de communication électronique.">
+				>
+				["at0001"] = <
+					text = <"Type">
+					description = <"Le type ou la forme de communication électronique.">
+					comment = <"L'ensemble de valeurs DV_CODED_TEXT permet d'enregistrer les communications électroniques les plus courantes utilisées dans le domaine de la santé. Si d'autres alternatives sont nécessaires, le type de données DV_TEXT peut être utilisé pour enregistrer d'autres types de communications électroniques, tels que les réseaux sociaux ou les URL de visioconférence, au sein d'un template.">
+				>
+				["at0002"] = <
+					text = <"Valeur">
+					description = <"Combinaison unique de caractères alphanumériques, permettant de représenter le « Type ».">
+					comment = <"Par exemple : indicatif régional + numéro de téléphone fixe/de téléavertisseur ; indicatif pays + numéro de téléphone mobile ; ou adresse e-mail.">
+				>
+				["at0003"] = <
+					text = <"Usage">
+					description = <"La fonction ou l'usage du type de communication électronique identifié.">
+				>
+				["at0004"] = <
+					text = <"Commentaire">
+					description = <"Informations supplémentaires concernant la communication électronique qui ne sont pas reprises dans d’autres champs.">
+				>
+				["at0005"] = <
+					text = <"Téléphone mobile (portable)">
+					description = <"Pour les SMS ou les appels vocaux.">
+				>
+				["at0006"] = <
+					text = <"Téléphone (à l'exclusion des téléphones portables)">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Courriel">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Téléavertisseur">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Fax">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Usage professionnelle">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Usage personnel">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Usage professionnel et personnel">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Détails supplémentaires">
+					description = <"Détails supplémentaires concernant la communication électronique.">
 				>
 			>
 		>
