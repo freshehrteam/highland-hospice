@@ -28,19 +28,19 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"c0a7af481658ac409ecde30f82cb4412">
+		["MD5-CAM-1.0.1"] = <"4e4547cdd0f96af36bec00dee0ca27b1">
 		["build_uid"] = <"7d297b96-cd1e-4eb6-975b-b9b400882b27">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- about_me new
+	EVALUATION[at0000] matches {    -- About me
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
 					CLUSTER[at0004] occurrences matches {0..*} matches {    -- Topic
 						items cardinality matches {1..*; unordered} matches {
-							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Category
+							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Topic category
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -48,6 +48,20 @@ definition
 							ELEMENT[at0002] occurrences matches {0..1} matches {    -- Narrative
 								value matches {
 									DV_TEXT matches {*}
+								}
+							}
+							CLUSTER[at0010] occurrences matches {0..*} matches {    -- Question
+								items cardinality matches {1..*; unordered} matches {
+									ELEMENT[at0009] occurrences matches {0..*} matches {    -- Question name
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Question value
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
 								}
 							}
 							allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- Additional details
@@ -81,7 +95,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"about_me new">
+					text = <"About me">
 					description = <"About me">
 				>
 				["at0001"] = <
@@ -114,7 +128,19 @@ ontology
 					description = <"Details of those people who helped me to complete this record.">
 				>
 				["at0008"] = <
-					text = <"Category">
+					text = <"Topic category">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Question name">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Question">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Question value">
 					description = <"">
 				>
 			>
