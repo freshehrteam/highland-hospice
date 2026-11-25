@@ -28,7 +28,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"b6365962dad1af1ebda85198a01c3566">
+		["MD5-CAM-1.0.1"] = <"88a6cc5b1ebc961f9bab3f224f83f408">
 		["build_uid"] = <"7d297b96-cd1e-4eb6-975b-b9b400882b27">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -45,7 +45,7 @@ definition
 									DV_TEXT matches {*}
 								}
 							}
-							ELEMENT[at0002] occurrences matches {0..1} matches {    -- Narrative
+							ELEMENT[at0002] occurrences matches {0..*} matches {    -- Narrative
 								value matches {
 									DV_TEXT matches {*}
 								}
@@ -54,6 +54,11 @@ definition
 								include
 									archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.multimedia_source\.v0/}
 							}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Context
+						value matches {
+							DV_TEXT matches {*}
 						}
 					}
 				}
@@ -115,6 +120,10 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Category">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Context">
 					description = <"">
 				>
 			>
