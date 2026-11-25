@@ -28,7 +28,7 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"4e4547cdd0f96af36bec00dee0ca27b1">
+		["MD5-CAM-1.0.1"] = <"660750ca295f09ee695721f443b398ce">
 		["build_uid"] = <"7d297b96-cd1e-4eb6-975b-b9b400882b27">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -38,6 +38,11 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Context
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 					CLUSTER[at0004] occurrences matches {0..*} matches {    -- Topic
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0008] occurrences matches {0..1} matches {    -- Topic category
@@ -141,6 +146,10 @@ ontology
 				>
 				["at0011"] = <
 					text = <"Question value">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Context">
 					description = <"">
 				>
 			>
